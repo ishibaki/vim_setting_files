@@ -1,5 +1,18 @@
-*~
 *.swp
-.vim/
-!/.vim/rc
-.DS_Store
+tags
+*~
+.DS_STORE
+
+# ignore image files
+*.png
+*.jpg
+*.gif
+
+.vim/.*
+.vim/bundle
+.vim/colors
+.vim/doc
+.vim/syntax
+.vim/ftplugin
+init.vim
+

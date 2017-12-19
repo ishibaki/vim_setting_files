@@ -1,0 +1,106 @@
+# 基本は github.com のレポジトリーを指定するだけ
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]] # ステータスライン
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+    let g:lightline = {
+    \   'colorscheme': 'wombat'
+    \}
+'''
+
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+
+[[plugins]] 
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]] # 括弧の操作を楽にする
+repo = 'tpope/vim-surround'
+
+[[plugins]] # 行末の不要な半角スペースを可視化
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]] # インデントによる階層を分かりやすく可視化
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]] # CSVなどの成型に
+repo = 'junegunn/vim-easy-align'
+
+[[plugins]] # diffsplitが便利になるよ
+repo = 'chrisbra/vim-diff-enhanced'
+
+[[plugins]] # :CalendarでGoogleカレンダーを開けます
+repo = 'itchyny/calendar.vim'
+
+[[plugins]] # 日本語IMEに影響しない括弧補完
+repo = 'itmammoth/doorboy.vim'
+
+# [[plugins]] # vim内移動用
+# repo = 'Lokaltog/vim-easymotion'
+
+[[plugins]] # コードブロックでvim内移動
+repo = 'haya14busa/vim-edgemotion'
+
+[[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
+repo = 'ishibaki/vim-cycle'
+
+[[plugins]] # vim上でプログラムの非同期実行
+repo = 'thinca/vim-quickrun'
+
+[[plugins]] # アウトラインの自動作成
+repo = 'Shougo/unite-outline'
+
+# [[plugins]] # 英語単語の自動補完
+# repo = 'ujihisa/neco-look'
+# on_i = 1
+# depends = 'neocomplete.vim'
+
+[[plugins]] # メモ用プラグイン
+repo = 'glidenote/memolist.vim'
+
+# git clone 後、実行すべきコマンドがある場合はこんな感じ
+# [[plugins]]
+# repo = 'Shougo/vimproc.vim'
+# hook_post_update = '''
+#   if dein#util#_is_windows()
+#     let cmd = 'tools\\update-dll-mingw'
+#   elseif dein#util#_is_cygwin()
+#     let cmd = 'make -f make_cygwin.mak'
+#   elseif executable('gmake')
+#     let cmd = 'gmake'
+#   else
+#     let cmd = 'make'
+#   endif
+#   let g:dein#plugin.build = cmd
+# '''
+
+# ブランチやタグを指定したいとき
+# [[plugins]]
+# repo = 'delphinus35/typescript-vim'
+# rev  = 'colorize-template-strings'
+
+# 特定の条件で読み込みたいとき
+# [[plugins]]
+# repo = 'elzr/vim-json'
+# if   = '''! has('kaoriya')'''
+
+# 依存関係を指定したいとき
+# [[plugins]]
+# repo    = 'vim-airline/vim-airline'
+# depends = ['vim-airline-themes']
+
+# 依存関係を指定したからと言って、自動でインストールはされない（ここは NeoBundle と違う）
+# [[plugins]]
+# repo = 'vim-airline/vim-airline-themes'

@@ -337,11 +337,6 @@ command! Setmdown set filetype=markdown
 command! Setmd set filetype=markdown
 
 nnoremap <Space><Space>o :Unite outline<CR>
-let g:memolist_path = "~/OneDrive\ -\ 大阪大学/memolist.vim"
-nnoremap <Leader>mn  :MemoNew<CR>
-nnoremap <Leader>ml  :MemoList<CR>
-nnoremap <Leader>mg  :MemoGrep<CR>
-let g:memolist_memo_date = "%Y/%m/%d %H:%M"
 
 map <C-j> <Plug>(edgemotion-j)
 map <C-k> <Plug>(edgemotion-k)

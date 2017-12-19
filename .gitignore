@@ -1,4 +1,5 @@
 *~
 *.swp
 .vim/
-!.vim/rc
+!/.vim/rc
+.DS_Store

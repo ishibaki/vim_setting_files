@@ -2,6 +2,7 @@
 tags
 *~
 .DS_STORE
+.DS_Store
 
 # ignore image files
 *.png
@@ -15,4 +16,5 @@ tags
 .vim/syntax
 .vim/ftplugin
 init.vim
+
 

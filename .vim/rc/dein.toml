@@ -67,8 +67,8 @@ repo = 'Shougo/unite-outline'
 # on_i = 1
 # depends = 'neocomplete.vim'
 
-[[plugins]] # メモ用プラグイン
-repo = 'glidenote/memolist.vim'
+# [[plugins]] # メモ用プラグイン
+# repo = 'glidenote/memolist.vim'
 
 # git clone 後、実行すべきコマンドがある場合はこんな感じ
 # [[plugins]]

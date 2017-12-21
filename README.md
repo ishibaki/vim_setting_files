@@ -15,22 +15,32 @@ In this repo, I only commit the setting files of vim **not neovim.**
 ├── .vimrc  @ -> ~/dotfiles/vim_setting_files/.vimrc
 ├── .gvimrc @ -> ~/dotfiles/vim_setting_files/.gvimrc
 ├── .vim/   @ -> ~/dotfiles/vim_setting_files/.vim/
-└── dotfiles/
-    ├── neovim_setting_files/
-    └── vim_setting_files/
-        ├── .git/
-        ├── .vimrc
-        ├── .gvimrc
-        └── .vim/
-            ├── rc/
-            |   ├── dein.toml
-            |   └── dein_lazy.toml
-            |
-            └── settings/
-                ├── basic.vim
-                ├── color.vim
-                ├── keymap.vim
-                └── plugins.vim
+├── dotfiles/
+|   ├── neovim_setting_files/
+|   |   ├── .git/
+|   |   ├── init.vim
+|   |   ├── dein.toml @ -> ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|   |   ├── dein_lazy.toml @ -> ~/dotfiles/vim_setting_files/.vim/rc/dein_lazy.toml
+|   |   └── neovim_settings/ @ -> ~/dotfiles/vim_setting_files/.vim/settings/
+|   |
+|   └── vim_setting_files/
+|       ├── .git/
+|       ├── .vimrc
+|       ├── .gvimrc
+|       └── .vim/
+|           ├── rc/
+|           |   ├── dein.toml
+|           |   └── dein_lazy.toml
+|           |
+|           └── settings/
+|               ├── basic.vim
+|               ├── color.vim
+|               ├── keymap.vim
+|               └── plugins.vim
+|
+└── .config
+    └──  nvim/ @ -> ~/dotfiles/neovim_setting_files/
+
 ```
 
 Additionally, splitting the files makes easy to manage them.

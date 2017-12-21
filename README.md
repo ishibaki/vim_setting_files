@@ -19,8 +19,8 @@ In this repo, I only commit the setting files of vim **not neovim.**
 |   ├── neovim_setting_files/
 |   |   ├── .git/
 |   |   ├── init.vim
-|   |   ├── dein.toml @ -> ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
-|   |   ├── dein_lazy.toml @ -> ~/dotfiles/vim_setting_files/.vim/rc/dein_lazy.toml
+|   |   ├── dein.toml        @ -> ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|   |   ├── dein_lazy.toml   @ -> ~/dotfiles/vim_setting_files/.vim/rc/dein_lazy.toml
 |   |   └── neovim_settings/ @ -> ~/dotfiles/vim_setting_files/.vim/settings/
 |   |
 |   └── vim_setting_files/

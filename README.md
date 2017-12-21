@@ -38,7 +38,7 @@ In this repo, I only commit the setting files of vim **not neovim.**
 |               ├── keymap.vim
 |               └── plugins.vim
 |
-└── .config
+└── .config/
     └──  nvim/ @ -> ~/dotfiles/neovim_setting_files/
 
 ```

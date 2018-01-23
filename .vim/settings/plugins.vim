@@ -16,6 +16,15 @@ let g:EasyMotion_leader_key = '<Space>f'
 " jediとquickrunのcompeteをクリア
 let g:jedi#rename_command = "<leader>R"
 
+" --------------- vim-table-mode ---------------
+" markdownのときにはマークダウン文法の表形式に変更
+augroup vimTableMode
+    autocmd!
+    autocmd BufNewFile,BufRead *.md let g:table_mode_corner='|'
+    autocmd BufNewFile,BufRead *.mdown let g:table_mode_corner='|'
+augroup END
+
+
 " " --------------- Unite ---------------
 " " Leaderキー
 " nnoremap    [unite]   <Nop>

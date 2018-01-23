@@ -22,10 +22,6 @@ repo = 'Shougo/neocomplete.vim'
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
 
-[[plugins]] # toml syntax
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
 [[plugins]] # 括弧の操作を楽にする
 repo = 'tpope/vim-surround'
 
@@ -61,6 +57,9 @@ repo = 'thinca/vim-quickrun'
 
 [[plugins]] # アウトラインの自動作成
 repo = 'Shougo/unite-outline'
+
+[[plugins]] # vim-table-mode
+repo = 'dhruvasagar/vim-table-mode'
 
 # [[plugins]] # 英語単語の自動補完
 # repo = 'ujihisa/neco-look'

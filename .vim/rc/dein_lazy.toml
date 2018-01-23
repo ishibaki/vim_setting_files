@@ -16,6 +16,10 @@ on_ft = 'markdown'
 repo = 'vim-scripts/HTML-AutoCloseTag'
 on_ft = 'markdown'
 
+[[plugins]] # toml syntax
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
 # [[plugins]]
 # repo = 'lambdalisue/vim-pyenv'
 # depends = 'davidhalter/jedi-vim'

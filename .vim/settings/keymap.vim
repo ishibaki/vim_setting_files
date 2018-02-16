@@ -47,10 +47,10 @@ nnoremap <Space>O  :<C-u>for i in range(v:count1) \| call append(line('.')-1, ''
 " -------------------挿入モードでの移動をemacs風に-------------------
 inoremap <C-a> <C-o>^
 inoremap <C-e> <C-o>$
-inoremap <C-f> <C-o>l
-inoremap <C-b> <C-o>h
-inoremap <C-j> <C-o>j
-inoremap <C-k> <C-o>k
+" inoremap <C-f> <C-o>l
+" inoremap <C-b> <C-o>h
+" inoremap <C-j> <C-o>j
+" inoremap <C-k> <C-o>k
 " inoremap <C-d> <C-o>x
 
 " ---------常にvery magic------------------
@@ -58,3 +58,7 @@ nnoremap / /\v
 cnoremap %s/ %s/\v
 cnoremap :/ %s/\v
 vnoremap / /\v
+
+" ----------行の連結後にスペースをいれない----------
+" nnoremap J gJ
+" nnoremap gJ J

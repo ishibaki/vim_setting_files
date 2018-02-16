@@ -61,6 +61,9 @@ repo = 'Shougo/unite-outline'
 [[plugins]] # vim-table-mode
 repo = 'dhruvasagar/vim-table-mode'
 
+[[plugins]]
+repo = 'mattn/sonictemplate-vim'
+
 # [[plugins]] # 英語単語の自動補完
 # repo = 'ujihisa/neco-look'
 # on_i = 1

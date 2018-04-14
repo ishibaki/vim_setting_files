@@ -53,7 +53,7 @@ hook_add = '''
 [[plugins]] # 日本語IMEに影響しない括弧補完
 repo = 'itmammoth/doorboy.vim'
 
-# [[plugins]] # vim内移動用
+[[plugins]] # vim内移動用
 repo = 'easymotion/vim-easymotion'
 # EasyMotionのleader keyを<Space>fにする
 # fコマンドを，easymotionのfモードにする

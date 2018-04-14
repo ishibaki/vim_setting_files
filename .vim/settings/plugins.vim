@@ -1,8 +1,3 @@
-" ---------- doorboy ----------
-let g:doorboy_additional_quotations = {
-\ 'markdown': ['*'],
-\ }
-
 " " --------------- Unite ---------------
 " " Leaderキー
 " nnoremap    [unite]   <Nop>

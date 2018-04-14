@@ -44,7 +44,11 @@ repo = 'itchyny/calendar.vim'
 repo = 'itmammoth/doorboy.vim'
 
 # [[plugins]] # vim内移動用
-# repo = 'Lokaltog/vim-easymotion'
+repo = 'easymotion/vim-easymotion'
+hook_add = ''
+hook_add = '''
+    map <Leader> <Plug>(easymotion-prefix)
+'''
 
 [[plugins]] # コードブロックでvim内移動
 repo = 'haya14busa/vim-edgemotion'

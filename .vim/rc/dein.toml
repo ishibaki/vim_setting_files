@@ -52,16 +52,6 @@ hook_add = '''
 
 [[plugins]] # 日本語IMEに影響しない括弧補完
 repo = 'itmammoth/doorboy.vim'
-hook_add = '''
-    let g:doorboy_additional_quotations = {
-    \ 'markdown': ['*'],
-    \ }
-'''
-# hook_add = '''
-# let g:doorboy_additional_brackets = {
-#     \ '*': ['「」'],
-#     \ }
-# '''
 
 # [[plugins]] # vim内移動用
 repo = 'easymotion/vim-easymotion'
@@ -109,6 +99,12 @@ hook_add = '''
 
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'
+
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'
+hook_add = '''
+    let g:cheatsheet#cheat_file = '~/.cheatsheet.txt'
+'''
 
 # [[plugins]] # 英語単語の自動補完
 # repo = 'ujihisa/neco-look'

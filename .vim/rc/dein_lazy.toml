@@ -7,6 +7,10 @@
 [[plugins]]
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
+# jediにおける変数リネーム機能とquickrun実行コマンドのcompeteをクリアしておく
+hook_add = '''
+    let g:jedi#rename_command = "<Leader>R"
+'''
 
 [[plugins]] # Markdownプレビューワ, 先にnpm -g install instant-markdown-dが必要
 repo = 'suan/vim-instant-markdown'

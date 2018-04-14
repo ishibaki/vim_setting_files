@@ -33,37 +33,79 @@ repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]] # CSVなどの成型に
 repo = 'junegunn/vim-easy-align'
+# ビジュアルモードで選択し，easy-align 呼んで整形．(e.g. vip<Enter>)
+# easy-align を呼んだ上で，移動したりテキストオブジェクトを指定して整形．(e.g. gaip)
+hook_add = '''
+    vmap <Enter> <Plug>(EasyAlign)
+    nmap ga <Plug>(EasyAlign)
+'''
 
 [[plugins]] # diffsplitが便利になるよ
 repo = 'chrisbra/vim-diff-enhanced'
 
 [[plugins]] # :CalendarでGoogleカレンダーを開けます
 repo = 'itchyny/calendar.vim'
+hook_add = '''
+    let g:calendar_google_calendar = 1
+    let g:calendar_first_day = 'monday'
+'''
 
 [[plugins]] # 日本語IMEに影響しない括弧補完
 repo = 'itmammoth/doorboy.vim'
+hook_add = '''
+    let g:doorboy_additional_quotations = {
+    \ 'markdown': ['*'],
+    \ }
+'''
+# hook_add = '''
+# let g:doorboy_additional_brackets = {
+#     \ '*': ['「」'],
+#     \ }
+# '''
 
 # [[plugins]] # vim内移動用
 repo = 'easymotion/vim-easymotion'
-hook_add = ''
+# EasyMotionのleader keyを<Space>fにする
+# fコマンドを，easymotionのfモードにする
 hook_add = '''
-    map <Leader> <Plug>(easymotion-prefix)
+    let g:EasyMotion_leader_key = '<Space>f'
+    let g:EasyMotion_use_migemo = 1
+    nmap <Space>ff <Plug>(easymotion-overwin-f)
+    nmap <Space>fs <Plug>(easymotion-overwin-f2)
+    nmap <Space>ft <Plug>(easymotion-t2)
+    nmap <Space>f/ <Plug>(easymotion-sn)
 '''
 
 [[plugins]] # コードブロックでvim内移動
 repo = 'haya14busa/vim-edgemotion'
+hook_add = '''
+    map <C-j> <Plug>(edgemotion-j)
+    map <C-k> <Plug>(edgemotion-k)
+'''
 
 [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
 repo = 'ishibaki/vim-cycle'
 
 [[plugins]] # vim上でプログラムの非同期実行
 repo = 'thinca/vim-quickrun'
+# <Leader>rで実行されるのでよろしく
 
 [[plugins]] # アウトラインの自動作成
 repo = 'Shougo/unite-outline'
+hook_add = '''
+    nmap <Leader>ol :Unite outline<CR>
+'''
 
 [[plugins]] # vim-table-mode
 repo = 'dhruvasagar/vim-table-mode'
+# markdownのときにはマークダウン文法の表形式に変更
+hook_add = '''
+    augroup vimTableMode
+        autocmd!
+        autocmd BufNewFile,BufRead *.md let g:table_mode_corner='|'
+        autocmd BufNewFile,BufRead *.mdown let g:table_mode_corner='|'
+    augroup END
+'''
 
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'

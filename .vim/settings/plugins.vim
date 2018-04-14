@@ -1,30 +1,3 @@
-" --------------- calendar.vim ---------------
-let g:calendar_google_calendar = 1
-let g:calendar_first_day = 'monday'
-
-" --------------- easy-align ---------------
-" ビジュアルモードで選択し，easy-align 呼んで整形．(e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
-" easy-align を呼んだ上で，移動したりテキストオブジェクトを指定して整形．(e.g. gaip)
-nmap ga <Plug>(EasyAlign)
-
-" --------------- easy-motion ---------------
-" easy-motionのLeaderを<Space>fにする
-let g:EasyMotion_leader_key = '<Space>f'
-
-" --------------- jedi.vim & quickrun ---------------
-" jediとquickrunのcompeteをクリア
-let g:jedi#rename_command = "<leader>R"
-
-" --------------- vim-table-mode ---------------
-" markdownのときにはマークダウン文法の表形式に変更
-augroup vimTableMode
-    autocmd!
-    autocmd BufNewFile,BufRead *.md let g:table_mode_corner='|'
-    autocmd BufNewFile,BufRead *.mdown let g:table_mode_corner='|'
-augroup END
-
-
 " " --------------- Unite ---------------
 " " Leaderキー
 " nnoremap    [unite]   <Nop>
@@ -84,18 +57,4 @@ if !exists('g:neocomplete#text_mode_filetypes')
                 \ }
 
 inoremap <expr><C-x>s neocomplete#start_manual_complete('look')
-
-" --------------- doorboy.vim ---------------
-"  add Japanese surrounds
-let g:doorboy_additional_quotations = {
-    \ 'markdown': ['*'],
-    \ }
-
-" let g:doorboy_additional_brackets = {
-"     \ '*': ['「」'],
-"     \ }
-
-" --------------- edgemotion ---------------
-map <C-j> <Plug>(edgemotion-j)
-map <C-k> <Plug>(edgemotion-k)
 

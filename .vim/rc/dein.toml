@@ -43,12 +43,12 @@ hook_add = '''
 [[plugins]] # diffsplitが便利になるよ
 repo = 'chrisbra/vim-diff-enhanced'
 
-[[plugins]] # :CalendarでGoogleカレンダーを開けます
-repo = 'itchyny/calendar.vim'
-hook_add = '''
-    let g:calendar_google_calendar = 1
-    let g:calendar_first_day = 'monday'
-'''
+# [[plugins]] # :CalendarでGoogleカレンダーを開けます
+# repo = 'itchyny/calendar.vim'
+# hook_add = '''
+#     let g:calendar_google_calendar = 1
+#     let g:calendar_first_day = 'monday'
+# '''
 
 [[plugins]] # 日本語IMEに影響しない括弧補完
 repo = 'itmammoth/doorboy.vim'
@@ -109,6 +109,12 @@ repo = 'mattn/sonictemplate-vim'
 repo = 'reireias/vim-cheatsheet'
 hook_add = '''
     let g:cheatsheet#cheat_file = '~/.cheatsheet.md'
+'''
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+    nmap <Leader>t<CR> :NERDTree<CR>
 '''
 
 # [[plugins]] # 英語単語の自動補完

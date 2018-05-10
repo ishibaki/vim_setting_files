@@ -24,7 +24,7 @@ on_ft = 'markdown'
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
 
-[[plugins]] # stand aloneに使えるMarkdown Previewer, Mermeid記法も使えるが，リアルタイム更新ではない
+[[plugins]] # stand aloneに使えるMarkdown Previewer, Mermeid記法も使える
 repo = 'kannokanno/previm'
 on_ft = 'markdown'
 hook_add = '''

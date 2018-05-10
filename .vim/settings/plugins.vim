@@ -1,3 +1,7 @@
+"   _  /   _  ._   _
+"  /_///_//_/// /_\ 
+" /       _/
+
 " " --------------- Unite ---------------
 " nnoremap <silent> ,vr :UniteResume<CR>
 " " vinarise

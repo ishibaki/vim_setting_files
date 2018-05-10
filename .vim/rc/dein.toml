@@ -1,11 +1,12 @@
-[[plugins]]
+[[plugins]] # plugin manager
 repo = 'Shougo/dein.vim'
 
-[[plugins]]
+[[plugins]] # Unite User Interface
 repo = 'Shougo/unite.vim'
 hook_add = '''
     nnoremap [unite] <Nop>
     nmap <Leader>u [unite]
+    nmap <Leader>u<CR> :Unite<CR>
     nnoremap <silent> [unite]u :<C-u>Unite<Space>file<CR>
     nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
     nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>
@@ -26,7 +27,7 @@ hook_add = '''
     \}
 '''
 
-[[plugins]]
+[[plugins]] # カラースキーム
 repo = 'w0ng/vim-hybrid'
 
 [[plugins]] # 括弧の操作を楽にする
@@ -101,19 +102,25 @@ hook_add = '''
     augroup END
 '''
 
-[[plugins]]
+[[plugins]] # テンプレート作成
 repo = 'mattn/sonictemplate-vim'
 
-[[plugins]]
+[[plugins]] # チートシート呼び出し
 repo = 'reireias/vim-cheatsheet'
 hook_add = '''
     let g:cheatsheet#cheat_file = '~/.cheatsheet.md'
 '''
 
-[[plugins]]
+[[plugins]] # ファイルツリー
 repo = 'scrooloose/nerdtree'
 hook_add = '''
     nmap <Leader>t<CR> :NERDTree<CR>
+'''
+
+[[plugins]]
+repo = 'mrtazz/simplenote.vim'
+hook_add = '''
+source ~/.simplenoterc
 '''
 
 # [[plugins]] # 英語単語の自動補完

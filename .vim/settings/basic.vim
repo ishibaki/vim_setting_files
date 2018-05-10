@@ -26,9 +26,8 @@ set whichwrap=b,s,<,>,[,],h,l
 autocmd BufNewFile,BufRead *.py nnoremap <C-e> :!python %
 autocmd BufNewFile,BufRead *.rb nnoremap <C-e> :!ruby %
 
-autocmd BufNewFile,BufRead *.md set filetype=markdown
-autocmd BufNewFile,BufRead *.mdown set filetype=markdown
-autocmd BufNewFile,BufRead *.markdown set filetype=markdown
+" マークダウンの拡張子設定
+autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown} set filetype=markdown
 
 " w!!でsudo保存
 cabbr w!! w !sudo tee > /dev/null %

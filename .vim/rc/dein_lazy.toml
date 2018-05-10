@@ -12,9 +12,9 @@ hook_add = '''
     let g:jedi#rename_command = "<Leader>R"
 '''
 
-[[plugins]] # Markdownプレビューワ, 先にnpm -g install instant-markdown-dが必要
-repo = 'suan/vim-instant-markdown'
-on_ft = 'markdown'
+# [[plugins]] # Markdownプレビューワ, 先にnpm -g install instant-markdown-dが必要
+# repo = 'suan/vim-instant-markdown'
+# on_ft = 'markdown'
 
 [[plugins]] # HTMLタグの自動補完
 repo = 'vim-scripts/HTML-AutoCloseTag'
@@ -23,6 +23,18 @@ on_ft = 'markdown'
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
+
+[[plugins]] # stand aloneに使えるMarkdown Previewer, Mermeid記法も使えるが，リアルタイム更新ではない
+repo = 'kannokanno/previm'
+on_ft = 'markdown'
+hook_add = '''
+    let g:previm_open_cmd = 'open -a Safari'
+    let g:previm_enable_realtime = 1
+    let g:previm_disable_default_css = 1
+    let g:previm_custom_css_path = '~/.pandoc/github.css'
+    nnoremap <silent> <Leader>P :PrevimOpen<CR>
+    autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown} PrevimOpen
+'''
 
 # [[plugins]]
 # repo = 'lambdalisue/vim-pyenv'

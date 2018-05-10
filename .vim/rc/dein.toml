@@ -1,15 +1,3 @@
-# 基本は github.com のレポジトリーを指定するだけ
-[[plugins]]
-repo = 'Shougo/dein.vim'
-
-[[plugins]] # ステータスライン
-repo = 'itchyny/lightline.vim'
-hook_add = '''
-    let g:lightline = {
-    \   'colorscheme': 'wombat'
-    \}
-'''
-
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
@@ -18,6 +6,14 @@ repo = 'Shougo/unite.vim'
 
 [[plugins]] 
 repo = 'Shougo/neocomplete.vim'
+
+[[plugins]] # ステータスライン
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+    let g:lightline = {
+    \   'colorscheme': 'wombat'
+    \}
+'''
 
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
@@ -42,13 +38,6 @@ hook_add = '''
 
 [[plugins]] # diffsplitが便利になるよ
 repo = 'chrisbra/vim-diff-enhanced'
-
-# [[plugins]] # :CalendarでGoogleカレンダーを開けます
-# repo = 'itchyny/calendar.vim'
-# hook_add = '''
-#     let g:calendar_google_calendar = 1
-#     let g:calendar_first_day = 'monday'
-# '''
 
 [[plugins]] # 日本語IMEに影響しない括弧補完
 repo = 'itmammoth/doorboy.vim'
@@ -78,8 +67,8 @@ hook_add = '''
     map <C-k> <Plug>(edgemotion-k)
 '''
 
-[[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
-repo = 'ishibaki/vim-cycle'
+# [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
+# repo = 'ishibaki/vim-cycle'
 
 [[plugins]] # vim上でプログラムの非同期実行
 repo = 'thinca/vim-quickrun'
@@ -97,8 +86,7 @@ repo = 'dhruvasagar/vim-table-mode'
 hook_add = '''
     augroup vimTableMode
         autocmd!
-        autocmd BufNewFile,BufRead *.md let g:table_mode_corner='|'
-        autocmd BufNewFile,BufRead *.mdown let g:table_mode_corner='|'
+        autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdown,markdown} let g:table_mode_corner='|'
     augroup END
 '''
 
@@ -159,3 +147,11 @@ hook_add = '''
 # 依存関係を指定したからと言って、自動でインストールはされない（ここは NeoBundle と違う）
 # [[plugins]]
 # repo = 'vim-airline/vim-airline-themes'
+
+# [[plugins]] # :CalendarでGoogleカレンダーを開けます
+# repo = 'itchyny/calendar.vim'
+# hook_add = '''
+#     let g:calendar_google_calendar = 1
+#     let g:calendar_first_day = 'monday'
+# '''
+

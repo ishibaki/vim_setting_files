@@ -115,6 +115,8 @@ hook_add = '''
 repo = 'scrooloose/nerdtree'
 hook_add = '''
     nmap <Leader>t<CR> :NERDTree<CR>
+    let NERDTreeShowBookmarks = 1
+    let NERDTreeShowHidden = 1
 '''
 
 [[plugins]]

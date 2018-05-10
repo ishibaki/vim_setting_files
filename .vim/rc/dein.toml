@@ -119,8 +119,10 @@ hook_add = '''
 
 [[plugins]]
 repo = 'mrtazz/simplenote.vim'
+# ~/.simplenotercを準備すること
 hook_add = '''
-source ~/.simplenoterc
+    source ~/.simplenoterc
+    let g:SimplenoteFiletype = 'markdown'
 '''
 
 # [[plugins]] # 英語単語の自動補完

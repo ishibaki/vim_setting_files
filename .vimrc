@@ -17,6 +17,8 @@ runtime! settings/*.vim
 " ~/.vim/settings/color.vim
 " ~/.vim/settings/keymap.vim
 " ~/.vim/settings/plugins.vim
+" ~/.vim/rc/dein.toml
+" ~/.vim/rc/dein_lazy.toml
 
 " -------------------dein.vimの設定-------------------
 " プラグインが実際にインストールされるディレクトリ

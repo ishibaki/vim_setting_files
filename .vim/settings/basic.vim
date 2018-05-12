@@ -94,7 +94,6 @@ set shiftwidth=4
 " 拡張子によってタブ文字の字下げ数を調節
 augroup fileTypeIndent
     autocmd!
-    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
@@ -144,3 +143,9 @@ command! Setpy set filetype=python
 command! Setmarkdown set filetype=markdown
 command! Setmdown set filetype=markdown
 command! Setmd set filetype=markdown
+
+" ---------------- netrw settings ----------------
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25

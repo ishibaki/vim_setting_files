@@ -125,6 +125,23 @@ repo = 'mrtazz/simplenote.vim'
 hook_add = '''
     source ~/.simplenoterc
     let g:SimplenoteFiletype = 'markdown'
+
+    :function! SimplenoteMemoFunc()
+        :SimplenoteOpen 0ea6ef57f1b5aeba17939b88039f1cd4
+        if getline("$") != ""
+            :call append(line("$"), "")
+        endif
+        :call append(line("$"), "---")
+        :call append(line("$"), "")
+        :let now_time = strftime("%Y/%m/%d %H:%M:%S", localtime())
+        :call append(line("$"), "## " . now_time)
+        :call append(line("$"), "")
+        :normal G
+        :PrevimOpen
+    :endfunction
+
+    command Memo :call SimplenoteMemoFunc()
+    command Note :call SimplenoteMemoFunc()
 '''
 
 [[plugins]]

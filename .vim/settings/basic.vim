@@ -40,7 +40,8 @@ autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown} set filetype=mark
 cabbr w!! w !sudo tee > /dev/null %
 
 " 行番号を表示
-set number
+" set number
+set relativenumber
 
 " 現在の行を強調表示
 set cursorline
@@ -68,6 +69,9 @@ set wildmode=list:longest
 
 " 入力中のコマンドを見えるようにする
 set showcmd
+
+" python設定
+let g:python3_host_prog = expand('/anaconda/bin/python')
 
 " -------------------CSVカラムのハイライト:Csvhl \d-------------------
 function! CSVH(x)

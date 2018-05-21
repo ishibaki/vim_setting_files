@@ -7,3 +7,7 @@ set guifont=Ricty\ Diminished\ Discord:h28
 set background=dark
 colorscheme hybrid
 set transparency=15
+
+" gVimでのみ効くタブ移動
+nnoremap <C-Tab> gt
+nnoremap <C-S-Tab> gT

@@ -12,6 +12,13 @@
 
 " 分割したsettingファイル.vimを一挙に読み込む
 runtime! settings/*.vim
+" Filepath, press gf to modify the setting files.
+" ~/.vim/settings/basic.vim
+" ~/.vim/settings/color.vim
+" ~/.vim/settings/keymap.vim
+" ~/.vim/settings/plugins.vim
+" ~/.vim/rc/dein.toml
+" ~/.vim/rc/dein_lazy.toml
 
 " -------------------dein.vimの設定-------------------
 " プラグインが実際にインストールされるディレクトリ

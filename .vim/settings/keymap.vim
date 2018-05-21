@@ -1,3 +1,8 @@
+"   __  __  ______ __    _ ____    __  ____    _____
+"  |  |/ / |   ___|\ \  //|    \  /  ||    \  |     |
+"  |     \ |   ___| \ \// |     \/   ||     \ |    _|
+"  |__|\__\|______| /__/  |__/\__/|__||__|\__\|___|
+
 " スペース+ドットでvimrcを開く
 nnoremap <Space>. :<C-u>tabedit $MYVIMRC<CR>
 nnoremap <Space><Space>. :<C-u>tabedit $MYVIMRC<CR>
@@ -16,7 +21,7 @@ nnoremap <Space>h ^
 nnoremap <Space><Space>h {
 
 " スペースキー+lで行末へ
-nnoremap <Space>l $
+nnoremap <Space>l g_
 
 " スペースキー+スペースキー+lで段落末へ
 nnoremap <Space><Space>l }
@@ -44,6 +49,20 @@ nnoremap <Space>o  :<C-u>for i in range(v:count1) \| call append(line('.'), '') 
 " スペースキー+Oで空行を現在行の前に挿入
 nnoremap <Space>O  :<C-u>for i in range(v:count1) \| call append(line('.')-1, '') \| endfor<CR>
 
+" ----------<Space>*によるその他のキーバインド----------
+" \nを含まない1行選択
+noremap <Space>v 0v$h
+" \nを含まない1行削除
+noremap <Space>d 0v$hx
+" \nを含まない1行コピー
+noremap <Space>y 0v$hy
+" 1行コメントアウト (# 形式)
+map <Space>co <S-i># <Esc>
+" 1行アンコメント (# 形式)
+map <Space>uc ^xx<Esc>
+" "0レジスタ(削除と関係のない，明示的ヤンクをしたレジスタ)をペースト
+map <Space>p "0p
+
 " -------------------挿入モードでの移動をemacs風に-------------------
 inoremap <C-a> <C-o>^
 inoremap <C-e> <C-o>$
@@ -62,3 +81,7 @@ vnoremap / /\v
 " ----------行の連結後にスペースをいれない----------
 " nnoremap J gJ
 " nnoremap gJ J
+
+" --------------- :terminal settings ---------------
+nnoremap :ter<CR> :vertical rightbelow terminal<CR>
+nnoremap :terminal<CR> :vertical rightbelow terminal<CR>

@@ -1,6 +1,23 @@
-# 基本は github.com のレポジトリーを指定するだけ
-[[plugins]]
+[[plugins]] # plugin manager
 repo = 'Shougo/dein.vim'
+
+[[plugins]] # Unite User Interface
+repo = 'Shougo/unite.vim'
+hook_add = '''
+    nnoremap [unite] <Nop>
+    nmap <Leader>u [unite]
+    nmap <Leader>u<CR> :Unite<CR>
+    nnoremap <silent> [unite]u :<C-u>Unite<Space>file<CR>
+    nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
+    nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>
+    nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark<CR>
+    nnoremap <silent> [unite]a :<C-u>UniteBookmardAdd<CR>
+    nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<CR>
+    nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
+'''
+
+[[plugins]] 
+repo = 'Shougo/neocomplete.vim'
 
 [[plugins]] # ステータスライン
 repo = 'itchyny/lightline.vim'
@@ -10,16 +27,7 @@ hook_add = '''
     \}
 '''
 
-[[plugins]]
-repo = 'Shougo/dein.vim'
-
-[[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]] 
-repo = 'Shougo/neocomplete.vim'
-
-[[plugins]]
+[[plugins]] # カラースキーム
 repo = 'w0ng/vim-hybrid'
 
 [[plugins]] # 括弧の操作を楽にする
@@ -33,36 +41,111 @@ repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]] # CSVなどの成型に
 repo = 'junegunn/vim-easy-align'
+# ビジュアルモードで選択し，easy-align 呼んで整形．(e.g. vip<Enter>)
+# easy-align を呼んだ上で，移動したりテキストオブジェクトを指定して整形．(e.g. gaip)
+hook_add = '''
+    vmap <Enter> <Plug>(EasyAlign)
+    nmap ga <Plug>(EasyAlign)
+'''
 
 [[plugins]] # diffsplitが便利になるよ
 repo = 'chrisbra/vim-diff-enhanced'
 
-[[plugins]] # :CalendarでGoogleカレンダーを開けます
-repo = 'itchyny/calendar.vim'
-
 [[plugins]] # 日本語IMEに影響しない括弧補完
 repo = 'itmammoth/doorboy.vim'
+hook_add = '''
+    let g:doorboy_additional_quotations = {
+    \ 'markdown': ['*'],
+    \ }
+'''
 
-# [[plugins]] # vim内移動用
-# repo = 'Lokaltog/vim-easymotion'
+[[plugins]] # vim内移動用
+repo = 'easymotion/vim-easymotion'
+# EasyMotionのleader keyを<Space>fにする
+# fコマンドを，easymotionのfモードにする
+hook_add = '''
+    let g:EasyMotion_leader_key = '<Space>f'
+    let g:EasyMotion_use_migemo = 1
+    nmap <Space>ff <Plug>(easymotion-overwin-f)
+    nmap <Space>fs <Plug>(easymotion-overwin-f2)
+    nmap <Space>ft <Plug>(easymotion-t2)
+    nmap <Space>f/ <Plug>(easymotion-sn)
+'''
 
 [[plugins]] # コードブロックでvim内移動
 repo = 'haya14busa/vim-edgemotion'
+hook_add = '''
+    map <C-j> <Plug>(edgemotion-j)
+    map <C-k> <Plug>(edgemotion-k)
+'''
 
-[[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
-repo = 'ishibaki/vim-cycle'
+# [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
+# repo = 'ishibaki/vim-cycle'
 
 [[plugins]] # vim上でプログラムの非同期実行
 repo = 'thinca/vim-quickrun'
+# <Leader>rで実行されるのでよろしく
 
 [[plugins]] # アウトラインの自動作成
 repo = 'Shougo/unite-outline'
+hook_add = '''
+    nmap <Leader>ol :Unite outline<CR>
+'''
 
 [[plugins]] # vim-table-mode
 repo = 'dhruvasagar/vim-table-mode'
+# markdownのときにはマークダウン文法の表形式に変更
+hook_add = '''
+    augroup vimTableMode
+        autocmd!
+        autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdown,markdown} let g:table_mode_corner='|'
+    augroup END
+'''
+
+[[plugins]] # テンプレート作成
+repo = 'mattn/sonictemplate-vim'
+
+[[plugins]] # チートシート呼び出し
+repo = 'reireias/vim-cheatsheet'
+hook_add = '''
+    let g:cheatsheet#cheat_file = '~/.cheatsheet.md'
+'''
+
+[[plugins]] # ファイルツリー
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+    nmap <Leader>t<CR> :NERDTree<CR>
+    let NERDTreeShowBookmarks = 1
+    let NERDTreeShowHidden = 1
+'''
 
 [[plugins]]
-repo = 'mattn/sonictemplate-vim'
+repo = 'mrtazz/simplenote.vim'
+# ~/.simplenotercを準備すること
+hook_add = '''
+    source ~/.simplenoterc
+    let g:SimplenoteFiletype = 'markdown'
+
+    :function! SimplenoteMemoFunc()
+        :SimplenoteOpen 0ea6ef57f1b5aeba17939b88039f1cd4
+        if getline("$") != ""
+            :call append(line("$"), "")
+        endif
+        :call append(line("$"), "---")
+        :call append(line("$"), "")
+        :let now_time = strftime("%Y/%m/%d %H:%M:%S", localtime())
+        :call append(line("$"), "## " . now_time)
+        :call append(line("$"), "")
+        :normal G
+        :PrevimOpen
+    :endfunction
+
+    command Memo :call SimplenoteMemoFunc()
+    command Note :call SimplenoteMemoFunc()
+'''
+
+[[plugins]]
+repo = 'yuratomo/w3m.vim'
 
 # [[plugins]] # 英語単語の自動補完
 # repo = 'ujihisa/neco-look'
@@ -106,3 +189,11 @@ repo = 'mattn/sonictemplate-vim'
 # 依存関係を指定したからと言って、自動でインストールはされない（ここは NeoBundle と違う）
 # [[plugins]]
 # repo = 'vim-airline/vim-airline-themes'
+
+# [[plugins]] # :CalendarでGoogleカレンダーを開けます
+# repo = 'itchyny/calendar.vim'
+# hook_add = '''
+#     let g:calendar_google_calendar = 1
+#     let g:calendar_first_day = 'monday'
+# '''
+

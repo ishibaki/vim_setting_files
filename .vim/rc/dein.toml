@@ -12,6 +12,7 @@ hook_add = '''
     nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer<CR>
     nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark<CR>
     nnoremap <silent> [unite]a :<C-u>UniteBookmardAdd<CR>
+    nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
 '''
 
 [[plugins]] 
@@ -143,7 +144,7 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'yuratomo/w3m.vim'
+repo = 'tpope/vim-abolish'
 
 # [[plugins]] # 英語単語の自動補完
 # repo = 'ujihisa/neco-look'
@@ -195,3 +196,5 @@ repo = 'yuratomo/w3m.vim'
 #     let g:calendar_first_day = 'monday'
 # '''
 
+# [[plugins]]
+# repo = 'yuratomo/w3m.vim'

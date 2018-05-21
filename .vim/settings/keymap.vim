@@ -83,5 +83,6 @@ vnoremap / /\v
 " nnoremap gJ J
 
 " --------------- :terminal settings ---------------
-nnoremap :ter<CR> :vertical rightbelow terminal<CR>
-nnoremap :terminal<CR> :vertical rightbelow terminal<CR>
+" nnoremap :ter<CR> :vertical rightbelow terminal<CR>
+" nnoremap :terminal<CR> :vertical rightbelow terminal<CR>
+nnoremap <Space>t<Space>t<CR> :vertical rightbelow terminal<CR>

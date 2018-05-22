@@ -30,8 +30,8 @@ set showcmd
 set whichwrap=b,s,<,>,[,],h,l
 
 " 拡張子に応じて，<C-e＞でスクリプトを実行できるようにする
-autocmd BufNewFile,BufRead *.py nnoremap <C-e> :!python %
-autocmd BufNewFile,BufRead *.rb nnoremap <C-e> :!ruby %
+autocmd BufNewFile,BufRead *.{py,python,py3,python3} nnoremap <C-e> :!python %
+autocmd BufNewFile,BufRead *.{rb,ruby} nnoremap <C-e> :!ruby %
 
 " マークダウンの拡張子設定
 autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown} set filetype=markdown
@@ -49,8 +49,8 @@ set cursorline
 " 現在の行を強調表示（縦）
 set cursorcolumn
 
-  " 行末の1文字先までカーソルを移動できるように
-  " set virtualedit=onemore
+" 行末の1文字先までカーソルを移動できるように
+" set virtualedit=onemore
 
 " インデントはスマートインデント
 set smartindent
@@ -69,6 +69,9 @@ set wildmode=list:longest
 
 " 入力中のコマンドを見えるようにする
 set showcmd
+
+" モードを見せない
+set noshowmode
 
 " python設定
 let g:python3_host_prog = expand('/anaconda/bin/python')

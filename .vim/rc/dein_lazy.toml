@@ -1,9 +1,16 @@
-# -----python設定-----
+#  _____     ______     __     __   __
+# /\  __-.  /\  ___\   /\ \   /\ "-.\ \
+# \ \ \/\ \ \ \  __\   \ \ \  \ \ \-.  \
+#  \ \____-  \ \_____\  \ \_\  \ \_\\"\_\
+#   \/____/   \/_____/   \/_/   \/_/ \/_/
+#
+#  __         ______     ______     __  __
+# /\ \       /\  __ \   /\___  \   /\ \_\ \
+# \ \ \____  \ \  __ \  \/_/  /__  \ \____ \
+#  \ \_____\  \ \_\ \_\   /\_____\  \/\_____\
+#   \/_____/   \/_/\/_/   \/_____/   \/_____/
 
-# [[plugins]]
-# repo = 'lambdalisue/vim-pyenv'
-# depends = 'davidhalter/jedi-vim'
-# on_ft = 'python'
+# -----python設定-----
 
 [[plugins]]
 repo = 'davidhalter/jedi-vim'
@@ -12,6 +19,11 @@ on_ft = 'python'
 hook_add = '''
     let g:jedi#rename_command = "<Leader>R"
 '''
+
+# [[plugins]]
+# repo = 'lambdalisue/vim-pyenv'
+# depends = 'davidhalter/jedi-vim'
+# on_ft = 'python'
 
 # [[plugins]]
 # repo = 'hynek/vim-python-pep8-indent'

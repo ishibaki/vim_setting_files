@@ -34,6 +34,9 @@ hook_add = '''
 
 [[plugins]] # カラースキーム
 repo = 'w0ng/vim-hybrid'
+hook_add = '''
+    let g:hybrid_reduced_contrast = 0
+'''
 
 [[plugins]] # 括弧の操作を楽にする
 repo = 'tpope/vim-surround'

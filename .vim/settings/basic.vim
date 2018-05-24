@@ -39,8 +39,10 @@ autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown} set filetype=mark
 " w!!でsudo保存
 cabbr w!! w !sudo tee > /dev/null %
 
-" 行番号を表示
-" set number
+" 絶対行番号を表示
+set number
+
+" 相対行番号を表示
 set relativenumber
 
 " 現在の行を強調表示

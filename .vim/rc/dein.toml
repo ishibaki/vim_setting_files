@@ -80,6 +80,10 @@ hook_add = '''
     nmap <Space>f/ <Plug>(easymotion-sn)
     nmap <Space>j <Plug>(easymotion-bd-jk)
     nmap <Space>k <Plug>(easymotion-bd-jk)
+    nmap <Space>fw <Plug>(easymotion-bd-w)
+    nmap <Space>fW <Plug>(easymotion-bd-W)
+    nmap <Space>fe <Plug>(easymotion-bd-e)
+    nmap <Space>fE <Plug>(easymotion-bd-E)
 '''
 
 [[plugins]] # コードブロックでvim内移動

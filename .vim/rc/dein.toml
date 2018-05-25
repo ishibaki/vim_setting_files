@@ -76,8 +76,10 @@ hook_add = '''
     let g:EasyMotion_use_migemo = 1
     nmap <Space>ff <Plug>(easymotion-overwin-f)
     nmap <Space>fs <Plug>(easymotion-overwin-f2)
-    nmap <Space>ft <Plug>(easymotion-t2)
+    nmap <Space>ft <Plug>(easymotion-bd-t2)
     nmap <Space>f/ <Plug>(easymotion-sn)
+    nmap <Space>j <Plug>(easymotion-bd-jk)
+    nmap <Space>k <Plug>(easymotion-bd-jk)
 '''
 
 [[plugins]] # コードブロックでvim内移動
@@ -86,9 +88,6 @@ hook_add = '''
     map <C-j> <Plug>(edgemotion-j)
     map <C-k> <Plug>(edgemotion-k)
 '''
-
-# [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
-# repo = 'ishibaki/vim-cycle'
 
 [[plugins]] # vim上でプログラムの非同期実行
 repo = 'thinca/vim-quickrun'
@@ -198,3 +197,7 @@ repo = 'tpope/vim-abolish'
 
 # [[plugins]]
 # repo = 'yuratomo/w3m.vim'
+
+# [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
+# repo = 'ishibaki/vim-cycle'
+

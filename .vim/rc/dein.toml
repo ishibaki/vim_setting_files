@@ -149,6 +149,7 @@ hook_add = '''
         :call append(line("$"), "")
         :normal G
         :PrevimOpen
+        :2quit
     :endfunction
 
     command Memo :call SimplenoteMemoFunc()

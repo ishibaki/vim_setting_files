@@ -18,7 +18,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap <Space>h ^
 
 " スペースキー+スペースキー+hで前段落頭へ
-nnoremap <Space><Space>h {-
+nnoremap <Space><Space>h 2{+
 
 " スペースキー+lで行末へ
 nnoremap <Space>l g_

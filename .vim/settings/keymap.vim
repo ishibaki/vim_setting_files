@@ -36,11 +36,20 @@ nnoremap <Space>w<CR> :w<CR>
 " スペースキー+wqで保存して終了
 nnoremap <Space>wq<CR> :wq<CR>
 
+" スペースキー+wqaで全bufferを保存して終了
+nnoremap <Space>wqa<CR> :wqa<CR>
+
 " スペースキー+wqqで強制保存終了
 " nnoremap <Space>wqq<CR> :wq!<CR>
 
 " スペースキー+qqで強制終了
 nnoremap <Space>qq<CR> :q!<CR>
+
+" スペースキー+qaで全bufferを終了
+nnoremap <Space>qa<CR> :qa<CR>
+
+" スペースキー+qqaで強制終了
+nnoremap <Space>qqa<CR> :qa!<CR>
 
 " -------------------空行の挿入コマンド------------------
 " スペースキー+oで空行を現在行の後に挿入

@@ -156,8 +156,16 @@ hook_add = '''
     command Note :call SimplenoteMemoFunc()
 '''
 
-[[plugins]] # a converter of camelCase, snake_case, and other cases
-repo = 'tpope/vim-abolish'
+
+[[plugins]] # visual選択領域の拡張
+repo = 'terryma/vim-expand-region'
+hook_add = '''
+    vmap v <Plug>(expand_region_expand)
+    vmap <C-v> <Plug>(expand_region_shrink)
+'''
+
+# [[plugins]] # a converter of camelCase, snake_case, and other cases
+# repo = 'tpope/vim-abolish'
 
 # [[plugins]] # 英語単語の自動補完
 # repo = 'ujihisa/neco-look'

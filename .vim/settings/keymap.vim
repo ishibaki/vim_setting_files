@@ -31,6 +31,9 @@ nnoremap <Space><Space>l }
 vnoremap <Silent>y y']
 vnoremap <Silent>p p']
 nnoremap <Silent>p p']
+" vnoremap <silent>y y']
+" vnoremap <silent>p p']
+" nnoremap <silent>p p']
 
 " -------------------終了/保存に関する追加コマンド-------------------
 " スペースキー+qで終了

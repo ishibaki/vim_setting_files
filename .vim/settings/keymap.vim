@@ -17,20 +17,17 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " スペースキー+hで行頭へ
 nnoremap <Space>h ^
 
-" スペースキー+スペースキー+hで段落頭へ
-nnoremap <Space><Space>h {
+" スペースキー+スペースキー+hで前段落頭へ
+nnoremap <Space><Space>h {-
 
 " スペースキー+lで行末へ
 nnoremap <Space>l g_
 
-" スペースキー+スペースキー+lで段落末へ
-nnoremap <Space><Space>l }
+" スペースキー+スペースキー+lで次段落頭へ
+nnoremap <Space><Space>l }+
 
 " -------------------- cut/pasteに関するコマンド --------------------
 " cut/pasteしたら，自動で末尾に移動する
-vnoremap <Silent>y y']
-vnoremap <Silent>p p']
-nnoremap <Silent>p p']
 " vnoremap <silent>y y']
 " vnoremap <silent>p p']
 " nnoremap <silent>p p']

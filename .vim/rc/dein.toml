@@ -76,7 +76,7 @@ hook_add = '''
     let g:EasyMotion_use_migemo = 1
     nmap <Space>ff <Plug>(easymotion-overwin-f)
     nmap <Space>fs <Plug>(easymotion-overwin-f2)
-    nmap <Space>ft <Plug>(easymotion-bd-t2)
+    nmap <Space>ft <Plug>(easymotion-bd-t)
     nmap <Space>f/ <Plug>(easymotion-sn)
     nmap <Space>j <Plug>(easymotion-bd-jk)
     nmap <Space>k <Plug>(easymotion-bd-jk)
@@ -128,6 +128,7 @@ hook_add = '''
     nmap <Leader>t<CR> :NERDTree<CR>
     let NERDTreeShowBookmarks = 1
     let NERDTreeShowHidden = 1
+    nnoremap <Silent><C-s> :NERDTreeToggle<CR>
 '''
 
 [[plugins]]

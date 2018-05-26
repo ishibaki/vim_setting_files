@@ -26,6 +26,12 @@ nnoremap <Space>l g_
 " スペースキー+スペースキー+lで段落末へ
 nnoremap <Space><Space>l }
 
+" -------------------- cut/pasteに関するコマンド --------------------
+" cut/pasteしたら，自動で末尾に移動する
+vnoremap <Silent>y y']
+vnoremap <Silent>p p']
+nnoremap <Silent>p p']
+
 " -------------------終了/保存に関する追加コマンド-------------------
 " スペースキー+qで終了
 nnoremap <Space>q<CR> :q<CR>

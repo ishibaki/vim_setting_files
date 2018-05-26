@@ -128,7 +128,7 @@ hook_add = '''
     nmap <Leader>t<CR> :NERDTree<CR>
     let NERDTreeShowBookmarks = 1
     let NERDTreeShowHidden = 1
-    nnoremap <Silent><C-s> :NERDTreeToggle<CR>
+    nnoremap <silent><C-s> :NERDTreeToggle<CR>
 '''
 
 [[plugins]]

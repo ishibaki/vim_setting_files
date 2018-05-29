@@ -104,3 +104,6 @@ vnoremap / /\v
 " nnoremap :ter<CR> :vertical rightbelow terminal<CR>
 " nnoremap :terminal<CR> :vertical rightbelow terminal<CR>
 nnoremap <Space>t<Space>t<CR> :vertical rightbelow terminal<CR>
+
+" macro editing
+nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>

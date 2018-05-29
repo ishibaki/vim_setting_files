@@ -12,7 +12,7 @@
 
 # -----python設定-----
 
-[[plugins]]
+[[plugins]] # vimのマニュアル参照
 repo = 'davidhalter/jedi-vim'
 on_ft = 'python'
 # jediにおける変数リネーム機能とquickrun実行コマンドのcompeteをクリアしておく

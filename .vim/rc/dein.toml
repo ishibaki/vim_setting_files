@@ -29,7 +29,7 @@ repo = 'itchyny/lightline.vim'
 hook_add = '''
     let g:lightline = {
     \   'colorscheme': 'wombat'
-    \}
+    \ }
 '''
 
 [[plugins]] # カラースキーム

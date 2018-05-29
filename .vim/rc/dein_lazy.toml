@@ -20,6 +20,10 @@ hook_add = '''
     let g:jedi#rename_command = "<Leader>R"
 '''
 
+[[plugins]] # text objectをpythonのdefとClassで設定できます
+repo = 'bps/vim-textobj-python'
+on_ft = 'python'
+
 # [[plugins]]
 # repo = 'lambdalisue/vim-pyenv'
 # depends = 'davidhalter/jedi-vim'

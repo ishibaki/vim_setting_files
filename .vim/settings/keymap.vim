@@ -26,6 +26,9 @@ nnoremap <Space>l g_
 " スペースキー+スペースキー+lで次段落頭へ
 nnoremap <Space><Space>l }+
 
+" 行移動をEnterで代用
+nnoremap <CR> G
+
 " -------------------- cut/pasteに関するコマンド --------------------
 " cut/pasteしたら，自動で末尾に移動する
 " vnoremap <silent>y y']

@@ -26,6 +26,9 @@ nnoremap <Space>l g_
 " スペースキー+スペースキー+lで次段落頭へ
 nnoremap <Space><Space>l }+
 
+" 行移動をEnterで代用
+nnoremap <CR> G
+
 " -------------------- cut/pasteに関するコマンド --------------------
 " cut/pasteしたら，自動で末尾に移動する
 " vnoremap <silent>y y']
@@ -101,3 +104,6 @@ vnoremap / /\v
 " nnoremap :ter<CR> :vertical rightbelow terminal<CR>
 " nnoremap :terminal<CR> :vertical rightbelow terminal<CR>
 nnoremap <Space>t<Space>t<CR> :vertical rightbelow terminal<CR>
+
+" macro editing
+nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>

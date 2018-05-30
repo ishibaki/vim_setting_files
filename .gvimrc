@@ -5,8 +5,9 @@ set columns=90
 set guifont=Ricty\ Diminished\ Discord:h28
 " set linespace=2.5
 set background=dark
-colorscheme hybrid
-set transparency=10
+colorscheme iceberg
+syntax on
+set transparency=15
 
 " gVimでのみ効くタブ移動
 nnoremap <C-Tab> gt

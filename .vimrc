@@ -59,9 +59,6 @@ if dein#check_install()
   call dein#install()
 endif
 
-" スペルチェック辞書を設定
-set spelllang=en,cjk
-set spell
-
+" これはcolor.vimに移せない
 colorscheme hybrid
 syntax on

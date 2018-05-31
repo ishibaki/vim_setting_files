@@ -29,6 +29,10 @@ nnoremap <Space><Space>l }+
 " 行移動をEnterで代用
 nnoremap <CR> G
 
+" *検索で次の単語に移動しないようにする
+nnoremap * *N
+nnoremap # #N
+
 " -------------------- cut/pasteに関するコマンド --------------------
 " cut/pasteしたら，自動で末尾に移動する
 " vnoremap <silent>y y']

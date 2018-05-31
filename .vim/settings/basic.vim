@@ -90,8 +90,8 @@ let g:python3_host_prog = expand('/anaconda/bin/python')
 
 " -------------------CSVカラムのハイライト:Csvhl \d-------------------
 function! CSVH(x)
-        execute 'match Keyword /^\([^,]*,\)\{'.a:x.'}\zs[^,]*/'
-        execute 'normal ^'.a:x.'f,'
+    execute 'match Keyword /^\([^,]*,\)\{'.a:x.'}\zs[^,]*/'
+    execute 'normal ^'.a:x.'f,'
 endfunction
 command! -nargs=1 Csvhl :call CSVH(<args>)
 

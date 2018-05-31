@@ -113,7 +113,8 @@ set shiftwidth=4
 " 拡張子によってタブ文字の字下げ数を調節
 augroup fileTypeIndent
     autocmd!
-    autocmd BufNewFile,BufRead *.html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.{html,rb,R,q} setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.{py,python,py3,python3,md,mdown,mkdn,markdown,c,h} setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
 " -------------------検索系-------------------

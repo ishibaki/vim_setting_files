@@ -122,10 +122,10 @@ hook_add = '''
 [[plugins]] # ファイルツリー
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-    nmap <Leader>t<CR> :NERDTree<CR>
+    nmap <Leader>t<CR> :NERDTreeToggle<CR>
     let NERDTreeShowBookmarks = 1
     let NERDTreeShowHidden = 1
-    nnoremap <silent><C-s> :NERDTreeToggle<CR>
+    nnoremap <Silent><C-s> :NERDTreeToggle<CR>
 '''
 
 [[plugins]]

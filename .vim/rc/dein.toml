@@ -21,6 +21,9 @@ hook_add = '''
     nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
 '''
 
+[[plugins]] # colorscheme
+repo = 'cocopon/iceberg.vim'
+
 [[plugins]]
 repo = 'Shougo/neocomplete.vim'
 
@@ -30,12 +33,6 @@ hook_add = '''
     let g:lightline = {
     \   'colorscheme': 'wombat'
     \ }
-'''
-
-[[plugins]] # カラースキーム
-repo = 'w0ng/vim-hybrid'
-hook_add = '''
-    let g:hybrid_reduced_contrast = 0
 '''
 
 [[plugins]] # 括弧の操作を楽にする
@@ -215,4 +212,10 @@ repo = 'kana/vim-textobj-line'
 
 # [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
 # repo = 'ishibaki/vim-cycle'
+
+# [[plugins]] # カラースキーム
+# repo = 'w0ng/vim-hybrid'
+# hook_add = '''
+#     let g:hybrid_reduced_contrast = 0
+# '''
 

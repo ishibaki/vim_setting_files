@@ -60,5 +60,5 @@ if dein#check_install()
 endif
 
 " これはcolor.vimに移せない
-colorscheme hybrid
+colorscheme iceberg
 syntax on

@@ -38,7 +38,7 @@ autocmd BufNewFile,BufRead *.{py,python,py3,python3} nnoremap <C-e> :!python %
 autocmd BufNewFile,BufRead *.{rb,ruby} nnoremap <C-e> :!ruby %
 
 " マークダウンの拡張子設定
-autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown} set filetype=markdown
+autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown,txt} set filetype=markdown
 
 " w!!でsudo保存
 cabbr w!! w !sudo tee > /dev/null %

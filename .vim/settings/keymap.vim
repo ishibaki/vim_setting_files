@@ -7,6 +7,10 @@
 nnoremap <Space>. :<C-u>tabedit $MYVIMRC<CR>
 nnoremap <Space><Space>. :<C-u>tabedit $MYVIMRC<CR>
 
+" スペース+コンマでGTDを拓く
+nnoremap <Space>, :tabedit ~/Dropbox/GTD/GTD.txt<CR>
+nnoremap <Space><Space>, :tabedit ~/Dropbox/GTD/GTD.txt<CR>
+
 " 挿入モードでjk入力によりノーマルモードへ戻る
 inoremap jk <Esc>
 

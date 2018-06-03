@@ -52,7 +52,7 @@ hook_add = '''
     let g:previm_disable_default_css = 1
     let g:previm_custom_css_path = '~/.pandoc/github.css'
     nnoremap <silent> <Leader>P :PrevimOpen<CR>
-    autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown,txt} PrevimOpen
+    autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown} PrevimOpen
 '''
 
 # [[plugins]] # Markdownプレビューワ, 先にnpm -g install instant-markdown-dが必要

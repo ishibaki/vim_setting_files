@@ -18,49 +18,49 @@ autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>tD :call GoToDone()<CR>
     :function! TaskDone()
         :let done_task_str = getline(".")
         :let done_task_str = done_task_str[match(done_task_str, "- ") : -1]
-        :let now_time = "; " . strftime("%Y/%m/%d", localtime())
-        :call append(line("$"), done_task_str . now_time)
+        :let now_day = "; " . strftime("%Y/%m/%d", localtime())
+        :call append(line("$"), done_task_str . now_day)
         :normal dd
     :endfunction
 
     :function! GoToInbox()
         :call search('^<a id="1_inbox"></a>')
-        :normal jjzz
+        :normal 2jzz
     :endfunction
 
     :function! GoToJustDoIt()
-        :let line_just_do_it = search('^<a id="2_just_do_it"></a>')
-        :normal jjzz
+        :call search('^<a id="2_just_do_it"></a>')
+        :normal 2jzz
     :endfunction
 
     :function! GoToNextActions()
-        :let line_next_actions = search('^<a id="3_next_actions"></a>')
-        :normal jjzz
+        :call search('^<a id="3_next_actions"></a>')
+        :normal 2jzz
     :endfunction
 
     :function! GoToProjects()
-        :let line_projects = search('^<a id="4_projects"></a>')
-        :normal jjzz
+        :call search('^<a id="4_projects"></a>')
+        :normal 2jzz
     :endfunction
 
     :function! GoToWaitingFor()
-        :let line_waiting_for = search('^<a id="5_waiting_for"></a>')
-        :normal jjzz
+        :call search('^<a id="5_waiting_for"></a>')
+        :normal 2jzz
     :endfunction
 
     :function! GoToCalendar()
-        :let line_calendar = search('^<a id="6_calendar"></a>')
-        :normal jjzz
+        :call search('^<a id="6_calendar"></a>')
+        :normal 2jzz
     :endfunction
 
     :function! GoToNotes()
-        :let line_notes = search('^<a id="7_notes"></a>')
-        :normal jjzz
+        :call search('^<a id="7_notes"></a>')
+        :normal 2jzz
     :endfunction
 
     :function! GoToDone()
-        :let line_done = search('^<a id="8_done"></a>')
-        :normal jjzz
+        :call search('^<a id="8_done"></a>')
+        :normal 2jzz
     :endfunction
 
 :endfunction

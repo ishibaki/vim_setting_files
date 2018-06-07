@@ -3,16 +3,7 @@
 " /       _/
 
 " ---------- my own ---------
-autocmd BufNewFile,BufRead GTD.txt call GenerateTaskDone()
-autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>td :call TaskDone()<CR>
-autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>ti :call GoToInbox()<CR>
-autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>tj :call GoToJustDoIt()<CR>
-autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>ta :call GoToNextActions()<CR>
-autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>tp :call GoToProjects()<CR>
-autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>tw :call GoToWaitingFor()<CR>
-autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>tc :call GoToCalendar()<CR>
-autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>tn :call GoToNotes()<CR>
-autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>tD :call GoToDone()<CR>
+autocmd BufNewFile,BufRead *GTD.txt call GenerateTaskDone()
 
 :function! GenerateTaskDone()
     :function! TaskDone()
@@ -62,6 +53,16 @@ autocmd BufNewFile,BufRead GTD.txt nnoremap <leader>tD :call GoToDone()<CR>
         :call search('^<a id="8_done"></a>')
         :normal 2jzz
     :endfunction
+
+    :nnoremap <leader>td :call TaskDone()<CR>
+    :nnoremap <leader>ti :call GoToInbox()<CR>
+    :nnoremap <leader>tj :call GoToJustDoIt()<CR>
+    :nnoremap <leader>ta :call GoToNextActions()<CR>
+    :nnoremap <leader>tp :call GoToProjects()<CR>
+    :nnoremap <leader>tw :call GoToWaitingFor()<CR>
+    :nnoremap <leader>tc :call GoToCalendar()<CR>
+    :nnoremap <leader>tn :call GoToNotes()<CR>
+    :nnoremap <leader>tD :call GoToDone()<CR>
 
 :endfunction
 

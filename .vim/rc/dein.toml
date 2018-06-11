@@ -83,13 +83,6 @@ hook_add = '''
     nmap <Space>fE <Plug>(easymotion-bd-E)
 '''
 
-[[plugins]] # コードブロックでvim内移動
-repo = 'haya14busa/vim-edgemotion'
-hook_add = '''
-    map <C-j> <Plug>(edgemotion-j)
-    map <C-k> <Plug>(edgemotion-k)
-'''
-
 [[plugins]] # vim上でプログラムの非同期実行
 repo = 'thinca/vim-quickrun'
 # <Leader>rで実行されるのでよろしく
@@ -219,3 +212,9 @@ repo = 'kana/vim-textobj-line'
 #     let g:hybrid_reduced_contrast = 0
 # '''
 
+# [[plugins]] # コードブロックでvim内移動
+# repo = 'haya14busa/vim-edgemotion'
+# hook_add = '''
+#     map <C-j> <Plug>(edgemotion-j)
+#     map <C-k> <Plug>(edgemotion-k)
+# ''' 

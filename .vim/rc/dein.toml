@@ -53,9 +53,6 @@ hook_add = '''
     nmap ga <Plug>(EasyAlign)
 '''
 
-[[plugins]] # diffsplitが便利になるよ
-repo = 'chrisbra/vim-diff-enhanced'
-
 [[plugins]] # 日本語IMEに影響しない括弧補完
 repo = 'itmammoth/doorboy.vim'
 hook_add = '''
@@ -82,10 +79,6 @@ hook_add = '''
     nmap <Space>fe <Plug>(easymotion-bd-e)
     nmap <Space>fE <Plug>(easymotion-bd-E)
 '''
-
-[[plugins]] # vim上でプログラムの非同期実行
-repo = 'thinca/vim-quickrun'
-# <Leader>rで実行されるのでよろしく
 
 [[plugins]] # アウトラインの自動作成
 repo = 'Shougo/unite-outline'

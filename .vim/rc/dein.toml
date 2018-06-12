@@ -35,6 +35,10 @@ hook_add = '''
     \ }
 '''
 
+[[plugins]] # vim上でプログラムの非同期実行
+repo = 'thinca/vim-quickrun'
+# <Leader>rで実行されるのでよろしく
+
 [[plugins]] # 括弧の操作を楽にする
 repo = 'tpope/vim-surround'
 
@@ -139,6 +143,15 @@ hook_add = '''
     command Memo :call SimplenoteMemoFunc()
     command Note :call SimplenoteMemoFunc()
 '''
+
+[[plugins]] # Text objectを新しく設定できる
+repo = 'kana/vim-textobj-user'
+
+[[plugins]] # indentの中身をモーション範囲に
+repo = 'kana/vim-textobj-indent'
+
+[[plugins]] # その行をモーション範囲に
+repo = 'kana/vim-textobj-line'
 
 # [[plugins]] # a converter of camelCase, snake_case, and other cases
 # repo = 'tpope/vim-abolish'

@@ -10,19 +10,6 @@
 #  \ \_____\  \ \_\ \_\   /\_____\  \/\_____\
 #   \/_____/   \/_/\/_/   \/_____/   \/_____/
 
-[[plugins]] # vim上でプログラムの非同期実行
-repo = 'thinca/vim-quickrun'
-# <Leader>rで実行されるのでよろしく
-
-[[plugins]] # Text objectを新しく設定できる
-repo = 'kana/vim-textobj-user'
-
-[[plugins]] # indentの中身をモーション範囲に
-repo = 'kana/vim-textobj-indent'
-
-[[plugins]] # その行をモーション範囲に
-repo = 'kana/vim-textobj-line'
-
 # -----python設定-----
 
 [[plugins]] # vimのマニュアル参照

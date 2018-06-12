@@ -52,8 +52,8 @@ on_ft = 'python'
 
 # ----- markdown関連 -----
 
-[[plugins]] # HTMLタグの自動補完
-repo = 'vim-scripts/HTML-AutoCloseTag'
+[[plugins]]
+repo = 'alvan/vim-closetag'
 on_ft = ['markdown', 'html']
 
 [[plugins]] # stand aloneに使えるMarkdown Previewer, Mermeid記法も使える
@@ -79,6 +79,10 @@ hook_add = '''
 #     let g:vim_markdown_frontmatter = 1
 #     let g:vim_markdown_math = 1
 # '''
+
+# [[plugins]] # HTMLタグの自動補完
+# repo = 'vim-scripts/HTML-AutoCloseTag'
+# on_ft = ['markdown', 'html']
 
 # ----- その他 -----
 

@@ -1,0 +1,542 @@
+# この viminfo ファイルは Vim 8.0 によって生成されました.
+# 変更する際には十分注意してください!
+
+# Viminfo version
+|1,4
+
+# このファイルが書かれた時の 'encoding' の値
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# 最後の 検索パターン:
+~MSle0~/\vbookmarks
+
+# コマンドライン 項目の履歴 (新しいものから古いものへ):
+:Startify
+|2,0,1529905323,,"Startify"
+:h G
+|2,0,1529905159,,"h G"
+:kkk
+|2,0,1529905099,,"kkk"
+:h startif
+|2,0,1529905052,,"h startif"
+:h startify
+|2,0,1529904795,,"h startify"
+:kkkkk
+|2,0,1529904702,,"kkkkk"
+:1
+|2,0,1529904619,,"1"
+:j
+|2,0,1529904127,,"j"
+::a
+|2,0,1529903826,,":a"
+::j
+|2,0,1529903432,,":j"
+:R
+|2,0,1529903367,,"R"
+:h
+|2,0,1529903189,,"h"
+:tabe
+|2,0,1529902347,,"tabe"
+:gg
+|2,0,1529902296,,"gg"
+:kkkkkkkkkkkk
+|2,0,1529902215,,"kkkkkkkkkkkk"
+::
+|2,0,1529902003,,":"
+:h ctrl-w_+
+|2,0,1529898471,,"h ctrl-w_+"
+:h window-size
+|2,0,1529898383,,"h window-size"
+:h window max
+|2,0,1529898378,,"h window max"
+:h zz
+|2,0,1529897986,,"h zz"
+:H zz
+|2,0,1529897983,,"H zz"
+:h startify-faq-02
+|2,0,1529897714,,"h startify-faq-02"
+
+# 検索文字列 項目の履歴 (新しいものから古いものへ):
+?/\vbookmarks
+|2,1,1529905118,47,"\\vbookmarks"
+?/\vheader
+|2,1,1529904832,47,"\\vheader"
+?/\v
+|2,1,1529904811,47,"\\v"
+?/\vcommands
+|2,1,1529904798,47,"\\vcommands"
+?/\vstart
+|2,1,1529904130,47,"\\vstart"
+? \<DNNN\>
+|2,1,1529903649,,"\\<DNNN\\>"
+?/\vstarty
+|2,1,1529897891,47,"\\vstarty"
+
+# 式 項目の履歴 (新しいものから古いものへ):
+
+# 入力行 項目の履歴 (新しいものから古いものへ):
+
+# デバッグ行 項目の履歴 (新しいものから古いものへ):
+
+# レジスタ:
+""0	CHAR	0
+	 
+|3,1,0,0,1,0,1529905230," "
+"1	LINE	0
+	
+	
+	 
+	 
+	
+	            
+	
+	
+|3,0,1,1,8,0,1529904771,"",""," "," ","","            ","",""
+"2	BLOCK	10
+	   __(__  )
+	   _/____( 
+	         |/
+	           
+	           
+|3,0,2,2,5,10,1529904663,"   __(__  )","   _/____( ","         |/","           ","           "
+"3	BLOCK	0
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+|3,0,3,2,8,0,1529904637," "," "," "," "," "," "," "," "
+"4	BLOCK	5
+	__  __
+	\ \/ /
+	 \  / 
+	 / /  
+	/_/\__
+	      
+	      
+	      
+|3,0,4,2,8,5,1529904634,"__  __","\\ \\/ /"," \\  / "," / /  ","/_/\\__","      ","      ","      "
+"5	BLOCK	0
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+|3,0,5,2,8,0,1529904557," "," "," "," "," "," "," "," "
+"6	LINE	0
+	__  __
+|3,0,6,1,1,0,1529904427,"__  __"
+"7	LINE	0
+	
+|3,0,7,1,1,0,1529904100,""
+"8	LINE	0
+	
+	let g:startify_custom_footer = [
+	    \ '                     ..',
+	    \ '                   .::::.',
+	    \ '       _________ ,:;;;;: ____________',
+	    \ '       \......,/.:?????L \,........_/',
+	    \ '        |.....| ????????> :.......`',
+	    \ '        |:::::| $$$$$$:`.:::::::` ,',
+	    \ '       ,|:::::| $$$$:`.:::::::` .OOS.',
+	    \ '     ,7D|;;;;;| $$:`.;;;;;;;` .OOOBBBS.',
+	    \ '   .GDDD|;;;;;| ?`.;;;;;;;` .OOBDDDDDNNS.',
+	    \ '    `DDD|IIIII| .7IIIII7` .DDDDDDDDNNNF`',
+	    \ '      `D|IIIIII7IIIII7` .DDDDDDDNNNNF`',
+	    \ '        |EEEEEEEEEE7` .DDDDDDDDNNNF`',
+	    \ '        |EEEEEEEEZ` .DDDDDDDDNNNF`',
+	    \ '        |BBBBBBZ` .DDDDDDDNNNNF`',
+	    \ '        |BBBBZ` ,DDDDDDDNNNNF`',
+	    \ '        |BBZ`    "DNNNNNNN`',
+	    \ '        `~`        "MMMM`',
+	    \ '                     ""',
+	    \ ]
+	'''
+|3,0,8,1,22,0,1529904099,"","let g:startify_custom_footer = [","    \\ '                     ..',","    \\ '                   .::::.',","    \\ '       _________ ,:;;;;: ____________',","    \\ '       \\......,/.:?????L \\,........_/',","    \\ '        |.....| ????????> :.......`',","    \\ '        |:::::| $$$$$$:`.:::::::` ,',","    \\ '       ,|:::::| $$$$:`.:::::::` .OOS.',","    \\ '     ,7D|;;;;;| $$:`.;;;;;;;` .OOOBBBS.',",>53
+|<"    \\ '   .GDDD|;;;;;| ?`.;;;;;;;` .OOBDDDDDNNS.',","    \\ '    `DDD|IIIII| .7IIIII7` .DDDDDDDDNNNF`',","    \\ '      `D|IIIIII7IIIII7` .DDDDDDDNNNNF`',","    \\ '        |EEEEEEEEEE7` .DDDDDDDDNNNF`',","    \\ '        |EEEEEEEEZ` .DDDDDDDDNNNF`',","    \\ '        |BBBBBBZ` .DDDDDDDNNNNF`',","    \\ '        |BBBBZ` ,DDDDDDDNNNNF`',","    \\ '        |BBZ`    \"DNNNNNNN`',","    \\ '        `~`        \"MMMM`',","    \\ '                     \"\"',","    \\ ]","'''"
+"9	LINE	0
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+|3,0,9,1,15,0,1529904091,"","","","","","","","","","","","","","",""
+"q@	CHAR	0
+	�K6
+|3,2,26,0,1,0,1529898366,"�K6"
+"-	CHAR	0
+	' '
+|3,0,36,0,1,0,1529905230,"' '"
+
+# ファイルマーク:
+'0  35  0  ~/NERD_tree_1
+|4,48,35,0,1529905336,"~/NERD_tree_1"
+'1  168  68  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,49,168,68,1529905308,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+'2  168  68  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,50,168,68,1529905308,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+'3  168  84  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,51,168,84,1529905028,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+'4  168  84  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,52,168,84,1529905028,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+'5  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,53,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+'6  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,54,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+'7  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,55,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+'8  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,56,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+'9  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,57,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+
+# ジャンプリスト (新しいものが先):
+-'  35  0  ~/NERD_tree_1
+|4,39,35,0,1529905336,"~/NERD_tree_1"
+-'  35  0  ~/NERD_tree_1
+|4,39,35,0,1529905336,"~/NERD_tree_1"
+-'  36  2  ~/NERD_tree_1
+|4,39,36,2,1529905332,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1529905332,"~/NERD_tree_1"
+-'  36  2  ~/NERD_tree_1
+|4,39,36,2,1529905332,"~/NERD_tree_1"
+-'  1  0  ~/NERD_tree_1
+|4,39,1,0,1529905332,"~/NERD_tree_1"
+-'  254  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,254,0,1529905323,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  254  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,254,0,1529905323,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  21  0  ~/.vimrc
+|4,39,21,0,1529905315,"~/.vimrc"
+-'  21  0  ~/.vimrc
+|4,39,21,0,1529905315,"~/.vimrc"
+-'  168  68  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,168,68,1529905308,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  168  68  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,168,68,1529905308,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  168  68  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,168,68,1529905308,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  168  68  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,168,68,1529905308,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  168  84  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,168,84,1529905028,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  168  84  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,168,84,1529905028,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  45  4  ~/Startify
+|4,39,45,4,1529904756,"~/Startify"
+-'  16  4  ~/Startify
+|4,39,16,4,1529904709,"~/Startify"
+-'  37  0  ~/Startify
+|4,39,37,0,1529904691,"~/Startify"
+-'  1  0  ~/Startify
+|4,39,1,0,1529904691,"~/Startify"
+-'  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  188  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,188,32,1529904690,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  185  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,185,32,1529904656,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  185  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,185,32,1529904656,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  185  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,185,32,1529904656,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  185  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,185,32,1529904656,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  185  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,185,32,1529904656,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  185  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,185,32,1529904656,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  185  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,185,32,1529904656,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  185  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,185,32,1529904656,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  185  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,185,32,1529904656,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  185  32  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,185,32,1529904656,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  262  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,262,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  254  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,254,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  262  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,262,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  254  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,254,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  262  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,262,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  262  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,262,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  262  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,262,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  254  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,254,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  262  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,262,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  254  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,254,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  262  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,262,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  262  0  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,262,0,1529904623,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  186  37  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,186,37,1529904621,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  186  37  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,186,37,1529904621,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  186  37  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,186,37,1529904621,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  186  37  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,186,37,1529904621,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  186  37  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,186,37,1529904621,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  186  37  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,186,37,1529904621,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  186  37  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,186,37,1529904621,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  186  37  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,186,37,1529904621,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  186  37  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,186,37,1529904621,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  186  37  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,186,37,1529904621,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  584  0  ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+|4,39,584,0,1529904612,"~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt"
+-'  16  4  ~/Startify
+|4,39,16,4,1529904592,"~/Startify"
+-'  37  0  ~/Startify
+|4,39,37,0,1529904255,"~/Startify"
+-'  1  0  ~/Startify
+|4,39,1,0,1529904255,"~/Startify"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+-'  190  21  ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+|4,39,190,21,1529904254,"~/dotfiles/vim_setting_files/.vim/rc/dein.toml"
+
+# ファイル内マークの履歴 (新しいものから古いもの):
+
+> ~/NERD_tree_1
+	*	1529905334	0
+	"	35	0
+	.	1	0
+	+	1	0
+
+> ~/dotfiles/vim_setting_files/.vim/rc/dein.toml
+	*	1529905316	0
+	"	254	0
+	^	168	129
+	.	168	49
+	+	179	0
+	+	178	46
+	+	179	0
+	+	177	46
+	+	191	7
+	+	192	0
+	+	177	31
+	+	191	6
+	+	179	0
+	+	192	31
+	+	192	6
+	+	192	0
+	+	178	7
+	+	179	7
+	+	181	7
+	+	182	7
+	+	180	7
+	+	183	7
+	+	179	0
+	+	184	0
+	+	185	0
+	+	186	0
+	+	187	0
+	+	188	0
+	+	189	0
+	+	190	0
+	+	192	0
+	+	178	8
+	+	179	0
+	+	178	23
+	+	179	32
+	+	180	33
+	+	181	32
+	+	182	30
+	+	183	32
+	+	185	32
+	+	186	30
+	+	187	28
+	+	188	26
+	+	189	24
+	+	190	22
+	+	192	0
+	+	187	17
+	+	186	19
+	+	187	0
+	+	188	15
+	+	187	17
+	+	186	19
+	+	187	17
+	+	186	0
+	+	188	19
+	+	190	21
+	+	192	5
+	+	192	14
+	+	192	22
+	+	192	30
+	+	182	36
+	+	192	0
+	+	182	37
+	+	192	0
+	+	183	35
+	+	192	0
+	+	184	37
+	+	192	0
+	+	185	37
+	+	192	0
+	+	186	36
+	+	192	11
+	+	187	47
+	+	192	0
+	+	188	48
+	+	192	0
+	+	189	47
+	+	182	35
+	+	183	40
+	+	184	39
+	+	185	38
+	+	183	0
+	+	182	30
+	+	183	32
+	+	184	34
+	+	185	0
+	+	184	34
+	+	185	32
+	+	186	32
+	+	185	33
+	+	186	0
+	+	192	0
+	+	165	30
+	+	163	29
+	+	162	30
+	+	161	97
+	+	163	96
+	+	164	96
+	+	165	96
+	+	159	30
+	+	168	49
+
+> ~/.vimrc
+	*	1529905314	0
+	"	21	0
+
+> ~/dotfiles/vim_setting_files/.vim/doc/motion.jax
+	*	1529905163	0
+	"	322	7
+
+> ~/.cache/dein/.cache/.vimrc/.dein/doc/startify.txt
+	*	1529905123	0
+	"	243	19
+
+> ~/dotfiles/vim_setting_files/.vim/doc/windows.jax
+	*	1529898511	0
+	"	550	55
+
+> ~/dotfiles/vim_setting_files/.vim/doc/term.jax
+	*	1529898388	0
+	"	626	78
+
+> ~/dotfiles/vim_setting_files/.vim/doc/scroll.jax
+	*	1529898009	0
+	"	140	0
+
+> ~/dotfiles/vim_setting_files/.vim/settings/basic.vim
+	*	1529897778	0
+	"	16	29
+	^	16	23
+	.	16	22
+	+	16	22

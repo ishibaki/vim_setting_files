@@ -12,6 +12,9 @@ set fenc=utf-8
 set spelllang=en,cjk
 set spell
 
+" viminfoの場所を指定
+set viminfo='100,n$HOME/.vim/info/viminfo
+
 " バックアップファイルを作らない
 " set nobackup
 

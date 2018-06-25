@@ -15,6 +15,7 @@ tags
 .vim/doc
 .vim/syntax
 .vim/ftplugin
+.vim/info
 init.vim
 
 .vim/info/viminfo

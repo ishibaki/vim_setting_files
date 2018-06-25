@@ -172,11 +172,11 @@ let g:startify_custom_header = [
     \ '     |::::| $$` .:::;`.',
     \ '    .|;;;;| $ .;;;;` .OS.',
     \ '   .G|IIII| .III7` .ADNNF`.',
-    \ '    "|EEEEEEEE7` .ADDNF`.  ,_    ___',
-    \ '     |BBBBBBI` .ADDDN`.    | |  / (_)___ ___',
-    \ '     |MMMMI` .ADDNN`.      | | / / / __ `__ \',
-    \ '     |MMI` *ADNNN`.        | |/ / / / / / / /',
-    \ '     `-`     "M`.          |___/_/_/ /_/ /_/',
+    \ '    "|EEEEEEEE7` .ADDNF`.',
+    \ '     |BBBBBBI` .ADDDN`.',
+    \ '     |MMMMI` .ADDNN`.',
+    \ '     |MMI` *ADNNN`.',
+    \ '     `-`     "M`.     Vim 8.0',
     \ '              `',
     \ ]
 

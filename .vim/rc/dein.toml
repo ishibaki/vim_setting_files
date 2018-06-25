@@ -170,15 +170,25 @@ let g:startify_custom_header = [
     \ '    \....../.:?L \.......\',
     \ '     |::::| ????` :::::.`',
     \ '     |::::| $$` .:::;`.',
-    \ '    .|;;;;| $ .;;;;` .OS.',
-    \ '   .G|IIII| .III7` .ADNNF`.',
-    \ '    "|EEEEEEEE7` .ADDNF`.',
-    \ '     |BBBBBBI` .ADDDN`.',
-    \ '     |MMMMI` .ADDNN`.',
+    \ '    .|;;;;| $ .;;;;` ,OS.',
+    \ '   .G|IIII| .III7` ,ADNNF`.',
+    \ '    "|EEEEEEEE7` ,ADDNF`.',
+    \ '     |BBBBBBI` ,ADDDN`.',
+    \ '     |MMMMI` ,ADDNN`.',
     \ '     |MMI` *ADNNN`.',
-    \ '     `-`     "M`.     Vim 8.0',
+    \ '     `-`    `;M`.     Vim 8.0',
     \ '              `',
     \ ]
+'''
+
+[[plugins]] # vim上でプログラムの非同期実行
+repo = 'thinca/vim-quickrun'
+# <Leader>rで実行されるのでよろしく
+
+[[plugins]] # アウトラインの自動作成
+repo = 'Shougo/unite-outline'
+hook_add = '''
+    nmap <Leader>ol :Unite outline -vertical<CR>
 '''
 
 # [[plugins]] # a converter of camelCase, snake_case, and other cases

@@ -17,5 +17,5 @@ tags
 .vim/ftplugin
 init.vim
 
-
+.vim/info/viminfo
 .vim/vim_cover.txt

@@ -153,6 +153,43 @@ repo = 'kana/vim-textobj-indent'
 [[plugins]] # その行をモーション範囲に
 repo = 'kana/vim-textobj-line'
 
+[[plugins]] # 表紙でMRUとか出す
+repo = 'mhinz/vim-startify'
+hook_add = '''
+let g:startify_files_number = 5
+let g:startify_lists = [
+      \ { 'type': 'files',     'header': ['   === Most Recently Used Files ==='                  ]},
+      \ { 'type': 'dir',       'header': ['   === Most Recently Used Files in '. getcwd(). ' ===']},
+      \ { 'type': 'sessions',  'header': ['   === Sessions ==='                                  ]},
+      \ { 'type': 'bookmarks', 'header': ['   === Bookmarks ==='                                 ]},
+      \ { 'type': 'commands',  'header': ['   === Commands ==='                                  ]},
+      \ ]
+
+let g:startify_bookmarks = [{"v": "~/.vimrc"}, {"s": "~/Dropbox/GTD/GTD.txt"}, {"d": "~/Desktop"}, {"~": "~"}, {"x": "~/Dropbox"},]
+
+function! s:filter_header(lines) abort
+    let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
+    let centered_lines = map(copy(a:lines),
+        \ 'repeat(" ", (&columns / 2) - (longest_line / 2)) . v:val')
+    return centered_lines
+endfunction
+
+let g:startify_custom_header = [
+    \ '              ,,',
+    \ '    ________.:::.________',
+    \ '    \....../.:?L \.......\',
+    \ '     |::::| ????` :::::.`',
+    \ '     |::::| $$` .:::;`.',
+    \ '    .|;;;;| $ .;;;;` .OS.',
+    \ '   .G|IIII| .III7` .ADNNF`.',
+    \ '    "|EEEEEEEE7` .ADDNF`.  ,_    ___',
+    \ '     |BBBBBBI` .ADDDN`.    | |  / (_)___ ___',
+    \ '     |MMMMI` .ADDNN`.      | | / / / __ `__ \',
+    \ '     |MMI` *ADNNN`.        | |/ / / / / / / /',
+    \ '     `-`     "M`.          |___/_/_/ /_/ /_/',
+    \ '              `',
+    \ ]
+
 # [[plugins]] # a converter of camelCase, snake_case, and other cases
 # repo = 'tpope/vim-abolish'
 

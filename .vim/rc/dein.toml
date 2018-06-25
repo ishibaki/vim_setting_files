@@ -35,10 +35,6 @@ hook_add = '''
     \ }
 '''
 
-[[plugins]] # vim上でプログラムの非同期実行
-repo = 'thinca/vim-quickrun'
-# <Leader>rで実行されるのでよろしく
-
 [[plugins]] # 括弧の操作を楽にする
 repo = 'tpope/vim-surround'
 
@@ -82,12 +78,6 @@ hook_add = '''
     nmap <Space>fW <Plug>(easymotion-bd-W)
     nmap <Space>fe <Plug>(easymotion-bd-e)
     nmap <Space>fE <Plug>(easymotion-bd-E)
-'''
-
-[[plugins]] # アウトラインの自動作成
-repo = 'Shougo/unite-outline'
-hook_add = '''
-    nmap <Leader>ol :Unite outline -vertical<CR>
 '''
 
 [[plugins]] # vim-table-mode

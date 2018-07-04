@@ -140,9 +140,11 @@ repo = 'kana/vim-textobj-user'
 
 [[plugins]] # indentの中身をモーション範囲に
 repo = 'kana/vim-textobj-indent'
+depends = 'vim-textobj-user'
 
 [[plugins]] # その行をモーション範囲に
 repo = 'kana/vim-textobj-line'
+depends = 'vim-textobj-user'
 
 [[plugins]] # 表紙でMRUとか出す
 repo = 'mhinz/vim-startify'

@@ -138,15 +138,15 @@ set hlsearch
 
 "-------------------ビジュアル選択範囲で検索を可能にする-------------------
 "ビジュアルモードには適応されるが選択モードではノーマルモードでは適応されないようにキーをリマップ
-xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
-xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
-"選択領域で検索
-function! s:VSetSearch()
-    let temp = @s
-    norm! gv"sy
-    let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
-    let @s = temp
-endfunction
+" xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
+" xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
+" "選択領域で検索
+" function! s:VSetSearch()
+"     let temp = @s
+"     norm! gv"sy
+"     let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+"     let @s = temp
+" endfunction
 
 " インデントガイドを常にON
 let g:indent_guides_enable_on_vim_startup = 1

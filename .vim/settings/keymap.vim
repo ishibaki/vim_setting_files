@@ -78,10 +78,6 @@ noremap <Space>v 0v$h
 noremap <Space>d 0v$hx
 " \nを含まない1行コピー
 noremap <Space>y 0v$hy
-" 1行コメントアウト (# 形式)
-map <Space>co <S-i># <Esc>
-" 1行アンコメント (# 形式)
-map <Space>uc ^xx<Esc>
 " "0レジスタ(削除と関係のない，明示的ヤンクをしたレジスタ)をペースト
 map <Space>p "0p
 

@@ -80,3 +80,10 @@ on_ft = 'toml'
 [[plugins]] # diffsplitが便利になるよ
 repo = 'chrisbra/vim-diff-enhanced'
 
+[[plugins]]
+repo = 'tyru/caw.vim'
+on_ft = ['python', 'html', 'markdown', 'vim']
+hook_add = '''
+    nmap gcc <Plug>(caw:wrap:toggle)
+    vmap gcc <Plug>(caw:wrap:toggle)
+'''

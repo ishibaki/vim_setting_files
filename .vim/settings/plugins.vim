@@ -54,6 +54,7 @@ autocmd BufNewFile,BufRead *GTD.txt call GenerateTaskDone()
         :normal 2jzz
     :endfunction
 
+    " key mapping
     :nnoremap <leader>td :call TaskDone()<CR>
     :nnoremap <leader>ti :call GoToInbox()<CR>
     :nnoremap <leader>tj :call GoToJustDoIt()<CR>

@@ -82,7 +82,7 @@ repo = 'chrisbra/vim-diff-enhanced'
 
 [[plugins]]
 repo = 'tyru/caw.vim'
-on_ft = ['python', 'html', 'markdown', 'vim']
+on_ft = ['python', 'html', 'markdown', 'vim', 'toml', 'zsh']
 hook_add = '''
     nmap gcc <Plug>(caw:wrap:toggle)
     vmap gcc <Plug>(caw:wrap:toggle)

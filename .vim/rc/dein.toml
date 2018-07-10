@@ -8,7 +8,7 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]] # Unite User Interface
-repo = 'Shougo/unite.vim'
+repo = 'Shougo/unite.vim'# {{{
 hook_add = '''
     nnoremap [unite] <Nop>
     nmap <Leader>u [unite]
@@ -19,7 +19,7 @@ hook_add = '''
     nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark -vertical<CR>
     nnoremap <silent> [unite]a :<C-u>UniteBookmardAdd<CR>
     nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
-'''
+'''# }}}
 
 [[plugins]] # colorscheme
 repo = 'cocopon/iceberg.vim'
@@ -28,12 +28,12 @@ repo = 'cocopon/iceberg.vim'
 repo = 'Shougo/neocomplete.vim'
 
 [[plugins]] # ステータスライン
-repo = 'itchyny/lightline.vim'
+repo = 'itchyny/lightline.vim'# {{{
 hook_add = '''
     let g:lightline = {
     \   'colorscheme': 'iceberg'
     \ }
-'''
+'''# }}}
 
 [[plugins]] # 括弧の操作を楽にする
 repo = 'tpope/vim-surround'
@@ -45,24 +45,24 @@ repo = 'bronson/vim-trailing-whitespace'
 repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]] # CSVなどの成型に
-repo = 'junegunn/vim-easy-align'
+repo = 'junegunn/vim-easy-align'# {{{
 # ビジュアルモードで選択し，easy-align 呼んで整形．(e.g. vip<Enter>)
 # easy-align を呼んだ上で，移動したりテキストオブジェクトを指定して整形．(e.g. gaip)
 hook_add = '''
     vmap <Enter> <Plug>(EasyAlign)
     nmap ga <Plug>(EasyAlign)
-'''
+'''# }}}
 
 [[plugins]] # 日本語IMEに影響しない括弧補完
-repo = 'itmammoth/doorboy.vim'
+repo = 'itmammoth/doorboy.vim'# {{{
 hook_add = '''
     let g:doorboy_additional_quotations = {
     \ 'markdown': ['*'],
     \ }
-'''
+'''# }}}
 
 [[plugins]] # vim内移動用
-repo = 'easymotion/vim-easymotion'
+repo = 'easymotion/vim-easymotion'# {{{
 # EasyMotionのleader keyを<Space>fにする
 # fコマンドを，easymotionのfモードにする
 hook_add = '''
@@ -79,38 +79,38 @@ hook_add = '''
     nmap <Space>fW <Plug>(easymotion-bd-W)
     nmap <Space>fe <Plug>(easymotion-bd-e)
     nmap <Space>fE <Plug>(easymotion-bd-E)
-'''
+'''# }}}
 
 [[plugins]] # vim-table-mode
-repo = 'dhruvasagar/vim-table-mode'
+repo = 'dhruvasagar/vim-table-mode'# {{{
 # markdownのときにはマークダウン文法の表形式に変更
 hook_add = '''
     augroup vimTableMode
         autocmd!
         autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdown,markdown} let g:table_mode_corner='|'
     augroup END
-'''
+'''# }}}
 
 [[plugins]] # テンプレート作成
 repo = 'mattn/sonictemplate-vim'
 
 [[plugins]] # チートシート呼び出し
-repo = 'reireias/vim-cheatsheet'
+repo = 'reireias/vim-cheatsheet'# {{{
 hook_add = '''
     let g:cheatsheet#cheat_file = '~/.cheatsheet.md'
-'''
+'''# }}}
 
 [[plugins]] # ファイルツリー
-repo = 'scrooloose/nerdtree'
+repo = 'scrooloose/nerdtree'# {{{
 hook_add = '''
     nmap <Leader>t<CR> :NERDTreeToggle<CR>
     let NERDTreeShowBookmarks = 1
     let NERDTreeShowHidden = 1
     nnoremap <silent><C-s> :NERDTreeToggle<CR>
-'''
+'''# }}}
 
 [[plugins]]
-repo = 'mrtazz/simplenote.vim'
+repo = 'mrtazz/simplenote.vim'# {{{
 # ~/.simplenotercを準備すること
 hook_add = '''
     source ~/.simplenoterc
@@ -133,7 +133,7 @@ hook_add = '''
 
     command Memo :call SimplenoteMemoFunc()
     command Note :call SimplenoteMemoFunc()
-'''
+'''# }}}
 
 [[plugins]] # Text objectを新しく設定できる
 repo = 'kana/vim-textobj-user'
@@ -147,7 +147,7 @@ repo = 'kana/vim-textobj-line'
 depends = 'vim-textobj-user'
 
 [[plugins]] # 表紙でMRUとか出す
-repo = 'mhinz/vim-startify'
+repo = 'mhinz/vim-startify'# {{{
 hook_add = '''
 let g:startify_files_number = 5
 let g:startify_lists = [
@@ -182,26 +182,26 @@ let g:startify_custom_header = [
     \ '     `-`    `;MM;`    Vim 8.0',
     \ '              ``',
     \ ]
-'''
+'''# }}}
 
 [[plugins]] # vim上でプログラムの非同期実行
 repo = 'thinca/vim-quickrun'
 # <Leader>rで実行されるのでよろしく
 
 [[plugins]] # アウトラインの自動作成
-repo = 'Shougo/unite-outline'
+repo = 'Shougo/unite-outline'# {{{
 hook_add = '''
     nmap <Leader>ol :Unite outline -vertical<CR>
-'''
+'''# }}}
 
 [[plugins]] # asterisk検索をちょっと便利に
-repo = 'haya14busa/vim-asterisk'
+repo = 'haya14busa/vim-asterisk'# {{{
 hook_add = '''
     map *  <Plug>(asterisk-z*)
     map #  <Plug>(asterisk-z#)
     map g* <Plug>(asterisk-gz*)
     map g# <Plug>(asterisk-gz#)
-'''
+'''# }}}
 
 
 # [[plugins]] # a converter of camelCase, snake_case, and other cases
@@ -266,3 +266,5 @@ hook_add = '''
 #     map <C-j> <Plug>(edgemotion-j)
 #     map <C-k> <Plug>(edgemotion-k)
 # '''
+
+# vim: set foldmethod=marker :

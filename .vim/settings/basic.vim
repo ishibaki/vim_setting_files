@@ -13,7 +13,7 @@ set spelllang=en,cjk
 set spell
 
 " viminfoの場所を指定
-set viminfo='100,n$HOME/.vim/info/viminfo
+set viminfo='2000,f1,<500,:1000,@500,/500,n$HOME/.vim/info/viminfo
 
 " バックアップファイルを作らない
 " set nobackup

@@ -111,3 +111,8 @@ nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v
 " --------------- bufferの切り替え ---------------
 nnoremap <silent>[b :bprev<CR>
 nnoremap <silent>]b :bnext<CR>
+
+" -------- visual modeでindentしたときにnormal modeへ戻らない -------
+" ドットによる繰り返しもできるが，個人的な直感ではこっちが好き
+xnoremap > >gv
+xnoremap < <gv

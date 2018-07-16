@@ -203,19 +203,22 @@ hook_add = '''
     map g# <Plug>(asterisk-gz#)
 '''# }}}
 
-
-# [[plugins]] # a converter of camelCase, snake_case, and other cases
+# 使っていない設定 {{{
+# [[plugins]] # a converter of camelCase, snake_case, and other cases {{{
 # repo = 'tpope/vim-abolish'
+# }}}
 
-# [[plugins]] # 英語単語の自動補完
+# [[plugins]] # 英語単語の自動補完 {{{
 # repo = 'ujihisa/neco-look'
 # on_i = 1
 # depends = 'neocomplete.vim'
+# }}}
 
-# [[plugins]] # メモ用プラグイン
+# [[plugins]] # メモ用プラグイン {{{
 # repo = 'glidenote/memolist.vim'
+# }}}
 
-# git clone 後、実行すべきコマンドがある場合はこんな感じ
+# git clone 後、実行すべきコマンドがある場合はこんな感じ {{{
 # [[plugins]]
 # repo = 'Shougo/vimproc.vim'
 # hook_post_update = '''
@@ -230,41 +233,50 @@ hook_add = '''
 #   endif
 #   let g:dein#plugin.build = cmd
 # '''
+# }}}
 
-# ブランチやタグを指定したいとき
+# ブランチやタグを指定したいとき {{{
 # [[plugins]]
 # repo = 'delphinus35/typescript-vim'
 # rev  = 'colorize-template-strings'
+# }}}
 
-# 特定の条件で読み込みたいとき
+# 特定の条件で読み込みたいとき {{{
 # [[plugins]]
 # repo = 'elzr/vim-json'
 # if   = '''! has('kaoriya')'''
+# }}}
 
-# [[plugins]] # :CalendarでGoogleカレンダーを開けます
+# [[plugins]] # :CalendarでGoogleカレンダーを開けます {{{
 # repo = 'itchyny/calendar.vim'
 # hook_add = '''
 #     let g:calendar_google_calendar = 1
 #     let g:calendar_first_day = 'monday'
 # '''
+# }}}
 
-# [[plugins]]
+# [[plugins]] # w3mブラウザー {{{
 # repo = 'yuratomo/w3m.vim'
+# }}}
 
-# [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
+# [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork {{{
 # repo = 'ishibaki/vim-cycle'
+# }}}
 
-# [[plugins]] # カラースキーム
+# [[plugins]] # カラースキーム {{{
 # repo = 'w0ng/vim-hybrid'
 # hook_add = '''
 #     let g:hybrid_reduced_contrast = 0
 # '''
+# }}}
 
-# [[plugins]] # コードブロックでvim内移動
+# [[plugins]] # コードブロックでvim内移動 {{{
 # repo = 'haya14busa/vim-edgemotion'
 # hook_add = '''
 #     map <C-j> <Plug>(edgemotion-j)
 #     map <C-k> <Plug>(edgemotion-k)
 # '''
+# }}}
+# }}}
 
 # vim: set foldmethod=marker :

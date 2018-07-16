@@ -39,7 +39,7 @@ on_ft = 'python'
 
 # ----- markdown関連 -----
 
-[[plugins]]
+[[plugins]] # 自動タグ補完
 repo = 'alvan/vim-closetag'
 on_ft = ['markdown', 'html']
 
@@ -80,7 +80,7 @@ on_ft = 'toml'
 [[plugins]] # diffsplitが便利になるよ
 repo = 'chrisbra/vim-diff-enhanced'
 
-[[plugins]]
+[[plugins]] # cow, comment out plugin
 repo = 'tyru/caw.vim'
 on_ft = ['python', 'html', 'markdown', 'vim', 'toml', 'zsh']
 hook_add = '''

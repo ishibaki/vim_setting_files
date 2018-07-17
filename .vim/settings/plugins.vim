@@ -2,7 +2,7 @@
 "  /_///_//_/// /_\ 
 " /       _/
 
-" ---------- my own ---------
+" ---------- my own --------- {{{
 autocmd BufNewFile,BufRead *GTD.txt call GenerateTaskDone()
 
 :function! GenerateTaskDone()
@@ -66,8 +66,9 @@ autocmd BufNewFile,BufRead *GTD.txt call GenerateTaskDone()
     :nnoremap <leader>tD :call GoToDone()<CR>
     " }}}
 :endfunction
+" }}}
 
-" --------- folding setting ----------
+" --------- folding setting ---------- {{{
 if expand('<sfile>:p')!=#expand('%:p') && exists('g:loaded_foldCC')| finish| endif| let g:loaded_foldCC = 1
 let s:save_cpo = &cpo| set cpo&vim
 scriptencoding utf-8
@@ -222,6 +223,7 @@ endfunction
 "=============================================================================
 let &cpo = s:save_cpo| unlet s:save_cpo
 set foldtext=FoldCCtext()
+" }}}
 
 " --------------- Unite --------------- {{{
 " nnoremap <silent> ,vr :UniteResume<CR>

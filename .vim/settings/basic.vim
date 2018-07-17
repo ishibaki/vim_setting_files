@@ -8,6 +8,9 @@
 "文字コードをUFT-8に設定
 set fenc=utf-8
 
+" 改行コードの設定
+set fileformats=unix,mac,dos
+
 " スペルチェック辞書を設定
 set spelllang=en,cjk
 set spell

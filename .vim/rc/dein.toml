@@ -184,9 +184,17 @@ let g:startify_custom_header = [
     \ ]
 '''# }}}
 
-[[plugins]] # vim上でプログラムの非同期実行
+[[plugins]] # vim上でプログラムの非同期実行 {{{
 repo = 'thinca/vim-quickrun'
+hook_add = '''
+let g:quickrun_config = {
+    \ 'python': {
+            \ 'command': 'python3.7'
+        \ }
+    \ }
+'''
 # <Leader>rで実行されるのでよろしく
+# }}}
 
 [[plugins]] # アウトラインの自動作成
 repo = 'Shougo/unite-outline'# {{{

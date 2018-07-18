@@ -166,6 +166,8 @@ command! Setmarkdown set filetype=markdown
 command! Setmdown set filetype=markdown
 command! Setmd set filetype=markdown
 
+command! Datetime read !date '+\%Y/\%m/\%d \%H:\%M:\%S'
+
 " ---------------- netrw settings ----------------
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4

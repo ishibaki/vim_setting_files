@@ -87,3 +87,11 @@ hook_add = '''
     nmap gcc <Plug>(caw:wrap:toggle)
     vmap gcc <Plug>(caw:wrap:toggle)
 '''
+
+[[plugins]] # For Excel viewer
+repo = 'mattn/webapi-vim'
+
+[[plugins]] # Excel viewer (only .xlsx)
+repo = 'mattn/excelview-vim' # {{{
+depends = 'webapi-vim'
+# }}}

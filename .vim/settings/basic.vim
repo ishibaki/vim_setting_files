@@ -58,7 +58,7 @@ set relativenumber
 " 現在の行を強調表示
 set cursorline
 
-" 現在の行を強調表示（縦）
+" 現在の行を強調表示(縦)
 set cursorcolumn
 
 " 行末の1文字先までカーソルを移動できるように

@@ -270,6 +270,6 @@ if !exists('g:neocomplete#text_mode_filetypes')
                 \ }
 " }}}
 
-inoremap <expr><C-x>s neocomplete#start_manual_complete('look')
+" inoremap <expr><C-x>s neocomplete#start_manual_complete('look')
 
 " vim: set foldmethod=marker :

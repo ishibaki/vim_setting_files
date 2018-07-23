@@ -109,6 +109,7 @@ vnoremap / /\v
 nnoremap <Space>t<Space>t<CR> :vertical rightbelow terminal<CR>
 
 " macro editing
+" ex) "q<Leader>m
 nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
 
 " --------------- bufferの切り替え ---------------

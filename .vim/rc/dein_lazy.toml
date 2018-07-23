@@ -42,6 +42,12 @@ on_ft = 'python'
 [[plugins]] # 自動タグ補完
 repo = 'alvan/vim-closetag'
 on_ft = ['markdown', 'html']
+hook_add = '''
+    let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.md,*.markdown,*.mkdown,*.mdown'
+    let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+    let g:closetag_filetypes = 'html,xhtml,phtml,markdown'
+    let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+'''
 
 [[plugins]] # stand aloneに使えるMarkdown Previewer, Mermeid記法も使える
 repo = 'kannokanno/previm'

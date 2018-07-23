@@ -46,6 +46,9 @@ nnoremap <Space>q<CR> :q<CR>
 " スペースキー+wで保存
 nnoremap <Space>w<CR> :w<CR>
 
+" スペースキー+wwで強制保存
+nnoremap <Space>ww<CR> :w!<CR>
+
 " スペースキー+wqで保存して終了
 nnoremap <Space>wq<CR> :wq<CR>
 

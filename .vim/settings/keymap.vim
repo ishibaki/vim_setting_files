@@ -113,8 +113,9 @@ nnoremap <Space>t<Space>t<CR> :vertical rightbelow terminal<CR>
 nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
 
 " --------------- bufferの切り替え ---------------
-nnoremap <silent>[b :bprev<CR>
-nnoremap <silent>]b :bnext<CR>
+" submodeへ移行
+" nnoremap <silent>[b :bprev<CR>
+" nnoremap <silent>]b :bnext<CR>
 
 " -------- visual modeでindentしたときにnormal modeへ戻らない -------
 " ドットによる繰り返しもできるが，個人的な直感ではこっちが好き

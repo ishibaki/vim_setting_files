@@ -158,30 +158,30 @@ let g:startify_lists = [
       \ { 'type': 'commands',  'header': ['   === Commands ==='                                  ]},
       \ ]
 
-let g:startify_bookmarks = [{"v": "~/.vimrc"}, {"s": "~/Dropbox/GTD/GTD.txt"}, {"d": "~/Desktop"}, {"~": "~"}, {"x": "~/Dropbox"},]
+    let g:startify_bookmarks = [{"v": "~/.vimrc"}, {"s": "~/Dropbox/GTD/GTD.txt"}, {"d": "~/Desktop"}, {"~": "~"}, {"x": "~/Dropbox"},]
 
-function! s:filter_header(lines) abort
-    let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
-    let centered_lines = map(copy(a:lines),
-        \ 'repeat(" ", (&columns / 2) - (longest_line / 2)) . v:val')
-    return centered_lines
-endfunction
+    function! s:filter_header(lines) abort
+        let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
+        let centered_lines = map(copy(a:lines),
+            \ 'repeat(" ", (&columns / 2) - (longest_line / 2)) . v:val')
+        return centered_lines
+    endfunction
 
-let g:startify_custom_header = [
-    \ '              . ',
-    \ '    ________.:::.________',
-    \ '    \....../.:?L \.......\',
-    \ '     |::::| ????` :::::`',
-    \ '     |::::| $$` .:::;".',
-    \ '    .|;;;;| $ .;;;;" ,OS.',
-    \ '   .G|IIII| .III7" ,ADNNF:.',
-    \ '    "|EEEEEEEE7" ,ADDNNF;`',
-    \ '     |BBBBBBF" ,ADDDNF;`',
-    \ '     |MMMMF" ,ADDNNF;`',
-    \ '     |MMF" *ADNNNN;`',
-    \ '     `-`    `;MM;`    Vim 8.0',
-    \ '              ``',
-    \ ]
+    let g:startify_custom_header = [
+        \ '              . ',
+        \ '    ________.:::.________',
+        \ '    \....../.:?L \.......\',
+        \ '     |::::| ????` :::::`',
+        \ '     |::::| $$` .:::;".',
+        \ '    .|;;;;| $ .;;;;" ,OS.',
+        \ '   .G|IIII| .III7" ,ADNNF:.',
+        \ '    "|EEEEEEEE7" ,ADDNNF;`',
+        \ '     |BBBBBBF" ,ADDDNF;`',
+        \ '     |MMMMF" ,ADDNNF;`',
+        \ '     |MMF" *ADNNNN;`',
+        \ '     `-`    `;MM;`    Vim 8.0',
+        \ '              ``',
+        \ ]
 '''# }}}
 
 [[plugins]] # vim上でプログラムの非同期実行
@@ -242,12 +242,10 @@ hook_add = '''
     call submode#enter_with('winmove', 'n', '', '<C-w>j', '<C-w>j')
     call submode#enter_with('winmove', 'n', '', '<C-w>k', '<C-w>k')
     call submode#enter_with('winmove', 'n', '', '<C-w>l', '<C-w>l')
-    call submode#enter_with('winmove', 'n', '', '<C-w><C-w>', '<C-w><C-w>')
     call submode#map('winmove', 'n', '', 'h', '<C-w>h')
     call submode#map('winmove', 'n', '', 'j', '<C-w>j')
     call submode#map('winmove', 'n', '', 'k', '<C-w>k')
     call submode#map('winmove', 'n', '', 'l', '<C-w>l')
-    call submode#map('winmove', 'n', '', '<C-w>', '<C-w><C-w>')
     " }}}
 
     " Tab Move Mode {{{

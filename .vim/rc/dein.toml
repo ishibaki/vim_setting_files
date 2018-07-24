@@ -220,6 +220,22 @@ hook_add = '''
     let g:submode_timeout = 0
     " Submodeから離れるときのキー入力を有効にする
     let g:submode_keep_leaving_key = 1
+
+    " Winsize Change Mode {{{
+    call submode#enter_with('winsize', 'n', '', '<C-w>>', '<C-w>>')
+    call submode#enter_with('winsize', 'n', '', '<C-w><', '<C-w><')
+    call submode#enter_with('winsize', 'n', '', '<C-w>+', '<C-w>+')
+    call submode#enter_with('winsize', 'n', '', '<C-w><kPlus>', '<C-w>+')
+    call submode#enter_with('winsize', 'n', '', '<C-w>-', '<C-w>-')
+    call submode#enter_with('winsize', 'n', '', '<C-w><kMinus>', '<C-w>-')
+    call submode#map('winsize', 'n', '', '>', '<C-w>>')
+    call submode#map('winsize', 'n', '', '<', '<C-w><')
+    call submode#map('winsize', 'n', '', '+', '<C-w>+')
+    call submode#map('winsize', 'n', '', '<kPlus>', '<C-w>+')
+    call submode#map('winsize', 'n', '', '-', '<C-w>-')
+    call submode#map('winsize', 'n', '', '<kMinus>', '<C-w>-')
+    call submode#map('winsize', 'n', '', '=', '<C-w>=')
+    " }}}
 '''
 # }}}
 

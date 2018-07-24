@@ -249,6 +249,13 @@ hook_add = '''
     call submode#map('winmove', 'n', '', 'l', '<C-w>l')
     call submode#map('winmove', 'n', '', '<C-w>', '<C-w><C-w>')
     " }}}
+
+    " Tab Move Mode {{{
+    call submode#enter_with('tabmove', 'n', '', 'gt', 'gt')
+    call submode#enter_with('tabmove', 'n', '', 'gT', 'gT')
+    call submode#map('tabmove', 'n', '', 't', 'gt')
+    call submode#map('tabmove', 'n', '', 'T', 'gT')
+    " }}}
 '''
 # }}}
 

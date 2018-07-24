@@ -68,17 +68,18 @@ repo = 'easymotion/vim-easymotion'# {{{
 hook_add = '''
     let g:EasyMotion_leader_key = '<Space>f'
     let g:EasyMotion_use_migemo = 1
-    nmap <Space>ff <Plug>(easymotion-overwin-f)
-    nmap <Space>fs <Plug>(easymotion-overwin-f2)
-    nmap <Space>fd <Plug>(easymotion-overwin-f2)
-    nmap <Space>ft <Plug>(easymotion-bd-t)
-    nmap <Space>f/ <Plug>(easymotion-sn)
-    nmap <Space>j  <Plug>(easymotion-bd-jk)
-    nmap <Space>k  <Plug>(easymotion-bd-jk)
-    nmap <Space>fw <Plug>(easymotion-bd-w)
-    nmap <Space>fW <Plug>(easymotion-bd-W)
-    nmap <Space>fe <Plug>(easymotion-bd-e)
-    nmap <Space>fE <Plug>(easymotion-bd-E)
+    map <Space>ff <Plug>(easymotion-bd-f)
+    map <Space>fs <Plug>(easymotion-bd-f2)
+    map <Space>fd <Plug>(easymotion-bd-f2)
+    map <Space>ft <Plug>(easymotion-bd-t)
+    map <Space>f/ <Plug>(easymotion-sn)
+    map <Space>j  <Plug>(easymotion-bd-jk)
+    map <Space>k  <Plug>(easymotion-bd-jk)
+    map <Space>fw <Plug>(easymotion-bd-w)
+    map <C-I>     <Plug>(easymotion-jumptoanywhere)
+    map <Space>fW <Plug>(easymotion-bd-W)
+    map <Space>fe <Plug>(easymotion-bd-e)
+    map <Space>fE <Plug>(easymotion-bd-E)
 '''# }}}
 
 [[plugins]] # vim-table-mode

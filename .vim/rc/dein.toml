@@ -213,6 +213,9 @@ hook_add = '''
     map g# <Plug>(asterisk-gz#)
 '''# }}}
 
+[[plugins]] # 新規modeを作成
+repo = 'thinca/vim-submode' #{{{
+
 # 使っていない設定 {{{
 # [[plugins]] # a converter of camelCase, snake_case, and other cases {{{
 # repo = 'tpope/vim-abolish'

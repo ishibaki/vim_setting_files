@@ -215,6 +215,13 @@ hook_add = '''
 
 [[plugins]] # 新規modeを作成
 repo = 'thinca/vim-submode' #{{{
+hook_add = '''
+    " タイムアウト設定をOFFに
+    let g:submode_timeout = 0
+    " Submodeから離れるときのキー入力を有効にする
+    let g:submode_keep_leaving_key = 1
+'''
+# }}}
 
 # 使っていない設定 {{{
 # [[plugins]] # a converter of camelCase, snake_case, and other cases {{{

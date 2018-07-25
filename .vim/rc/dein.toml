@@ -5,7 +5,8 @@
 #   \/____/   \/_____/   \/_/   \/_/ \/_/
 
 [[plugins]] # plugin manager
-repo = 'Shougo/dein.vim'
+repo = 'Shougo/dein.vim' # {{{
+# }}}
 
 [[plugins]] # Unite User Interface
 repo = 'Shougo/unite.vim'# {{{
@@ -22,10 +23,12 @@ hook_add = '''
 '''# }}}
 
 [[plugins]] # colorscheme
-repo = 'cocopon/iceberg.vim'
+repo = 'cocopon/iceberg.vim' # {{{
+# }}}
 
 [[plugins]]
-repo = 'Shougo/neocomplete.vim'
+repo = 'Shougo/neocomplete.vim' # {{{
+# }}}
 
 [[plugins]] # ステータスライン
 repo = 'itchyny/lightline.vim'# {{{
@@ -36,13 +39,16 @@ hook_add = '''
 '''# }}}
 
 [[plugins]] # 括弧の操作を楽にする
-repo = 'tpope/vim-surround'
+repo = 'tpope/vim-surround' # {{{
+# }}}
 
 [[plugins]] # 行末の不要な半角スペースを可視化
-repo = 'bronson/vim-trailing-whitespace'
+repo = 'bronson/vim-trailing-whitespace' # {{{
+# }}}
 
 [[plugins]] # インデントによる階層を分かりやすく可視化
-repo = 'nathanaelkane/vim-indent-guides'
+repo = 'nathanaelkane/vim-indent-guides' # {{{
+# }}}
 
 [[plugins]] # CSVなどの成型に
 repo = 'junegunn/vim-easy-align'# {{{
@@ -93,7 +99,8 @@ hook_add = '''
 '''# }}}
 
 [[plugins]] # テンプレート作成
-repo = 'mattn/sonictemplate-vim'
+repo = 'mattn/sonictemplate-vim' # {{{
+# }}}
 
 [[plugins]] # チートシート呼び出し
 repo = 'reireias/vim-cheatsheet'# {{{
@@ -137,15 +144,18 @@ hook_add = '''
 '''# }}}
 
 [[plugins]] # Text objectを新しく設定できる
-repo = 'kana/vim-textobj-user'
+repo = 'kana/vim-textobj-user' # {{{
+# }}}
 
 [[plugins]] # indentの中身をモーション範囲に
-repo = 'kana/vim-textobj-indent'
+repo = 'kana/vim-textobj-indent' # {{{
 depends = 'vim-textobj-user'
+# }}}
 
 [[plugins]] # その行をモーション範囲に
-repo = 'kana/vim-textobj-line'
+repo = 'kana/vim-textobj-line' # {{{
 depends = 'vim-textobj-user'
+# }}}
 
 [[plugins]] # 表紙でMRUとか出す
 repo = 'mhinz/vim-startify'# {{{
@@ -259,20 +269,53 @@ hook_add = '''
 # }}}
 
 # 使っていない設定 {{{
-# [[plugins]] # a converter of camelCase, snake_case, and other cases {{{
-# repo = 'tpope/vim-abolish'
+# [[plugins]] # a converter of camelCase, snake_case, and other cases
+# repo = 'tpope/vim-abolish' # {{{
 # }}}
 
-# [[plugins]] # 英語単語の自動補完 {{{
-# repo = 'ujihisa/neco-look'
+# [[plugins]] # 英語単語の自動補完
+# repo = 'ujihisa/neco-look' # {{{
 # on_i = 1
 # depends = 'neocomplete.vim'
 # }}}
 
-# [[plugins]] # メモ用プラグイン {{{
-# repo = 'glidenote/memolist.vim'
+# [[plugins]] # メモ用プラグイン
+# repo = 'glidenote/memolist.vim' # {{{
 # }}}
 
+
+# [[plugins]] # :CalendarでGoogleカレンダーを開けます
+# repo = 'itchyny/calendar.vim' # {{{
+# hook_add = '''
+#     let g:calendar_google_calendar = 1
+#     let g:calendar_first_day = 'monday'
+# '''
+# }}}
+
+# [[plugins]] # w3mブラウザー
+# repo = 'yuratomo/w3m.vim' # {{{
+# }}}
+
+# [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
+# repo = 'ishibaki/vim-cycle' # {{{
+# }}}
+
+# [[plugins]] # カラースキーム
+# repo = 'w0ng/vim-hybrid' # {{{
+# hook_add = '''
+#     let g:hybrid_reduced_contrast = 0
+# '''
+# }}}
+
+# [[plugins]] # コードブロックでvim内移動
+# repo = 'haya14busa/vim-edgemotion' # {{{
+# hook_add = '''
+#     map <C-j> <Plug>(edgemotion-j)
+#     map <C-k> <Plug>(edgemotion-k)
+# '''
+# }}}
+
+# 例集 {{{
 # git clone 後、実行すべきコマンドがある場合はこんな感じ {{{
 # [[plugins]]
 # repo = 'Shougo/vimproc.vim'
@@ -302,36 +345,8 @@ hook_add = '''
 # if   = '''! has('kaoriya')'''
 # }}}
 
-# [[plugins]] # :CalendarでGoogleカレンダーを開けます {{{
-# repo = 'itchyny/calendar.vim'
-# hook_add = '''
-#     let g:calendar_google_calendar = 1
-#     let g:calendar_first_day = 'monday'
-# '''
 # }}}
 
-# [[plugins]] # w3mブラウザー {{{
-# repo = 'yuratomo/w3m.vim'
-# }}}
-
-# [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork {{{
-# repo = 'ishibaki/vim-cycle'
-# }}}
-
-# [[plugins]] # カラースキーム {{{
-# repo = 'w0ng/vim-hybrid'
-# hook_add = '''
-#     let g:hybrid_reduced_contrast = 0
-# '''
-# }}}
-
-# [[plugins]] # コードブロックでvim内移動 {{{
-# repo = 'haya14busa/vim-edgemotion'
-# hook_add = '''
-#     map <C-j> <Plug>(edgemotion-j)
-#     map <C-k> <Plug>(edgemotion-k)
-# '''
-# }}}
 # }}}
 
 # vim: set foldmethod=marker :

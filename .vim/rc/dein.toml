@@ -82,7 +82,7 @@ hook_add = '''
     map <Space>j  <Plug>(easymotion-bd-jk)
     map <Space>k  <Plug>(easymotion-bd-jk)
     map <Space>fw <Plug>(easymotion-bd-w)
-    map <C-I>     <Plug>(easymotion-jumptoanywhere)
+    map <C-J>     <Plug>(easymotion-jumptoanywhere)
     map <Space>fW <Plug>(easymotion-bd-W)
     map <Space>fe <Plug>(easymotion-bd-e)
     map <Space>fE <Plug>(easymotion-bd-E)

@@ -305,7 +305,17 @@ hook_add = '''
 # }}}
 
 # [[plugins]] # <C-a>,<C-x>でleft<->rightなど対義語変換, zef/vim-cycleよりfork
-# repo = 'ishibaki/vim-cycle' # {{{
+# repo = 'zef/vim-cycle' # {{{
+# hook_add = '''
+#     call AddCycleGroup(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'])
+#     call AddCycleGroup(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
+#     call AddCycleGroup(['hoge', 'fuga', 'piyo', 'mogera'])
+#     call AddCycleGroup(['foo', 'bar', 'baz', 'qux', 'quux', 'corge', 'grault', 'garply', 'waldo', 'fred', 'plugh', 'xyzzy', 'thud'])
+#     call AddCycleGroup(['mercury', 'venus', 'earth', 'mars', 'saturn', 'jupiter', 'uranus', 'neptune', 'pluto', 'the_sun'])
+#     call AddCycleGroup(['ochre', 'amber', 'opal'])
+#     call AddCycleGroup(['able', 'baker', 'charlie', 'dog', 'easy', 'fox', 'george', 'how', 'item', 'jack', 'king', 'love', 'mike', 'nancy', 'over', 'peter', 'queen', 'rodger', 'sugar', 'tiger', 'uncle', 'victory', 'whiskey', 'x-ray', 'york', 'zebra'])
+#     call AddCycleGroup('python', ['else', 'elif'])
+# '''
 # }}}
 
 # [[plugins]] # カラースキーム

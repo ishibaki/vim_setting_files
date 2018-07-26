@@ -102,12 +102,6 @@ hook_add = '''
 repo = 'mattn/sonictemplate-vim' # {{{
 # }}}
 
-[[plugins]] # チートシート呼び出し
-repo = 'reireias/vim-cheatsheet'# {{{
-hook_add = '''
-    let g:cheatsheet#cheat_file = '~/.cheatsheet.md'
-'''# }}}
-
 [[plugins]] # ファイルツリー
 repo = 'scrooloose/nerdtree'# {{{
 hook_add = '''
@@ -291,6 +285,11 @@ hook_add = '''
 # repo = 'glidenote/memolist.vim' # {{{
 # }}}
 
+# [[plugins]] # チートシート呼び出し
+# repo = 'reireias/vim-cheatsheet'# {{{
+# hook_add = '''
+#     let g:cheatsheet#cheat_file = '~/.cheatsheet.md'
+# '''# }}}
 
 # [[plugins]] # :CalendarでGoogleカレンダーを開けます
 # repo = 'itchyny/calendar.vim' # {{{

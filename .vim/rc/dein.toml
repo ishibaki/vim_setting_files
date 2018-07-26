@@ -31,12 +31,13 @@ repo = 'Shougo/neocomplete.vim' # {{{
 # }}}
 
 [[plugins]] # ステータスライン
-repo = 'itchyny/lightline.vim'# {{{
+repo = 'itchyny/lightline.vim' # {{{
 hook_add = '''
     let g:lightline = {
-    \   'colorscheme': 'iceberg'
+    \   'colorscheme': 'Tomorrow_Night'
     \ }
-'''# }}}
+'''
+# }}}
 
 [[plugins]] # 括弧の操作を楽にする
 repo = 'tpope/vim-surround' # {{{

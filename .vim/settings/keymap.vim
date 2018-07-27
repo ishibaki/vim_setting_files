@@ -82,7 +82,7 @@ noremap <Space>d 0v$hx
 " \nを含まない1行コピー
 noremap <Space>y 0v$hy
 " "0レジスタ(削除と関係のない，明示的ヤンクをしたレジスタ)をペースト
-map <Space>p "0p
+noremap <Space>p "0p
 
 " -------------------挿入モードでの移動をemacs風に-------------------
 inoremap <C-a> <C-o>^

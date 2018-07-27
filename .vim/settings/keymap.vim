@@ -78,7 +78,7 @@ nnoremap <Space>O  :<C-u>for i in range(v:count1) \| call append(line('.')-1, ''
 " \nを含まない1行選択
 noremap <Space>v 0v$h
 " \nを含まない1行削除
-noremap <Space>d 0v$hx
+noremap <Space>d 0v$hd
 " \nを含まない1行コピー
 noremap <Space>y 0v$hy
 " "0レジスタ(削除と関係のない，明示的ヤンクをしたレジスタ)をペースト

@@ -19,16 +19,16 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " -------------------移動に関する追加コマンド-------------------
 " スペースキー+hで行頭へ
-nnoremap <Space>h ^
+noremap <Space>h ^
 
 " スペースキー+スペースキー+hで前段落頭へ
-nnoremap <Space><Space>h 2{+
+noremap <Space><Space>h 2{+
 
 " スペースキー+lで行末へ
-nnoremap <Space>l g_
+noremap <Space>l g_
 
 " スペースキー+スペースキー+lで次段落頭へ
-nnoremap <Space><Space>l }+
+noremap <Space><Space>l }+
 
 " 行移動をEnterで代用
 nnoremap <CR> G

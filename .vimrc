@@ -21,7 +21,7 @@ runtime! settings/*.vim
 " ~/.vim/rc/dein.toml 7
 " ~/.vim/rc/dein_lazy.toml 15
 
-" -------------------dein.vimの設定-------------------
+" -------------------dein.vimの設定------------------- {{{
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')
 " dein.vim 本体
@@ -59,6 +59,8 @@ endif
 if dein#check_install()
     call dein#install()
 endif
+" }}}
+
 " }}}
 
 " これはcolor.vimに移せない

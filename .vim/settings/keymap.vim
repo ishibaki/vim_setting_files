@@ -15,7 +15,7 @@ nnoremap <Space><Space>, :tabedit ~/Dropbox/GTD/GTD.txt<CR>gg
 inoremap jk <Esc>
 
 " ESC連打でハイライト解除
-nmap <Esc><Esc> :nohlsearch<CR><Esc>
+nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " -------------------移動に関する追加コマンド-------------------
 " スペースキー+hで行頭へ

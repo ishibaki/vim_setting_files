@@ -196,7 +196,7 @@ repo = 'thinca/vim-quickrun' # {{{
 hook_add = '''
 let g:quickrun_config = {
     \ 'python': {
-            \ 'command': 'python3.7'
+            \ 'command': 'python3'
         \ }
     \ }
 '''

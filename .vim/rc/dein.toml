@@ -38,6 +38,7 @@ hook_add = '''
     \ 'colorscheme': 'iceberg'
     \ }
 '''
+depends = "iceberg.vim"
 # }}}
 
 [[plugins]] # 括弧の操作を楽にする
@@ -197,6 +198,7 @@ let g:startify_lists = [
         \ '              ``',
         \ ]
 '''
+depends = "iceberg.vim"
 # }}}
 
 [[plugins]] # vim上でプログラムの非同期実行

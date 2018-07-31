@@ -9,7 +9,7 @@ repo = 'Shougo/dein.vim' # {{{
 # }}}
 
 [[plugins]] # Unite User Interface
-repo = 'Shougo/unite.vim'# {{{
+repo = 'Shougo/unite.vim' # {{{
 hook_add = '''
     nnoremap [unite] <Nop>
     nmap <Leader>u [unite]
@@ -53,7 +53,7 @@ repo = 'nathanaelkane/vim-indent-guides' # {{{
 # }}}
 
 [[plugins]] # CSVなどの成型に
-repo = 'junegunn/vim-easy-align'# {{{
+repo = 'junegunn/vim-easy-align' # {{{
 # ビジュアルモードで選択し，easy-align 呼んで整形．(e.g. vip<Enter>)
 # easy-align を呼んだ上で，移動したりテキストオブジェクトを指定して整形．(e.g. gaip)
 hook_add = '''
@@ -63,7 +63,7 @@ hook_add = '''
 # }}}
 
 [[plugins]] # 日本語IMEに影響しない括弧補完
-repo = 'itmammoth/doorboy.vim'# {{{
+repo = 'itmammoth/doorboy.vim' # {{{
 hook_add = '''
     let g:doorboy_additional_quotations = {
     \ 'markdown': ['*'],
@@ -72,7 +72,7 @@ hook_add = '''
 # }}}
 
 [[plugins]] # vim内移動用
-repo = 'easymotion/vim-easymotion'# {{{
+repo = 'easymotion/vim-easymotion' # {{{
 # EasyMotionのleader keyを<Space>fにする
 # fコマンドを，easymotionのfモードにする
 hook_add = '''
@@ -95,7 +95,7 @@ hook_add = '''
 # }}}
 
 [[plugins]] # vim-table-mode
-repo = 'dhruvasagar/vim-table-mode'# {{{
+repo = 'dhruvasagar/vim-table-mode' # {{{
 # markdownのときにはマークダウン文法の表形式に変更
 hook_add = '''
     augroup vimTableMode
@@ -110,7 +110,7 @@ repo = 'mattn/sonictemplate-vim' # {{{
 # }}}
 
 [[plugins]] # ファイルツリー
-repo = 'scrooloose/nerdtree'# {{{
+repo = 'scrooloose/nerdtree' # {{{
 hook_add = '''
     nmap <Leader>t<CR> :NERDTreeToggle<CR>
     let NERDTreeShowBookmarks = 1
@@ -120,7 +120,7 @@ hook_add = '''
 # }}}
 
 [[plugins]]
-repo = 'mrtazz/simplenote.vim'# {{{
+repo = 'mrtazz/simplenote.vim' # {{{
 # ~/.simplenotercを準備すること
 hook_add = '''
     source ~/.simplenoterc
@@ -161,7 +161,7 @@ depends = 'vim-textobj-user'
 # }}}
 
 [[plugins]] # 表紙でMRUとか出す
-repo = 'mhinz/vim-startify'# {{{
+repo = 'mhinz/vim-startify' # {{{
 hook_add = '''
 let g:startify_files_number = 5
 let g:startify_lists = [
@@ -211,14 +211,14 @@ let g:quickrun_config = {
 # }}}
 
 [[plugins]] # アウトラインの自動作成
-repo = 'Shougo/unite-outline'# {{{
+repo = 'Shougo/unite-outline' # {{{
 hook_add = '''
     nmap <Leader>ol :Unite outline -vertical<CR>
 '''
 # }}}
 
 [[plugins]] # asterisk検索をちょっと便利に
-repo = 'haya14busa/vim-asterisk'# {{{
+repo = 'haya14busa/vim-asterisk' # {{{
 hook_add = '''
     map *  <Plug>(asterisk-z*)
     map <kMultiply> <Plug>(asterisk-z*)
@@ -297,7 +297,7 @@ hook_add = '''
 # }}}
 
 # [[plugins]] # チートシート呼び出し
-# repo = 'reireias/vim-cheatsheet'# {{{
+# repo = 'reireias/vim-cheatsheet' # {{{
 # hook_add = '''
 #     let g:cheatsheet#cheat_file = '~/.cheatsheet.md'
 # '''

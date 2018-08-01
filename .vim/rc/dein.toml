@@ -183,7 +183,7 @@ let g:startify_lists = [
     endfunction
 
     let g:startify_custom_header = [
-        \ '              . ',
+        \ '              .',
         \ '    ________.:::.________',
         \ '    \....../.:?L \.......\',
         \ '     |::::| ????` :::::`',
@@ -194,7 +194,7 @@ let g:startify_lists = [
         \ '     |BBBBBBF" ,ADDDNF;`',
         \ '     |MMMMF" ,ADDNNF;`',
         \ '     |MMF" *ADNNNN;`',
-        \ '     `-`    `;MM;`    Vim 8.0',
+        \ '     `-`    `;MM;`',
         \ '              ``',
         \ ]
 '''

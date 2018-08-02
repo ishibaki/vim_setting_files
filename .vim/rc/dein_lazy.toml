@@ -26,6 +26,16 @@ repo = 'bps/vim-textobj-python' # {{{
 on_ft = 'python'
 # }}}
 
+[[plugins]] # python editing mode
+repo = 'python-mode/python-mode' # {{{
+on_ft = 'python'
+hook_add = '''
+    let g:pymode_python = 'python3'
+    let g:pymode_run = 0
+    let g:pymode_run_bind = '<leader>_'
+'''
+# }}}
+
 # Not In Use {{{
 
 # [[plugins]]

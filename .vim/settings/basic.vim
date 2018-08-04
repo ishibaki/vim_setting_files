@@ -91,6 +91,8 @@ set wildmenu
 " ◯や■などの記号が崩れるのを防ぐ
 set ambiwidth=double
 
+set antialias
+
 " python設定
 let g:python3_host_prog = expand('/anaconda/bin/python')
 

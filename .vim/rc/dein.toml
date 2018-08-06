@@ -31,10 +31,6 @@ hook_add = '''
 depends = 'unite.vim'
 # }}}
 
-[[plugins]]
-repo = 'ujihisa/unite-colorscheme'
-depends = 'unite.vim'
-
 [[plugins]] # colorscheme
 repo = 'cocopon/iceberg.vim' # {{{
 # }}}

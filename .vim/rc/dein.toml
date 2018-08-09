@@ -42,6 +42,7 @@ repo = 'Shougo/neocomplete.vim' # {{{
 [[plugins]] # ステータスライン
 repo = 'itchyny/lightline.vim' # {{{
 hook_add = '''
+    set noshowmode
     let g:lightline = {
     \ 'colorscheme': 'iceberg'
     \ }

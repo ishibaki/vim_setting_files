@@ -82,9 +82,6 @@ set wildmode=list:longest
 " 入力中のコマンドを見えるようにする
 set showcmd
 
-" モードを見せない
-set noshowmode
-
 " コマンドモードの補完
 set wildmenu
 

@@ -33,6 +33,15 @@ set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
 
+" 暗号化(:X)のアルゴリズムをvimのバージョンに合わせて変更
+if v:version > 704 || (v:version == 704 && has('patch399'))
+  set cryptmethod=blowfish2
+elseif v:version >= 703
+  set cryptmethod=blowfish
+else
+  set cryptmethod=zip
+endif
+
 " 0が前置された数字を，8進数でなく10進数として扱う
 " set nrformats="bin,hex"
 

@@ -348,6 +348,14 @@ hook_add = '''
 # '''
 # }}}
 
+# [[plugins]]
+# repo = 't9md/vim-quickhl' # {{{
+# hook_add = '''
+#     map <Space>m <Plug>(quickhl-manual-this)
+#     map <Space>M <Plug>(quickhl-manual-reset)
+# '''
+# }}}
+
 # 例集 {{{
 # git clone 後、実行すべきコマンドがある場合はこんな感じ {{{
 # [[plugins]]

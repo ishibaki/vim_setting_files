@@ -8,18 +8,15 @@
 repo = 'Shougo/dein.vim' # {{{
 # }}}
 
-[[plugins]] # Unite User Interface
-repo = 'Shougo/unite.vim' # {{{
+[[plugins]] # Denite User Interface
+repo = 'Shougo/denite.nvim' # {{{
 hook_add = '''
-    nnoremap [unite] <Nop>
-    nmap <Leader>u [unite]
-    nmap <Leader>u<CR> :Unite -vertical<CR>
-    nnoremap <silent> [unite]u :<C-u>Unite<Space>file -vertical<CR>
-    nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
-    nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer -vertical<CR>
-    nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark -vertical<CR>
-    nnoremap <silent> [unite]a :<C-u>UniteBookmardAdd<CR>
-    nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
+    nnoremap [denite] <Nop>
+    nmap <Leader>u [denite]
+    nnoremap <silent> [denite]b :<C-u>Denite -direction=topleft -cursor-wrap=true buffer<CR>
+    nnoremap <silent> [denite]f :<C-u>DeniteBufferDir -direction=topleft -cursor-wrap=true file file:new<CR>
+    nnoremap <silent> [denite]c :<C-u>Denite -direction=topleft -cursor-wrap=true bookmark<CR>
+    nnoremap <silent> [denite]a :<C-u>DeniteBookmardAdd<CR>
 '''
 # }}}
 
@@ -286,6 +283,22 @@ hook_add = '''
 # }}}
 
 # 使っていない設定 {{{
+
+# [[plugins]] # Unite User Interface
+# repo = 'Shougo/unite.vim' # {{{
+# hook_add = '''
+#     nnoremap [unite] <Nop>
+#     nmap <Leader>u [unite]
+#     nmap <Leader>u<CR> :Unite -vertical<CR>
+#     nnoremap <silent> [unite]u :<C-u>Unite<Space>file -vertical<CR>
+#     nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
+#     nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer -vertical<CR>
+#     nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark -vertical<CR>
+#     nnoremap <silent> [unite]a :<C-u>UniteBookmardAdd<CR>
+#     nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
+# '''
+# }}}
+
 # [[plugins]] # a converter of camelCase, snake_case, and other cases
 # repo = 'tpope/vim-abolish' # {{{
 # }}}

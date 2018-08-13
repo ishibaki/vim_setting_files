@@ -98,7 +98,7 @@ set wildmenu
 set ambiwidth=double
 
 " python設定
-let g:python3_host_prog = expand('/anaconda/bin/python')
+let g:python3_host_prog = expand('usr/local/bin/python3')
 
 " -------------------CSVカラムのハイライト:Csvhl \d-------------------
 function! CSVH(x)

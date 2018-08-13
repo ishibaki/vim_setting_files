@@ -179,7 +179,7 @@ let g:startify_lists = [
       \ { 'type': 'commands',  'header': ['   === Commands ==='                                  ]},
       \ ]
 
-    let g:startify_bookmarks = [{"v": "~/.vimrc"}, {"s": "~/Dropbox/GTD/GTD.txt"}, {"d": "~/Desktop"}, {"~": "~"}, {"x": "~/Dropbox"},]
+    let g:startify_bookmarks = [{"v": $MYVIMRC}, {"s": "~/Dropbox/GTD/GTD.txt"}, {"d": "~/Desktop"}, {"~": "~"}, {"x": "~/Dropbox"},]
 
     function! s:filter_header(lines) abort
         let longest_line   = max(map(copy(a:lines), 'len(v:val)'))

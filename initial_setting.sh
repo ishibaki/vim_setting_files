@@ -26,3 +26,8 @@ if [ -e ~/.vim ]; then
     rm -rf ~/.vim
 fi
 ln -s "${DIRPATH_REPO}/.vim" "~/.vim"
+
+if [ ! -e "${DIRPATH_REPO}/info" ]; then
+    mkdir "${DIRPATH_REPO}/info"
+fi
+

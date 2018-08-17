@@ -1,6 +1,7 @@
 #!/bin/sh
 
 DIRPATH_REPO="~/dotfiles/vim_setting_files"
+DIRPATH_PARENT="~/dotfiles"
 
 if [ ! -e ${DIRPATH_REPO} ]; then
     if [ ! -e ~/dotfiles ]; then

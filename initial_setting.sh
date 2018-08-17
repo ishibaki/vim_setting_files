@@ -1,3 +1,5 @@
+#!/bin/sh
+
 DIRPATH_REPO="~/dotfiles/vim_setting_files"
 
 if [ ! -e ${DIRPATH_REPO} ]; then

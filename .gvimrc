@@ -16,7 +16,10 @@ endif
 set background=dark
 colorscheme iceberg
 syntax on
-set transparency=15
+
+if has('kaoriya')
+    set transparency=15
+endif
 
 " gVimでのみ効くタブ移動
 nnoremap <C-Tab> gt

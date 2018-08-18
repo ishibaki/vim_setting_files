@@ -53,7 +53,7 @@ depends = 'unite.vim'
 repo = 'cocopon/iceberg.vim' # {{{
 # }}}
 
-[[plugins]]
+[[plugins]] # 補完
 repo = 'Shougo/neocomplete.vim' # {{{
 # }}}
 
@@ -147,7 +147,7 @@ hook_add = '''
 '''
 # }}}
 
-[[plugins]]
+[[plugins]] # Simplenote連携
 repo = 'mrtazz/simplenote.vim' # {{{
 # ~/.simplenotercを準備すること
 hook_add = '''

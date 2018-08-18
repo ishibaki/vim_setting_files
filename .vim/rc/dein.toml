@@ -382,7 +382,7 @@ hook_add = '''
 # '''
 # }}}
 
-# [[plugins]]
+# [[plugins]] # 検索ワードハイライトを複数設置
 # repo = 't9md/vim-quickhl' # {{{
 # hook_add = '''
 #     map <Space>m <Plug>(quickhl-manual-this)

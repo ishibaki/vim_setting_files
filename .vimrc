@@ -66,6 +66,6 @@ endif
 " これはcolor.vimに移せない
 colorscheme iceberg
 syntax on
-py3 print("Vim")
+call has('python3')
 
 " vim: set foldmethod=marker :

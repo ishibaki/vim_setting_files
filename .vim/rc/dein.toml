@@ -25,8 +25,6 @@ hook_add = '''
     nnoremap <silent> [denite]l :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true line<CR>
     nnoremap <silent> [denite]m :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true mark<CR>
 
-    nnoremap <silent> [denite]<CR> :<C-u>Denite
-
     " Denite keymap {{{
     call denite#custom#map('normal', '/', '<denite:enter_mode:insert>', 'noremap')
     call denite#custom#map('normal', '<Esc>', '<denite:quit>', 'noremap')
@@ -39,6 +37,7 @@ hook_add = '''
     call denite#custom#map('insert', 'jk', '<denite:enter_mode:normal>', 'noremap')
     " }}}
 '''
+
 # }}}
 
 [[plugins]] # アウトラインの自動作成

@@ -302,6 +302,10 @@ hook_add = '''
 '''
 # }}}
 
+[[plugins]] # Markerを可視化
+repo = 'kshenoy/vim-signature' #{{{
+#}}}
+
 # 使っていない設定 {{{
 
 # [[plugins]] # Unite User Interface

@@ -48,7 +48,7 @@ endif
 " 行頭-左・行末-右のカーソル移動で前の行・後ろの行へ移動可能にする
 set whichwrap=b,s,<,>,[,],h,l
 
-" " 拡張子に応じて，<C-e＞でスクリプトを実行できるようにする
+" " 拡張子に応じて，<C-e>でスクリプトを実行できるようにする
 " autocmd BufNewFile,BufRead *.{py,python,py3,python3} nnoremap <C-e> :!python %
 " autocmd BufNewFile,BufRead *.{rb,ruby} nnoremap <C-e> :!ruby %
 

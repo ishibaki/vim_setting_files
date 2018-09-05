@@ -44,7 +44,7 @@ In this repo, I only commit the setting files of vim **not neovim.**
 
 Additionally, splitting the files makes easy to manage them.
 
-## .vimrc
+## [.vimrc](./.vimrc)
 
 The vim specific setting file.  
 The symbolic link file locates in the home directory, and it links to `~/dotfiles/vim_setting_files/.vimrc`.  
@@ -55,7 +55,7 @@ In this file,
 - Set spell-checking
 - Set Color-scheme (I don't know why, but I failed to set color-scheme in color.vim)
 
-## .gvimrc
+## [.gvimrc](./.gvimrc)
 
 The GUI vim setting file.  
 The symbolic link file locates in the home directory, and it links to `~/dotfiles/vim_setting_files/.gvimrc`.  
@@ -66,11 +66,11 @@ In this file,
 - Set colors
 - Set transparency
 
-## .vim/rc/
+## [.vim/rc/](./.vim/rc/)
 
 This directory includes the plug-in TOML files.
 
-## .vim/settings/
+## [.vim/settings/](./.vim/settings)
 
 This directory includes the split .vimrc files.
 

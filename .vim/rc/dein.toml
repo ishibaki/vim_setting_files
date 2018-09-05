@@ -105,19 +105,20 @@ repo = 'easymotion/vim-easymotion' # {{{
 hook_add = '''
     let g:EasyMotion_leader_key = '<Space>f'
     let g:EasyMotion_use_migemo = 1
-    map <Space>ff <Plug>(easymotion-bd-f)
-    map <Space>fs <Plug>(easymotion-bd-f2)
-    map <Space>fd <Plug>(easymotion-bd-f2)
-    map <Space>ft <Plug>(easymotion-bd-t)
-    map <Space>f/ <Plug>(easymotion-sn)
-    map <Space>j  <Plug>(easymotion-bd-jk)
-    map <Space>k  <Plug>(easymotion-bd-jk)
-    map <Space>fw <Plug>(easymotion-bd-w)
-    map <C-J>     <Plug>(easymotion-jumptoanywhere)
-    imap <C-J>    <C-O><Plug>(easymotion-bd-w)
-    map <Space>fW <Plug>(easymotion-bd-W)
-    map <Space>fe <Plug>(easymotion-bd-e)
-    map <Space>fE <Plug>(easymotion-bd-E)
+    map  <Space>f<Space> <Plug>(easymotion-bd-f)
+    map  <Space>ff       <Plug>(easymotion-bd-f)
+    map  <Space>fs       <Plug>(easymotion-bd-f2)
+    map  <Space>fd       <Plug>(easymotion-bd-f2)
+    map  <Space>ft       <Plug>(easymotion-bd-t)
+    map  <Space>f/       <Plug>(easymotion-sn)
+    map  <Space>j        <Plug>(easymotion-bd-jk)
+    map  <Space>k        <Plug>(easymotion-bd-jk)
+    map  <Space>fw       <Plug>(easymotion-bd-w)
+    map  <Space>fW       <Plug>(easymotion-bd-W)
+    map  <Space>fe       <Plug>(easymotion-bd-e)
+    map  <Space>fE       <Plug>(easymotion-bd-E)
+    map  <C-J>           <Plug>(easymotion-jumptoanywhere)
+    imap <C-J>           <C-O><Plug>(easymotion-bd-w)
 '''
 # }}}
 

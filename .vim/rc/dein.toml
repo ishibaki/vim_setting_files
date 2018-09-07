@@ -39,14 +39,6 @@ hook_add = '''
 '''
 # }}}
 
-[[plugins]] # アウトラインの自動作成
-repo = 'Shougo/unite-outline' # {{{
-hook_add = '''
-    nmap <Leader>ol :Unite outline -vertical<CR>
-'''
-depends = 'unite.vim'
-# }}}
-
 [[plugins]] # colorscheme
 repo = 'cocopon/iceberg.vim' # {{{
 # }}}

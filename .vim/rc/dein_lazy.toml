@@ -84,6 +84,20 @@ hook_add = '''
 '''
 # }}}
 
+[[plugins]] # markdownでoutlineを作る専用
+repo = 'Shougo/unite.vim' # {{{
+on_ft = ['markdown']
+# }}}
+
+[[plugins]] # アウトラインの自動作成
+repo = 'Shougo/unite-outline' # {{{
+hook_add = '''
+    nnoremap <Leader>ol :<C-u>Denite -mode=normal -cursor-wrap=true -split=vertical unite:outline<CR>
+'''
+depends = 'unite.vim'
+on_ft = ['markdown']
+# }}}
+
 # Not In Use {{{
 
 # [[plugins]] # Markdownプレビューワ, 先にnpm -g install instant-markdown-dが必要

@@ -313,7 +313,6 @@ repo = 'kshenoy/vim-signature' # {{{
 repo = 'embear/vim-localvimrc' # {{{
 hook_add = '''
     let g:localvimrc_persistent=1
-    let g:localvimrc_persistent_file="$HOME/.vim/.localvimrc_persistent"
 '''
 # }}}
 

@@ -309,6 +309,14 @@ hook_add = '''
 repo = 'kshenoy/vim-signature' # {{{
 # }}}
 
+[[plugins]] # ディレクトリごとにvimrcを設定できる
+repo = 'embear/vim-localvimrc' # {{{
+hook_add = '''
+    let g:localvimrc_persistent=1
+    let g:localvimrc_persistent_file="$HOME/.vim/.localvimrc_persistent"
+'''
+# }}}
+
 # 使っていない設定 {{{
 
 # [[plugins]] # Unite User Interface

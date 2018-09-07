@@ -37,7 +37,6 @@ hook_add = '''
     call denite#custom#map('insert', 'jk', '<denite:enter_mode:normal>', 'noremap')
     " }}}
 '''
-
 # }}}
 
 [[plugins]] # アウトラインの自動作成
@@ -255,7 +254,7 @@ hook_add = '''
 # }}}
 
 [[plugins]] # 新規modeを作成
-repo = 'thinca/vim-submode' #{{{
+repo = 'thinca/vim-submode' # {{{
 hook_add = '''
     " タイムアウト設定をOFFに
     let g:submode_timeout = 0
@@ -307,8 +306,8 @@ hook_add = '''
 # }}}
 
 [[plugins]] # Markerを可視化
-repo = 'kshenoy/vim-signature' #{{{
-#}}}
+repo = 'kshenoy/vim-signature' # {{{
+# }}}
 
 # 使っていない設定 {{{
 

@@ -22,6 +22,7 @@ hook_add = '''
     nnoremap <silent> [denite]t :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical tag<CR>
     nnoremap <silent> [denite]l :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical line<CR>
     nnoremap <silent> [denite]m :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical mark<CR>
+    nnoremap <silent> [denite]o :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical outline<CR>
 
     " Denite keymap {{{
     call denite#custom#map('normal', '/', '<denite:enter_mode:insert>', 'noremap')

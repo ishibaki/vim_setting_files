@@ -298,6 +298,31 @@ hook_add = '''
 
 [[plugins]] # Markerを可視化
 repo = 'kshenoy/vim-signature' # {{{
+hook_add = '''
+    let g:SignatureMap = {
+    \ 'Leader'             :  "m",
+    \ 'PlaceNextMark'      :  "m,",
+    \ 'ToggleMarkAtLine'   :  "m.",
+    \ 'PurgeMarksAtLine'   :  "m-",
+    \ 'DeleteMark'         :  "dm",
+    \ 'PurgeMarks'         :  "m<Space>",
+    \ 'PurgeMarkers'       :  "m<BS>",
+    \ 'GotoNextLineAlpha'  :  "']",
+    \ 'GotoPrevLineAlpha'  :  "'[",
+    \ 'GotoNextSpotAlpha'  :  "`]",
+    \ 'GotoPrevSpotAlpha'  :  "`[",
+    \ 'GotoNextLineByPos'  :  "]'",
+    \ 'GotoPrevLineByPos'  :  "['",
+    \ 'GotoNextSpotByPos'  :  "]`",
+    \ 'GotoPrevSpotByPos'  :  "[`",
+    \ 'GotoNextMarker'     :  "]=",
+    \ 'GotoPrevMarker'     :  "[=",
+    \ 'GotoNextMarkerAny'  :  "]-",
+    \ 'GotoPrevMarkerAny'  :  "[-",
+    \ 'ListBufferMarks'    :  "m/",
+    \ 'ListBufferMarkers'  :  "m?"
+    \ }
+'''
 # }}}
 
 [[plugins]] # ディレクトリごとに.local.vimrcを設定できる

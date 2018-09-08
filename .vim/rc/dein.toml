@@ -16,7 +16,7 @@ hook_add = '''
     nmap <Leader>u [denite]
     nnoremap <silent> [denite]b :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical buffer<CR>
     nnoremap <silent> [denite]f :<C-u>DeniteBufferDir -direction=topleft -mode=normal -cursor-wrap=true -split=vertical file file:new<CR>
-    nnoremap <silent> [denite]c :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical changes<CR>
+    nnoremap <silent> [denite]c :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical change<CR>
     nnoremap <silent> [denite]g :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical grep<CR>
     nnoremap <silent> [denite]h :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical help<CR>
     nnoremap <silent> [denite]t :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical tag<CR>

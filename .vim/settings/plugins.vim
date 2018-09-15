@@ -225,6 +225,28 @@ let &cpo = s:save_cpo| unlet s:save_cpo
 set foldtext=FoldCCtext()
 " }}}
 
+" ------ netrw setting ---------
+" Toggle Vexplore with Ctrl-E
+function! ToggleLExplorer()
+    if exists("t:expl_buf_num")
+        let expl_win_num = bufwinnr(t:expl_buf_num)
+        if expl_win_num != -1
+            let cur_win_nr = winnr()
+            exec expl_win_num . 'wincmd w'
+            close
+            exec cur_win_nr . 'wincmd w'
+            unlet t:expl_buf_num
+        else
+            unlet t:expl_buf_num
+        endif
+    else
+        exec '1wincmd w'
+        Lexplore
+        let t:expl_buf_num = bufnr("%")
+    endif
+endfunction
+map <silent><C-S> :call ToggleLExplorer()<CR>
+
 " --------------- Unite --------------- {{{
 " nnoremap <silent> ,vr :UniteResume<CR>
 

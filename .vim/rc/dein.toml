@@ -130,16 +130,6 @@ hook_add = '''
 repo = 'mattn/sonictemplate-vim' # {{{
 # }}}
 
-[[plugins]] # ファイルツリー
-repo = 'scrooloose/nerdtree' # {{{
-hook_add = '''
-    nmap <Leader>t<CR> :NERDTreeToggle<CR>
-    let NERDTreeShowBookmarks = 1
-    let NERDTreeShowHidden = 1
-    nnoremap <silent><C-s> :NERDTreeToggle<CR>
-'''
-# }}}
-
 [[plugins]] # Simplenote連携
 repo = 'mrtazz/simplenote.vim' # {{{
 # ~/.simplenotercを準備すること
@@ -434,6 +424,16 @@ repo = 'thinca/vim-localrc' # {{{
 # hook_add = '''
 #     map <Space>m <Plug>(quickhl-manual-this)
 #     map <Space>M <Plug>(quickhl-manual-reset)
+# '''
+# }}}
+
+# [[plugins]] # ファイルツリー
+# repo = 'scrooloose/nerdtree' # {{{
+# hook_add = '''
+#     nmap <Leader>t<CR> :NERDTreeToggle<CR>
+#     let NERDTreeShowBookmarks = 1
+#     let NERDTreeShowHidden = 1
+#     nnoremap <silent><C-s> :NERDTreeToggle<CR>
 # '''
 # }}}
 

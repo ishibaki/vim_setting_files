@@ -40,8 +40,8 @@ nnoremap <CR> G
 " nnoremap <silent>p p']
 
 " -------------------- バッファ全体をモーション範囲に ---------------
-omap ae :normal ggVG<CR>
-omap ie :normal ggVG<CR>
+omap ae :<C-u>normal ggVG<CR>
+omap ie :<C-u>normal ggVG<CR>
 
 " -------------------終了/保存に関する追加コマンド-------------------
 " スペースキー+qで終了

@@ -340,6 +340,16 @@ repo = 'thinca/vim-localrc' # {{{
 # repo = 'embear/vim-localvimrc' でも良い．どっちがいいんだろう．
 # }}}
 
+[[plugins]] # undoをツリー表示する
+repo = 'sjl/gundo.vim' # {{{
+hook_add = '''
+    let g:gundo_prefer_python3 = 1
+    let g:gundo_auto_preview = 0
+    nnoremap <F5> :GundoToggle<CR>
+    nnoremap gy   :GundoToggle<CR>
+'''
+# }}}
+
 # 使っていない設定 {{{
 
 # [[plugins]] # Unite User Interface

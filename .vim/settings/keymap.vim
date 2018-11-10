@@ -124,3 +124,5 @@ nnoremap <silent>]b :bnext<CR>
 " ドットによる繰り返しもできるが，個人的な直感ではこっちが好き
 xnoremap > >gv
 xnoremap < <gv
+
+nnoremap <Space>s,. :<C-u>%s/，/、/g<CR>:<C-u>%s/．/。/g<CR>

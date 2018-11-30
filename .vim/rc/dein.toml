@@ -447,6 +447,14 @@ hook_add = '''
 # '''
 # }}}
 
+# [[plugins]]
+# repo = 'mattn/vimplenote-vim' # {{{
+# # ~/.vimplenotercを用意すること
+# hook_add = '''
+#     source ~/.vimplenoterc
+# '''
+# # }}}
+
 # 例集 {{{
 # git clone 後、実行すべきコマンドがある場合はこんな感じ {{{
 # [[plugins]]

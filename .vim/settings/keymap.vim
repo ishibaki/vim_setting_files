@@ -39,6 +39,9 @@ nnoremap <CR> G
 " vnoremap <silent>p p']
 " nnoremap <silent>p p']
 
+" DやCコマンドとの一貫性を保つために，Yで行末までヤンクにする
+nnoremap Y y$
+
 " -------------------- バッファ全体をモーション範囲に ---------------
 omap ae :<C-u>normal ggVG<CR>
 omap ie :<C-u>normal ggVG<CR>

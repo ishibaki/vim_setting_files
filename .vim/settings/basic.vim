@@ -76,6 +76,9 @@ set cursorcolumn
 " インデントはスマートインデント
 set smartindent
 
+" wrapで折り返された行を，その行と同じインデントレベルにする
+set breakindent
+
 " ビープ音を可視化
 set visualbell
 

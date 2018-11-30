@@ -133,5 +133,7 @@ nnoremap <Space>s,. :<C-u>%s/，/、/g<CR>:<C-u>%s/．/。/g<CR>
 
 " ------- タイムスタンプの挿入 ------
 nnoremap <silent>ZTD O<C-r>=strftime("%Y-%m-%d")<CR><Esc>
+nnoremap <silent>ZTd O<C-r>=strftime("%Y/%m/%d")<CR><Esc>
 nnoremap <silent>ZTT O<C-r>=strftime("%T")<CR><Esc>
 nnoremap <silent>ZTF O<C-r>=strftime("%Y-%m-%d %T")<CR><Esc>
+nnoremap <silent>ZTf O<C-r>=strftime("%Y/%m/%d %T")<CR><Esc>

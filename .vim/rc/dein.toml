@@ -130,33 +130,6 @@ hook_add = '''
 repo = 'mattn/sonictemplate-vim' # {{{
 # }}}
 
-[[plugins]] # Simplenote連携
-repo = 'mrtazz/simplenote.vim' # {{{
-# ~/.simplenotercを準備すること
-hook_add = '''
-    source ~/.simplenoterc
-    let g:SimplenoteFiletype = 'markdown'
-
-    :function! SimplenoteMemoFunc()
-        :SimplenoteOpen 0ea6ef57f1b5aeba17939b88039f1cd4
-        if getline("$") != ""
-            :call append(line("$"), "")
-        endif
-        :call append(line("$"), "---")
-        :call append(line("$"), "")
-        :let now_time = strftime("%Y/%m/%d %H:%M:%S", localtime())
-        :call append(line("$"), "## " . now_time)
-        :call append(line("$"), "")
-        :normal G
-        :PrevimOpen
-        :2quit
-    :endfunction
-
-    command Memo :call SimplenoteMemoFunc()
-    command Note :call SimplenoteMemoFunc()
-'''
-# }}}
-
 [[plugins]] # Text objectを新しく設定できる
 repo = 'kana/vim-textobj-user' # {{{
 # }}}
@@ -347,6 +320,33 @@ hook_add = '''
     let g:gundo_auto_preview = 0
     nnoremap <F5> :GundoToggle<CR>
     nnoremap gy   :GundoToggle<CR>
+'''
+# }}}
+
+[[plugins]] # Simplenote連携
+repo = 'mrtazz/simplenote.vim' # {{{
+# ~/.simplenotercを準備すること
+hook_add = '''
+    source ~/.simplenoterc
+    let g:SimplenoteFiletype = 'markdown'
+
+    :function! SimplenoteMemoFunc()
+        :SimplenoteOpen 0ea6ef57f1b5aeba17939b88039f1cd4
+        if getline("$") != ""
+            :call append(line("$"), "")
+        endif
+        :call append(line("$"), "---")
+        :call append(line("$"), "")
+        :let now_time = strftime("%Y/%m/%d %H:%M:%S", localtime())
+        :call append(line("$"), "## " . now_time)
+        :call append(line("$"), "")
+        :normal G
+        :PrevimOpen
+        :2quit
+    :endfunction
+
+    command Memo :call SimplenoteMemoFunc()
+    command Note :call SimplenoteMemoFunc()
 '''
 # }}}
 

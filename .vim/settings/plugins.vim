@@ -68,7 +68,7 @@ autocmd BufNewFile,BufRead *GTD.txt call GenerateTaskDone()
 :endfunction
 " }}}
 
-" --------- folding setting ---------- {{{
+" ---------- folding setting ---------- {{{
 if expand('<sfile>:p')!=#expand('%:p') && exists('g:loaded_foldCC')| finish| endif| let g:loaded_foldCC = 1
 let s:save_cpo = &cpo| set cpo&vim
 scriptencoding utf-8
@@ -225,8 +225,8 @@ let &cpo = s:save_cpo| unlet s:save_cpo
 set foldtext=FoldCCtext()
 " }}}
 
-" ------ netrw setting ---------
-" Toggle Vexplore with Ctrl-E
+" ---------- netrw setting ---------- {{{
+" Toggle Vexplore with Ctrl-S
 function! ToggleLExplorer()
     if exists("t:expl_buf_num")
         let expl_win_num = bufwinnr(t:expl_buf_num)
@@ -246,6 +246,7 @@ function! ToggleLExplorer()
     endif
 endfunction
 map <silent><C-S> :call ToggleLExplorer()<CR>
+" }}}
 
 " ---------- Highlight CSV column ---------- {{{
 function! CSVH(x)
@@ -256,7 +257,7 @@ command! -nargs=1 Csvhl :call CSVH(<args>)
 " :Csvhl 1<CR>みたいにつかう
 " }}}
 
-" --------------- Unite --------------- {{{
+" ---------- Unite ---------- {{{
 " nnoremap <silent> ,vr :UniteResume<CR>
 
 " " vinarise
@@ -277,7 +278,7 @@ command! -nargs=1 Csvhl :call CSVH(<args>)
 " set runtimepath+=c:/tools/vim/vim74/bundle/neco-look
 " }}}
 
-" --------------- neocomplete --------------- {{{
+" ---------- neocomplete ---------- {{{
 let g:neocomplete#enable_at_startup = 1
 
 if !exists('g:neocomplete#text_mode_filetypes')

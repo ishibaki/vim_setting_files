@@ -103,13 +103,6 @@ set ambiwidth=double
 " python設定
 let g:python3_host_prog = expand('usr/local/bin/python3')
 
-" -------------------CSVカラムのハイライト:Csvhl \d-------------------
-function! CSVH(x)
-    execute 'match Keyword /^\([^,]*,\)\{'.a:x.'}\zs[^,]*/'
-    execute 'normal ^'.a:x.'f,'
-endfunction
-command! -nargs=1 Csvhl :call CSVH(<args>)
-
 " -------------------Tab系-------------------
 " 不可視文字を可視化(タブが▸-, 改行が↲, ノーブレークスペース
 " が%として表示される)

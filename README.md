@@ -1,5 +1,7 @@
 # vim_setting_files
 
+[Latest on github](https://github.com/ishibaki/vim_setting_files)
+
 My VIM setting files.
 
 ---

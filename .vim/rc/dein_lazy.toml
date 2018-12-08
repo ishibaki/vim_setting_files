@@ -152,6 +152,11 @@ repo = 'mattn/excelview-vim' # {{{
 depends = 'webapi-vim'
 # }}}
 
+[[plugins]] # カーソル下の語が自動ハイライトされる
+repo = 'itchyny/vim-cursorword' # {{{
+on_ft = ['python', 'html', 'toml', 'c']
+# }}}
+
 # Not In Use {{{
 # }}}
 

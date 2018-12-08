@@ -137,3 +137,6 @@ nnoremap <silent>ZTd O<C-r>=strftime("%Y/%m/%d")<CR><Esc>
 nnoremap <silent>ZTT O<C-r>=strftime("%T")<CR><Esc>
 nnoremap <silent>ZTF O<C-r>=strftime("%Y-%m-%d %T")<CR><Esc>
 nnoremap <silent>ZTf O<C-r>=strftime("%Y/%m/%d %T")<CR><Esc>
+
+" ------ <C-f>で最後1行に行き過ぎるのをふせぐ -----
+noremap <expr> <C-f> max([winheight(0) - 2, 1]) . "\<C-d>" . (line('.') > line('$') - winheight(0) ? 'L' : 'H')

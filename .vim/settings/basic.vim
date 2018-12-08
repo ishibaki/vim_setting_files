@@ -183,3 +183,9 @@ autocmd WinEnter * set cursorline
 autocmd WinLeave * set nocursorline
 autocmd InsertEnter * set nocursorline
 autocmd InsertLeave * set cursorline
+
+" ファイルが大きいとき，ハイライトを無効にする
+augroup vimrc-highlight
+    autocmd!
+    autocmd Syntax * if 10000 < line('$') | syntax sync minlines=100 | endif
+augroup END

@@ -100,6 +100,9 @@ set wildmenu
 " ◯や■などの記号が崩れるのを防ぐ
 set ambiwidth=double
 
+" H, M, Lコマンドのオフセットを無しにする
+set scrolloff=0
+
 " python設定
 let g:python3_host_prog = expand('usr/local/bin/python3')
 

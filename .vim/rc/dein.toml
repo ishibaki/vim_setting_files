@@ -64,7 +64,7 @@ repo = 'tpope/vim-surround' # {{{
 [[plugins]] # 行末の不要な半角スペースを可視化
 repo = 'bronson/vim-trailing-whitespace' # {{{
 hook_add = '''
-    let g:extra_whitespace_ignored_filetypes = ['unite', 'markdown']
+    let g:extra_whitespace_ignored_filetypes = ['unite']
 '''
 # }}}
 

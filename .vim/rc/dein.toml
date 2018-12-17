@@ -350,6 +350,10 @@ hook_add = '''
 '''
 # }}}
 
+[[plugins]] # Rename機能を提供，:Renamerで起動，:Renで決定
+repo = 'qpkorr/vim-renamer' # {{{
+# }}}
+
 # 使っていない設定 {{{
 
 # [[plugins]] # Unite User Interface

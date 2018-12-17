@@ -68,9 +68,9 @@ autocmd BufNewFile,BufRead *GTD.txt call GenerateTaskDone()
 :endfunction
 " }}}
 
-" ---------- machit ---------- {{{
-source $VIMRUNTIME/macros/matchit.vim
-" }}}
+" " ---------- machit ---------- {{{
+" source $VIMRUNTIME/macros/matchit.vim
+" " }}}
 
 " ---------- folding setting ---------- {{{
 if expand('<sfile>:p')!=#expand('%:p') && exists('g:loaded_foldCC')| finish| endif| let g:loaded_foldCC = 1

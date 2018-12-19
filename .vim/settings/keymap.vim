@@ -46,8 +46,8 @@ nnoremap <CR> G
 nnoremap Y y$
 
 " -------------------- バッファ全体をモーション範囲に ---------------
-omap ae :<C-u>normal ggVG<CR>
-omap ie :<C-u>normal ggVG<CR>
+omap <silent> ae :<C-u>normal ggVG<CR>
+omap <silent> ie :<C-u>normal ggVG<CR>
 xnoremap <silent> ie <Esc>ggVG
 xnoremap <silent> ae <Esc>ggVG
 

@@ -4,12 +4,12 @@
 "  |__|\__\|______| /__/  |__/\__/|__||__|\__\|___|
 
 " スペース+ドットでvimrcを開く
-nnoremap <Space>. :<C-u>tabedit $MYVIMRC<CR>
-nnoremap <Space><Space>. :<C-u>tabedit $MYVIMRC<CR>
+nnoremap <silent> <Space>. :<C-u>tabedit $MYVIMRC<CR>
+nnoremap <silent> <Leader>. :<C-u>tabedit $MYVIMRC<CR>
 
 " スペース+コンマでGTDを拓く
-nnoremap <Space>, :tabedit ~/Dropbox/GTD/GTD.txt<CR>gg
-nnoremap <Space><Space>, :tabedit ~/Dropbox/GTD/GTD.txt<CR>gg
+nnoremap <silent> <Space>, :tabedit ~/Dropbox/GTD/GTD.txt<CR>gg
+nnoremap <silent> <Leader>, :tabedit ~/Dropbox/GTD/GTD.txt<CR>gg
 
 " 挿入モードでjk入力によりノーマルモードへ戻る
 inoremap jk <Esc>
@@ -115,11 +115,11 @@ vnoremap / /\v
 " --------------- :terminal settings ---------------
 " nnoremap :ter<CR> :vertical rightbelow terminal<CR>
 " nnoremap :terminal<CR> :vertical rightbelow terminal<CR>
-nnoremap <silent><Space>t<Space>t<CR> :vertical rightbelow terminal<CR>
+nnoremap <silent> <Space>t<Space>t<CR> :vertical rightbelow terminal<CR>
 
 " macro editing
 " ex) "q<Leader>m
-nnoremap <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
+nnoremap <silent> <leader>m  :<c-u><c-r><c-r>='let @'. v:register .' = '. string(getreg(v:register))<cr><c-f><left>
 
 " --------------- bufferの切り替え ---------------
 nnoremap <silent>[b :bprev<CR>
@@ -131,7 +131,7 @@ xnoremap > >gv
 xnoremap < <gv
 
 " ------- 全角コンマと全角ピリオドを句読点に変更する ------
-nnoremap <Space>s,. :<C-u>%s/，/、/g<CR>:<C-u>%s/．/。/g<CR>
+nnoremap <silent> <Space>s,. :<C-u>%s/，/、/g<CR>:<C-u>%s/．/。/g<CR>
 
 " ------- タイムスタンプの挿入 ------
 nnoremap <silent>ZTD O<C-r>=strftime("%Y-%m-%d")<CR><Esc>

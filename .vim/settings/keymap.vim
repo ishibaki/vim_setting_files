@@ -105,7 +105,6 @@ inoremap <C-e> <C-o>$
 " ---------常にvery magic------------------
 nnoremap / /\v
 cnoremap %s/ %s/\v
-cnoremap :/ %s/\v
 vnoremap / /\v
 
 " ----------行の連結後にスペースをいれない----------

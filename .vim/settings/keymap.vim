@@ -81,10 +81,10 @@ nnoremap <Space>qqa<CR> :qa!<CR>
 
 " -------------------空行の挿入コマンド------------------
 " スペースキー+oで空行を現在行の後に挿入
-nnoremap <silent><Space>o  :<C-u>for i in range(v:count1) \| call append(line('.'), '') \| endfor<CR>
+nnoremap <Space>o  :<C-u>for i in range(v:count1) \| call append(line('.'), '') \| endfor<CR>
 
 " スペースキー+Oで空行を現在行の前に挿入
-nnoremap <silent><Space>O  :<C-u>for i in range(v:count1) \| call append(line('.')-1, '') \| endfor<CR>
+nnoremap <Space>O  :<C-u>for i in range(v:count1) \| call append(line('.')-1, '') \| endfor<CR>
 
 " ----------<Space>*によるその他のキーバインド----------
 " \nを含まない1行選択

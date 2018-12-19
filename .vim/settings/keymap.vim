@@ -17,6 +17,9 @@ inoremap jk <Esc>
 " ESC連打でハイライト解除
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
+" <C-l>でハイライト解除と画面のredraw
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 " -------------------移動に関する追加コマンド-------------------
 " スペースキー+hで行頭へ
 noremap <Space>h ^

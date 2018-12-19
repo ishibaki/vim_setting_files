@@ -252,7 +252,7 @@ endfunction
 map <silent><C-S> :call ToggleLExplorer()<CR>
 " }}}
 
-" ---------- Highlight CSV column ---------- {{{
+" ---------- Highlight CSV column (:Csvhl 1<CR>) ---------- {{{
 function! CSVH(x)
     execute 'match Keyword /^\([^,]*,\)\{'.a:x.'}\zs[^,]*/'
     execute 'normal ^'.a:x.'f,'

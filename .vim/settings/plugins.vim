@@ -68,10 +68,6 @@ autocmd BufNewFile,BufRead *GTD.txt call GenerateTaskDone()
 :endfunction
 " }}}
 
-" " ---------- machit ---------- {{{
-" source $VIMRUNTIME/macros/matchit.vim
-" " }}}
-
 " ---------- folding setting ---------- {{{
 if expand('<sfile>:p')!=#expand('%:p') && exists('g:loaded_foldCC')| finish| endif| let g:loaded_foldCC = 1
 let s:save_cpo = &cpo| set cpo&vim
@@ -231,7 +227,7 @@ set foldtext=FoldCCtext()
 
 " ---------- netrw setting ---------- {{{
 " Toggle Vexplore with Ctrl-S
-function! ToggleLExplorer()
+function! ToggleLExplorer() " {{{
     if exists("t:expl_buf_num")
         let expl_win_num = bufwinnr(t:expl_buf_num)
         if expl_win_num != -1
@@ -249,14 +245,16 @@ function! ToggleLExplorer()
         let t:expl_buf_num = bufnr("%")
     endif
 endfunction
+" }}}
 map <silent><C-S> :call ToggleLExplorer()<CR>
 " }}}
 
 " ---------- Highlight CSV column (:Csvhl 1<CR>) ---------- {{{
-function! CSVH(x)
+function! CSVH(x) "{{{
     execute 'match Keyword /^\([^,]*,\)\{'.a:x.'}\zs[^,]*/'
     execute 'normal ^'.a:x.'f,'
 endfunction
+" }}}
 command! -nargs=1 Csvhl :call CSVH(<args>)
 " :Csvhl 1<CR>みたいにつかう
 " }}}
@@ -305,6 +303,10 @@ if !exists('g:neocomplete#text_mode_filetypes')
                 \ 'tex': 1,
                 \ }
 " }}}
+
+" " ---------- machit ---------- {{{
+" source $VIMRUNTIME/macros/matchit.vim
+" " }}}
 
 " inoremap <expr><C-x>s neocomplete#start_manual_complete('look')
 

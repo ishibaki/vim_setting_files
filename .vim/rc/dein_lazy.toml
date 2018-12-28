@@ -157,6 +157,11 @@ repo = 'itchyny/vim-cursorword' # {{{
 on_ft = ['python', 'html', 'toml', 'c']
 # }}}
 
+[[plugins]] # カラムをモーション範囲に
+repo = 'idbrii/textobj-word-column.vim' # {{{
+depends = 'vim-textobj-user'
+# }}}
+
 # Not In Use {{{
 # }}}
 

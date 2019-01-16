@@ -13,12 +13,12 @@
 # -----python設定----- {{{
 
 # [[plugins]] # vimのマニュアル参照
-# repo = 'davidhalter/jedi-vim' # {{{
-# on_ft = 'python'
-# # jediにおける変数リネーム機能とquickrun実行コマンドのcompeteをクリアしておく
-# hook_add = '''
-#     let g:jedi#rename_command = "<Leader>R"
-# '''
+repo = 'davidhalter/jedi-vim' # {{{
+on_ft = 'python'
+# jediにおける変数リネーム機能とquickrun実行コマンドのcompeteをクリアしておく
+hook_add = '''
+    let g:jedi#rename_command = "<Leader>R"
+'''
 # }}}
 
 [[plugins]] # text objectをpythonのdefとClassで設定できます

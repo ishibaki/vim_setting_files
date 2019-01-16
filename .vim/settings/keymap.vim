@@ -45,6 +45,10 @@ nnoremap <CR> G
 " DやCコマンドとの一貫性を保つために，Yで行末までヤンクにする
 nnoremap Y y$
 
+" PとgPの入れ替え
+nnoremap P gP
+nnoremap gP P
+
 " -------------------- バッファ全体をモーション範囲に ---------------
 omap <silent> ae :<C-u>normal ggVG<CR>
 omap <silent> ie :<C-u>normal ggVG<CR>

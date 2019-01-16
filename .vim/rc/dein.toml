@@ -128,6 +128,9 @@ hook_add = '''
 
 [[plugins]] # テンプレート作成
 repo = 'mattn/sonictemplate-vim' # {{{
+hook_add = '''
+  let g:sonictemplate_vim_template_dir = '$HOME/.vim/sonictemplate-vim'
+'''
 # }}}
 
 [[plugins]] # Text objectを新しく設定できる

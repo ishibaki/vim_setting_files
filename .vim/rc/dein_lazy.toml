@@ -80,7 +80,7 @@ hook_add = '''
     let g:previm_disable_default_css = 1
     let g:previm_custom_css_path = '~/.pandoc/github.css'
     nnoremap <silent> <Leader>P :PrevimOpen<CR>
-    autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown} PrevimOpen
+    " autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mdwn,mdown,markdown} PrevimOpen
 '''
 # }}}
 
@@ -93,6 +93,22 @@ on_ft = ['markdown']
 repo = 'Shougo/unite-outline' # {{{
 hook_add = '''
     nnoremap <Leader>ol :<C-u>Denite -mode=normal -cursor-wrap=true -split=vertical unite:outline<CR>
+'''
+depends = 'unite.vim'
+on_ft = ['markdown']
+# }}}
+
+[[plugins]] # citation
+repo = 'rafaqz/citation.vim' # {{{
+hook_add = '''
+    let g:citation_vim_bibtex_file="~/.pandoc/library.bib"
+    let g:citation_vim_mode="bibtex"
+    let g:citation_vim_cache_path='~/.vim/hoge'
+    let g:citation_vim_outer_prefix="["
+    let g:citation_vim_inner_prefix="@"
+    let g:citation_vim_suffix="]"
+    let g:citation_vim_et_al_limit=2
+    nnoremap <leader>c :<C-u>Unite -buffer-name=citation-start-insert -default-action=append citation/key<cr>
 '''
 depends = 'unite.vim'
 on_ft = ['markdown']

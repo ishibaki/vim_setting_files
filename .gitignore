@@ -21,4 +21,4 @@ init.vim
 .vim/info/viminfo
 .vim/vim_cover.txt
 
-.vim/hoge/citation_vim_cache
+.vim/citation_cache/citation_vim_cache

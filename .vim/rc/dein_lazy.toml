@@ -109,7 +109,10 @@ hook_add = '''
     let g:citation_vim_inner_prefix="@"
     let g:citation_vim_suffix="]"
     let g:citation_vim_et_al_limit=2
-    nnoremap <leader>c :<C-u>Unite -buffer-name=citation-start-insert -default-action=append citation/key<cr>
+    nnoremap <silent> <leader>c :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical unite:citation/key<CR>
+    nnoremap <silent> [denite]k :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical unite:citation/key<CR>
+    nnoremap <silent> [denite]a :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical unite:citation/abstract<CR>
+    nnoremap [denite]i :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical unite:citation<CR>
 '''
 depends = 'unite.vim'
 on_ft = ['markdown']

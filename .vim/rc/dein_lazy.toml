@@ -34,6 +34,7 @@ hook_add = '''
     let g:pymode_python = 'python3'
     let g:pymode_run = 0
     let g:pymode_run_bind = '<leader>_'
+    let g:pymode_doc_bind = '<leader>K'
 '''
 # }}}
 
@@ -45,6 +46,7 @@ hook_add = '''
         autocmd!
         autocmd FileType python nmap <buffer>K <Plug>(devdocs-under-cursor)
     augroup END
+    nmap K <Plug>(devdocs-under-cursor)
     let g:devdocs_filetype_map = { '*': '' }
     let g:devdocs_open_cmd = 'open -a Safari'
 '''

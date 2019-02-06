@@ -12,15 +12,15 @@
 
 # -----python設定----- {{{
 
-[[plugins]] # vimのマニュアル参照
-repo = 'davidhalter/jedi-vim' # {{{
-on_ft = 'python'
-# jediにおける変数リネーム機能とquickrun実行コマンドのcompeteをクリアしておく
-hook_add = '''
-    let g:jedi#rename_command = "<Leader>R"
-    let g:jedi#force_py_version = 3
-'''
-# }}}
+# [[plugins]] # vimのマニュアル参照
+# repo = 'davidhalter/jedi-vim' # {{{
+# on_ft = 'python'
+# # jediにおける変数リネーム機能とquickrun実行コマンドのcompeteをクリアしておく
+# hook_add = '''
+#     let g:jedi#rename_command = "<Leader>R"
+#     let g:jedi#force_py_version = 3
+# '''
+# # }}}
 
 [[plugins]] # text objectをpythonのdefとClassで設定できます
 repo = 'bps/vim-textobj-python' # {{{

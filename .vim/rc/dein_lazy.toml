@@ -37,6 +37,19 @@ hook_add = '''
 '''
 # }}}
 
+[[plugins]] # devdocs
+repo = 'rhysd/devdocs.vim' # {{{
+on_ft = 'python'
+hook_add = '''
+    augroup plugin-devdocs
+        autocmd!
+        autocmd FileType python nmap <buffer>K <Plug>(devdocs-under-cursor)
+    augroup END
+    let g:devdocs_filetype_map = { '*': '' }
+    let g:devdocs_open_cmd = 'open -a Safari'
+'''
+# }}}
+
 # Not In Use {{{
 
 # [[plugins]]

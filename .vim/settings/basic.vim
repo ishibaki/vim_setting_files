@@ -104,7 +104,7 @@ set ambiwidth=double
 set scrolloff=0
 
 " python設定
-let g:python3_host_prog = expand('usr/local/bin/python3')
+let g:python3_host_prog = expand('/usr/local/bin/python3')
 
 " -------------------Tab系-------------------
 " 不可視文字を可視化(タブが▸-, 改行が↲, ノーブレークスペース

@@ -100,15 +100,10 @@ hook_add = '''
 '''
 # }}}
 
-[[plugins]] # markdownでoutlineを作る専用
-repo = 'Shougo/unite.vim' # {{{
-on_ft = ['markdown']
-# }}}
-
 [[plugins]] # アウトラインの自動作成
 repo = 'Shougo/unite-outline' # {{{
 hook_add = '''
-    nnoremap <Leader>ol :<C-u>Denite -mode=normal -cursor-wrap=true -split=vertical unite:outline<CR>
+    nnoremap <Leader>ol :<C-u>Unite -vertical outline<CR>
 '''
 depends = 'unite.vim'
 on_ft = ['markdown']
@@ -124,16 +119,21 @@ hook_add = '''
     let g:citation_vim_inner_prefix="@"
     let g:citation_vim_suffix="]"
     let g:citation_vim_et_al_limit=2
-    nnoremap <silent> <leader>c :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical unite:citation/key<CR>
-    nnoremap <silent> [denite]k :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical unite:citation/key<CR>
-    nnoremap <silent> [denite]a :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical unite:citation/abstract<CR>
-    nnoremap [denite]i :<C-u>Denite -direction=topleft -mode=normal -cursor-wrap=true -split=vertical unite:citation<CR>
+    nnoremap <silent> <leader>c :<C-u>Unite -direction=topleft -vertical citation/key<CR>
+    nnoremap <silent> [unite]k  :<C-u>Unite -direction=topleft -vertical citation/key<CR>
+    nnoremap <silent> [unite]a  :<C-u>Unite -direction=topleft -vertical citation/abstract<CR>
+    nnoremap <silent> [unite]i  :<C-u>Unite -direction=topleft -vertical citation<CR>
 '''
 depends = 'unite.vim'
 on_ft = ['markdown']
 # }}}
 
 # Not In Use {{{
+
+# [[plugins]] # markdownでoutlineを作る専用
+# repo = 'Shougo/unite.vim' # {{{
+# on_ft = ['markdown']
+# # }}}
 
 # [[plugins]] # Markdownプレビューワ，同期が早い
 # repo = 'iamcco/markdown-preview.nvim' # {{{

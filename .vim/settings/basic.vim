@@ -124,8 +124,8 @@ set shiftwidth=4
 " 拡張子によってタブ文字の字下げ数を調節
 augroup fileTypeIndent
     autocmd!
-    autocmd BufNewFile,BufRead *.{html,css,rb,R,q} setlocal tabstop=2 softtabstop=2 shiftwidth=2
-    autocmd BufNewFile,BufRead *.{py,python,py3,python3,md,mdown,mkdn,markdown,c,h} setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.{html,css,rb,R,q,md,mdown,mkdn,markdown} setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.{py,python,py3,python3,c,h} setlocal tabstop=4 softtabstop=4 shiftwidth=4
 augroup END
 
 " -------------------検索系-------------------
@@ -167,9 +167,7 @@ command! Setpython set filetype=python
 command! Setpy set filetype=python
 
 " filetypeをmarkdownにする
-command! Setmarkdown set filetype=markdown
-command! Setmdown set filetype=markdown
-command! Setmd set filetype=markdown
+command! Setmd set filetype=markdown | set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 
 command! Datetime read !date '+\%Y/\%m/\%d \%H:\%M:\%S'
 command! Date read !date '+\%Y-\%m-\%d'

@@ -38,20 +38,6 @@ hook_add = '''
 '''
 # }}}
 
-[[plugins]] # devdocs
-repo = 'rhysd/devdocs.vim' # {{{
-on_ft = 'python'
-hook_add = '''
-    augroup plugin-devdocs
-        autocmd!
-        autocmd FileType python nmap <buffer>K <Plug>(devdocs-under-cursor)
-    augroup END
-    nmap K <Plug>(devdocs-under-cursor)
-    let g:devdocs_filetype_map = { '*': '' }
-    let g:devdocs_open_cmd = 'open -a Safari'
-'''
-# }}}
-
 # Not In Use {{{
 
 # [[plugins]]
@@ -68,6 +54,20 @@ hook_add = '''
 # [[plugins]]
 # repo = 'andviro/flake8-vim' # {{{
 # on_ft = 'python'
+# # }}}
+
+# [[plugins]] # devdocs
+# repo = 'rhysd/devdocs.vim' # {{{
+# on_ft = 'python'
+# hook_add = '''
+#     augroup plugin-devdocs
+#         autocmd!
+#         autocmd FileType python nmap <buffer>K <Plug>(devdocs-under-cursor)
+#     augroup END
+#     nmap K <Plug>(devdocs-under-cursor)
+#     let g:devdocs_filetype_map = { '*': '' }
+#     let g:devdocs_open_cmd = 'open -a Safari'
+# '''
 # # }}}
 
 # }}}

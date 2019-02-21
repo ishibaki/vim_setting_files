@@ -163,7 +163,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 let mapleader = "\<Space>\<Space>"
 
 " filetypeをpythonにする
-command! Setpython set filetype=python
 command! Setpy set filetype=python
 
 " filetypeをmarkdownにする

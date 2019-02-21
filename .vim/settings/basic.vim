@@ -169,6 +169,9 @@ command! Setpy set filetype=python
 " filetypeをmarkdownにする
 command! Setmd set filetype=markdown | set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 
+" filetypeをipynbにする
+command! Setnb set filetype=ipynb
+
 command! Datetime read !date '+\%Y/\%m/\%d \%H:\%M:\%S'
 command! Date read !date '+\%Y-\%m-\%d'
 command! Time read !date '+\%H:\%M:\%S'

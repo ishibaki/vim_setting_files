@@ -185,7 +185,10 @@ hook_add = '''
 let g:quickrun_config = {
     \ 'python': {
             \ 'command': 'python3'
-        \ }
+        \ },
+    \ 'ipynb': {
+            \ 'command': 'python3'
+        \ },
     \ }
 '''
 # }}}
@@ -347,6 +350,19 @@ hook_add = '''
 
 [[plugins]] # Rename機能を提供，:Renamerで起動，:Renで決定
 repo = 'qpkorr/vim-renamer' # {{{
+# }}}
+
+[[plugins]] # ipynb editor
+repo = 'szymonmaszke/vimpyter' # {{{
+on_ft = 'ipynb'
+hook_add = '''
+    nmap <silent><Leader>b :VimpyterInsertPythonBlock<CR>
+    nmap <silent><Leader>s :VimpyterStartJupyter<CR>
+    nmap <silent><Leader>S :VimpyterStartNteract<CR>
+    let g:vimpyter_view_directory = '$HOME/.vimpyter_views'
+    xnoremap <silent> ic <Esc>?```{.python?+1<CR>V/```/-1<CR>
+    xnoremap <silent> ac <Esc>?```{.python<CR>V/```<CR>
+'''
 # }}}
 
 # 使っていない設定 {{{

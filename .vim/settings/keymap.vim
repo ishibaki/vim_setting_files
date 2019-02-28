@@ -149,3 +149,17 @@ nnoremap <silent>ZTf O<C-r>=strftime("%Y/%m/%d %T")<CR><Esc>
 
 " ------ <C-f>で最後1行に行き過ぎるのをふせぐ -----
 noremap <expr> <C-f> max([winheight(0) - 2, 1]) . "\<C-d>" . (line('.') > line('$') - winheight(0) ? 'L' : 'H')
+
+" ------ 矩形選択以外でもIやAを使えるようにする -----
+vnoremap <expr> I  <SID>force_blockwise_visual('I')
+vnoremap <expr> A  <SID>force_blockwise_visual('A')
+
+function! s:force_blockwise_visual(next_key)
+  if mode() ==# 'v'
+    return "\<C-v>" . a:next_key
+  elseif mode() ==# 'V'
+    return "\<C-v>0o$" . a:next_key
+  else  " mode() ==# "\<C-v>"
+    return a:next_key
+  endif
+endfunction

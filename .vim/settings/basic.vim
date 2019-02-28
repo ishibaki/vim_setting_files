@@ -100,6 +100,9 @@ set wildmenu
 " ◯や■などの記号が崩れるのを防ぐ
 set ambiwidth=double
 
+" マルチバイト文字(日本語とか)行の連結には空白を挿入しない
+set formatoptions+=mMj
+
 " H, M, Lコマンドのオフセットを無しにする
 set scrolloff=0
 

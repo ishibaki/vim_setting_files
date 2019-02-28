@@ -38,6 +38,19 @@ hook_add = '''
 '''
 # }}}
 
+[[plugins]] # ipynb editor
+repo = 'szymonmaszke/vimpyter' # {{{
+on_ft = 'ipynb'
+hook_add = '''
+    nmap <silent><Leader>b :VimpyterInsertPythonBlock<CR>
+    nmap <silent><Leader>s :VimpyterStartJupyter<CR>
+    nmap <silent><Leader>S :VimpyterStartNteract<CR>
+    let g:vimpyter_view_directory = '$HOME/.vimpyter_views'
+    xnoremap <silent> ic <Esc>?```{.python?+1<CR>V/```/-1<CR>
+    xnoremap <silent> ac <Esc>?```{.python<CR>V/```<CR>
+'''
+# }}}
+
 [[plugins]] # Snippet
 repo = 'Shougo/neosnippet.vim' # {{{
 on_ft = 'python'

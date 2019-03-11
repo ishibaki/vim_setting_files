@@ -1,3 +1,3 @@
-% {{_input_:title}}
-% {{_input_:author}}
-% {{_input_:date}}
+% Title
+% Author1; Author2
+% Dth MMMM YYYY

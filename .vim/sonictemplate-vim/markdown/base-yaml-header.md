@@ -1,11 +1,15 @@
 ---
-title: '{{_cursor_}}'
+title: "{{_cursor_}}"
 author:
-- name: ''
-  affiliation: ''
-- name: ''
-  affiliation: ''
-tags: ['',]
+- name: ""
+  affiliation: ""
+- name: ""
+  affiliation: ""
+tags: ["", ""
+keywords: ["", ""]
+papersize: a4
+mainfont: "Times"
+sansfont: "Lato"
 abstract: |
 
 ...

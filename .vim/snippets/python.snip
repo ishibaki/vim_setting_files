@@ -2,153 +2,153 @@ snippet     #!
 abbr        #!/usr/bin/env python3
 alias       shebang
 options     head
-	#!/usr/bin/env python3
-	${0}
+    #!/usr/bin/env python3
+    ${0}
 
 snippet     class
 abbr        class Class(...): ...
 options     head
-	class ${1:#:name}(${2:object}):
-		def __init__(self, ${3}):
-			${0:pass}
+    class ${1:#:name}(${2:object}):
+        def __init__(self, ${3}):
+            ${0:pass}
 
 snippet     classd
 abbr        class Class(...): "..."
 options     head
-	class ${1:#:name}(${2:object}):
-		"""${3:#:class documentation}"""
-		def __init__(self, ${4}):
-			"""${5:#:__init__ documentation}"""
-			${0:pass}
+    class ${1:#:name}(${2:object}):
+        """${3:#:class documentation}"""
+        def __init__(self, ${4}):
+            """${5:#:__init__ documentation}"""
+            ${0:pass}
 
 snippet     def
 abbr        def function(...): ...
 options     head
-	def ${1:#:name}(${2}):
-		${0:pass}
+    def ${1:#:name}(${2}):
+        ${0:pass}
 
 snippet     defd
 abbr        def function(...): """..."""
 options     head
-	def ${1:#:name}(${2}):
-		"""${3:#:function documentation}"""
-		${0:pass}
+    def ${1:#:name}(${2}):
+        """${3:#:function documentation}"""
+        ${0:pass}
 
 snippet     defm
 abbr        def method(self, ...): ...
 options     head
-	def ${1:#:name}(self, ${2}):
-		${0:pass}
+    def ${1:#:name}(self, ${2}):
+        ${0:pass}
 
 snippet     defmd
 abbr        def method(self, ...): "..."
 options     head
-	def ${1:#:name}(self, ${2}):
-		"""${3:#:method documentation}"""
-		${0:pass}
+    def ${1:#:name}(self, ${2}):
+        """${3:#:method documentation}"""
+        ${0:pass}
 
 snippet     elif
 abbr        elif ...: ...
 options     head
-	elif ${1:#:condition}:
-		${0:pass}
+    elif ${1:#:condition}:
+        ${0:pass}
 
 snippet     else
 abbr        else: ...
 options     head
-	else:
-		${0:pass}
+    else:
+        ${0:pass}
 
 snippet     with_open
 alias       fileidiom
 options     head
-	with open(${1:#:file}, '${2:r}') as ${3:f}:
-		${0:pass}
+    with open(${1:#:file}, '${2:r}') as ${3:f}:
+        ${0:pass}
 
 snippet     for
 abbr        for ... in ...: ...
 options     head
-	for ${1:#:value} in ${2:#:list}:
-		${0:pass}
+    for ${1:#:value} in ${2:#:list}:
+        ${0:pass}
 
 snippet     if
 abbr        if ...: ...
 options     head
-	if ${1:#:condition}:
-		${0:pass}
+    if ${1:#:condition}:
+        ${0:pass}
 
 snippet     ifmain
 abbr        if __name__ == '__main__': ...
 alias       main
 options     head
-	if __name__ == '__main__':
-		${0:pass}
+    if __name__ == '__main__':
+        ${0:pass}
 
 snippet     tryexcept
 abbr        try: ... except ...: ...
 options     head
-	try:
-		${1:pass}
-	except ${2:#:ExceptionClass}:
-		${3:pass}
+    try:
+        ${1:pass}
+    except ${2:#:ExceptionClass}:
+        ${3:pass}
 
 snippet     tryfinally
 abbr        try: ... finally: ...
 options     head
-	try:
-		${1:pass}
-	finally:
-		${2:pass}
+    try:
+        ${1:pass}
+    finally:
+        ${2:pass}
 
 snippet     while
 abbr        while ...: ...
 options     head
-	while ${1:#:condition}:
-		${0:pass}
+    while ${1:#:condition}:
+        ${0:pass}
 
 snippet     with
 abbr        with {func}({file}) as :
 options     head
-	with ${1:open}(${2:#:filename, mode}) as ${3:f}:
-		${0:pass}
+    with ${1:open}(${2:#:filename, mode}) as ${3:f}:
+        ${0:pass}
 
 snippet     filter
 abbr        [x for x in {list} if {condition}]
-	[$1 for ${1:x} in ${2:#:list} if ${3:#:condition}]
+    [$1 for ${1:x} in ${2:#:list} if ${3:#:condition}]
 
 snippet     print
 options     word
-	print(${0:#:TARGET})
+    print(${0:#:TARGET})
 
 snippet     coding
 abbr        # -*- coding ...
-	# -*- coding: utf-8 -*-
+    # -*- coding: utf-8 -*-
 
 snippet     getattr
 abbr        getattr(..., ...)
 options     word
-	getattr(${1:#:obj}, ${2:#:attr})
+    getattr(${1:#:obj}, ${2:#:attr})
 
 snippet     setattr
 abbr        setattr(..., ...)
-	setattr(${1:#:obj}, ${2:#:attr}, ${3:#:value})
+    setattr(${1:#:obj}, ${2:#:attr}, ${3:#:value})
 
 snippet     hasattr
 abbr        hasattr(..., ...)
 options     word
-	hasattr(${1:#:obj}, ${2:#:attr})
+    hasattr(${1:#:obj}, ${2:#:attr})
 
 snippet     pdb
 abbr        import pdb..
-	import pdb; pdb.set_trace()
+    import pdb; pdb.set_trace()
 
 snippet     ipdb
 abbr        import ipdb..
-	import ipdb; ipdb.set_trace()
+    import ipdb; ipdb.set_trace()
 
 snippet     ipy
 abbr        import ipython..
-	from IPython import embed; embed()
+    from IPython import embed; embed()
 
 snippet     isci
 abbr        imoprt numpy as np..
@@ -169,6 +169,8 @@ options     head
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
 
+    ${0}
+
     # X-axis Settings
     ax.set_xlim(0, 1)
     ax.set_xlabel('X-axis')
@@ -188,6 +190,7 @@ abbr        ax.bar(x=x, height=..
     # Bar plot
     ax.bar(x=x, height=height, width=0.8, color='white', edgecolor='black',
            alpha=1, linewidth=1, yerr=yerr, capsize=5, label=label)
+    ${0}
 
 snippet     scatterplot
 abbr        ax.scatter(x=x, y=y, ..
@@ -197,6 +200,7 @@ abbr        ax.scatter(x=x, y=y, ..
     # Error bar settings
     # ax.errorbar(x=x, y=y, xerr=xerr, yerr=yerr, ecolor='black' capsize=8,
     #             elinewidth=1)
+    ${0}
 
 snippet     lineplot
 abbr        ax.plot(x=x, y=y, ..
@@ -205,18 +209,21 @@ abbr        ax.plot(x=x, y=y, ..
             marker=None, markerfacecolor=None, label=label)
     # Error bar settings
     # ax.errorbar(x=x, y=y, yerr=yerr, ecolor='black' capsize=8, elinewidth=1)
+    ${0}
 
 snippet     histogram
 abbr        ax.hist(x=x, bins=..
     # Histogram
     ax.scatter(x=x, bins=np.linspace(0, 1, 2 + 1), density=None, color='white',
                edgecolor='black', alpha=1, label=label)
+    ${0}
 
 snippet     jitterplot
 abbr        sns.stripplot(x="id-column", ..
     # Jitter plot
     sns.stripplot(x="id-column", y="data-column", data=df, color='black',
                   jitter=True, size=5, edgecolor='grey')
+    ${0}
 
 snippet     boxplot
 abbr        sns.boxplot(x="id-column", ..
@@ -225,3 +232,56 @@ abbr        sns.boxplot(x="id-column", ..
     # Jitter plot
     # sns.stripplot(x="id-column", y="data-column", data=df, color='black',
     #               jitter=True, size=5, edgecolor='grey')
+    ${0}
+
+snippet     import
+abbr        import scipy; import ...
+    # Scientific libraries
+    import scipy
+    import numpy as np
+    import pandas as pd
+
+    # Graphic libraries
+    import matplotlib as mpl
+    import matplotlib.pyplot as plt
+    from matplotlib import rcParams
+    # import japanize_matplotlib
+    # import seaborn as sns
+
+    # Statistical libraries
+    # import statsmodels.stats as stats
+    # import statsmodels.stats.multicomp as multi
+    # import statsmodels.formula.api as smf
+    # import scikit_posthocs as sp
+
+    # Other libraries
+    # import re
+    # from datetime import datetime
+    # import collections
+    ${0}
+
+snippet vim
+abbr modeline foldmethod
+options head
+    ${0}
+    # vim: set foldmethod=marker :
+
+snippet modeline
+abbr modeline foldmethod
+options head
+    # vim: set foldmethod=marker :
+
+snippet fold
+abbr fold
+options word
+    # ${0} {{{
+    # }}}
+
+snippet errs
+abbr errs = {'se': 68.2689...
+options head
+    errs = {'se': 68.26894921370859, 'sd': 'sd', '95%': 95,
+            '1s': 68.268949213708590, '2s': 95.449973610364159,
+            '3s': 99.730020393673981, '4s': 99.993665751633376,
+            '5s': 99.999942669685624, '6s': 99.999999802682471}
+    ${0}

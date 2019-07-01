@@ -27,17 +27,6 @@ repo = 'bps/vim-textobj-python' # {{{
 on_ft = 'python'
 # }}}
 
-[[plugins]] # python editing mode
-repo = 'python-mode/python-mode' # {{{
-on_ft = 'python'
-hook_add = '''
-    let g:pymode_python = 'python3'
-    let g:pymode_run = 0
-    let g:pymode_run_bind = '<leader>_'
-    let g:pymode_doc_bind = '<leader>K'
-'''
-# }}}
-
 [[plugins]] # ipynb editor
 repo = 'szymonmaszke/vimpyter' # {{{
 on_ft = 'ipynb'
@@ -53,8 +42,11 @@ hook_add = '''
 
 [[plugins]] # Snippet
 repo = 'Shougo/neosnippet.vim' # {{{
-on_ft = 'python'
+on_ft = ['python', 'markdown']
 hook_add = '''
+    let g:neosnippet#disable_runtime_snippets = {
+            \   '_' : 1,
+            \ }
     let g:neosnippet#snippets_directory='$HOME/.vim/snippets/'
     imap <C-k>     <Plug>(neosnippet_expand_or_jump)
     smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -67,6 +59,41 @@ hook_add = '''
 repo = 'Shougo/neosnippet-snippets'
 on_ft = 'python'
 depends = 'neosnippet.vim'
+# }}}
+
+[[plugins]] # Python cell mode
+repo = 'julienr/vim-cellmode' # {{{
+on_ft = 'python'
+hook_add = '''
+    let g:cellmode_tmux_sessionname=''
+    let g:cellmode_tmux_windowname=''
+    let g:cellmode_tmux_panenumber='0'
+    let g:cellmode_screen_sessionname='ipython'
+    let g:cellmode_screen_window='0'
+    let g:cellmode_cell_delimiter='\(##\|#%%\|#\s%%\)'
+
+    function! InsertCellSeparatorLine(...)
+      let line_num = get(a:, 1, '.')
+      if empty(getline(line_num))
+        normal 79A#-
+      else
+        normal o79A#-
+      endif
+    endfunction
+
+    nnoremap <silent><Space># :<C-u>call InsertCellSeparatorLine()<CR>
+'''
+# }}}
+
+[[plugins]] # python editing mode
+repo = 'python-mode/python-mode' # {{{
+on_ft = 'python'
+hook_add = '''
+    let g:pymode_python = 'python3'
+    let g:pymode_run = 0
+    let g:pymode_run_bind = '<leader>_'
+    let g:pymode_doc_bind = '<leader>K'
+'''
 # }}}
 
 # Not In Use {{{
@@ -122,7 +149,7 @@ hook_add = '''
 repo = 'kannokanno/previm' # {{{
 on_ft = ['markdown','txt']
 hook_add = '''
-    let g:previm_open_cmd = 'open -a Safari'
+    let g:previm_open_cmd = 'open -a Safari.app'
     let g:previm_enable_realtime = 1
     let g:previm_disable_default_css = 1
     let g:previm_custom_css_path = '~/.pandoc/github.css'
@@ -137,7 +164,7 @@ hook_add = '''
     nnoremap <Leader>ol :<C-u>Unite -vertical outline<CR>
 '''
 depends = 'unite.vim'
-on_ft = ['markdown']
+on_ft = 'markdown'
 # }}}
 
 [[plugins]] # citation
@@ -157,6 +184,12 @@ hook_add = '''
 '''
 depends = 'unite.vim'
 on_ft = ['markdown']
+# }}}
+
+[[plugins]] # Markdown用テキストオブジェクト
+repo = 'coachshea/vim-textobj-markdown' # {{{
+on_ft = ['markdown']
+depends = 'vim-textobj-user'
 # }}}
 
 # Not In Use {{{
@@ -196,6 +229,11 @@ on_ft = ['markdown']
 # }}}
 
 # ----- その他 ----- {{{
+
+[[plugins]]
+repo = 'vim-scripts/Vim-R-plugin' # {{{
+on_ft = 'R'
+# }}}
 
 [[plugins]] # 英語単語の自動補完
 repo = 'ujihisa/neco-look' # {{{

@@ -18,6 +18,9 @@ set spell
 " viminfoの場所を指定
 set viminfo='2000,f1,<500,:1000,@500,/500,n$HOME/.vim/info/viminfo
 
+" シソーラスファイルの設定
+set thesaurus+=$HOME/dotfiles/thesaurus_file/mthesaur.txt
+
 " バックアップファイルを作らない
 " set nobackup
 
@@ -109,16 +112,19 @@ set scrolloff=0
 " python設定
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 
+" 波括弧マーカーでフォールディングする設定
+set foldmethod=marker
+
 " -------------------Tab系-------------------
-" 不可視文字を可視化(タブが▸-, 改行が↲, ノーブレークスペース
-" が%として表示される)
+" 不可視文字を可視化(タブが▸-, 改行が↲,
+" ノーブレークスペースが%として表示される)
 set list
 set listchars=tab:»-,eol:↲,nbsp:%
 
 " Tab文字を半角スペースにする
 set expandtab
 
-" 行頭以外のTab文字の表示幅（スペースいくつ分）
+" 行頭以外のTab文字の表示幅(スペースいくつ分)
 set tabstop=4
 
 " 行頭でのTab文字の表示幅
@@ -159,17 +165,29 @@ set hlsearch
 "     let @s = temp
 " endfunction
 
-" インデントガイドを常にON
-let g:indent_guides_enable_on_vim_startup = 1
-
 " <Leader>をスペースキーダブルタップにする
 let mapleader = "\<Space>\<Space>"
 
 " filetypeをpythonにする
 command! Setpy set filetype=python
 
+" filetypeをRにする
+command! Setr set filetype=R
+
 " filetypeをmarkdownにする
-command! Setmd set filetype=markdown | set tabstop=2 | set softtabstop=2 | set shiftwidth=2
+function! Setmd()
+    set filetype=markdown
+    set tabstop=2
+    set softtabstop=2
+    set shiftwidth=2
+    set commentstring=<!--\ %s\ -->
+    if getline("$") !~ 'set foldmethod'
+        call append(line("$"), "<!-- vim: set foldmethod=marker : -->")
+    endif
+endfunction
+
+command! Setmd :call Setmd()
+
 
 " filetypeをipynbにする
 command! Setnb set filetype=ipynb

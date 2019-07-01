@@ -66,6 +66,7 @@ endif
 " これはcolor.vimに移せない
 colorscheme iceberg
 syntax on
+let $PATH = "~/.pyenv/shims:".$PATH
 call has('python3')
 
 " vim: set foldmethod=marker :

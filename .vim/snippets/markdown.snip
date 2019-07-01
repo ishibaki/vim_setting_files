@@ -1,0 +1,260 @@
+snippet image
+abbr ![]()
+options word
+    ![${0}]()
+
+snippet linkid
+abbr [link][id]
+options word
+    [${1:#:link}][${2:id}]${3}
+
+snippet linkurl
+abbr [link](url)
+options word
+    [${0}]()
+
+snippet linkemail
+abbr [link](email)
+options word
+    [${0}](mailto:)
+
+snippet emphasis
+abbr *emphasis*
+options word
+    *${0}*
+
+snippet italic
+abbr *italic*
+options word
+    *${0}*
+
+snippet strong
+abbr **strong**
+options word
+    **${0}**
+
+snippet code
+abbr `code`
+options word
+    \`${0}\`
+
+snippet codeblock
+abbr code block
+options head
+    \`\`\`
+    ${0}
+    \`\`\`
+
+snippet detail
+abbr detail block
+options head
+    <details>
+    <summary>${0}</summary>
+    <!-- {{{ -->
+    </details>
+    <!-- }}} -->
+
+snippet mer
+abbr mermaid block
+options head
+    \`\`\`mermaid
+    ${0}
+    \`\`\`
+
+snippet graph
+abbr mermaid graph TD
+options head
+    \`\`\`mermaid
+    graph TD;
+    ${0}
+    id1["abc"]
+    id2("123")
+
+    id1 -- "ABC" --> id2;
+    \`\`\`
+
+snippet subgraph
+abbr mermaid subgraph
+options head
+    subgraph ${0}
+        sub1 -- > sub2;
+    end
+
+snippet gantt
+abbr gantt chart
+options head
+    \`\`\`mermaid
+    gantt
+        title ${0}
+        dateFormat YYYY-MM-DD
+
+        section Section Name
+        task1 :done,   id1, 1991-09-18, 1991-09-20
+        task2 :active, id2, 1991-09-19, 5d
+        task3 :        id3, after id2, 2d
+        task4 :crit,   id4, after id1, 48h
+    \`\`\`
+
+snippet modeline
+abbr modeline foldmethod
+options head
+    <!-- vim: set foldmethod=marker : -->
+
+snippet fold
+abbr fold
+options word
+    <!-- {{{ -->${0}<!-- }}} -->
+
+snippet comment
+abbr comment
+options word
+    <!-- ${0} -->
+
+snippet color
+abbr <font color=...
+options word
+    <font color="${1}">${0}</font>
+
+snippet size
+abbr <font size=...
+options word
+    <font size="${1}">${0}</font>
+
+snippet     %
+abbr        % Title % Author ...
+options     head
+    % ${1:Title}
+    % ${2:Author1; Author2}
+    % ${3:Date}
+    ${0}
+
+snippet     yaml
+abbr        YAML header of pandoc
+options     head
+    ---
+    title: "${1:Title}"
+    author:
+    - name: ${2:Author}
+      affiliation: ${3:#:Affiliation}
+    keywords: [${4:Keyword},]
+    titlepage: true
+    toc-own-page: true
+    fontsize: 14pt
+    mainfont: "Times New Roman"
+    sansfont: "Lato"
+    titlepage-rule-color: 5F5F5F
+    hanging-indent: true
+    footer-center: \thepage
+    header-includes:
+      - \usepackage{seqsplit}
+      - \hypersetup{colorlinks = false}
+    titleDelim: ""
+    figureTitle: "Figure"
+    tableTitle: "Table"
+    listingTitle: "Code"
+    figPrefix:
+      - "Fig."
+      - "Figs."
+    eqnPrefix:
+      - "Eq."
+      - "Eqs."
+    tblPrefix:
+      - "Table"
+      - "Tables"
+    lstPrefix:
+      - "Code"
+      - "Codes"
+    abstract: |
+    ${5:#:Abstract}
+    ...
+    ${0}
+
+snippet     seqsplit
+abbr        \seqsplit{...}
+options     word
+    \seqsplit{${0}}
+
+snippet     clearpage
+abbr        \clearpage
+options     head
+    \clearpage
+
+    \mbox{}\newpage
+    ${0}
+
+snippet     newpage
+abbr        \clearpage
+options     head
+    \clearpage
+
+    \mbox{}\newpage
+    ${0}
+
+snippet     crfigtag
+abbr        {#fig:tagname}
+options     word
+    ![](${0}){#fig:${1:tagname}}
+
+snippet     crfigref
+abbr        [@fig:tagname]
+options     word
+    [@fig:${1:tagname}]${0}
+
+snippet     crtbltag
+abbr        {#tbl:tagname}
+options     word
+    |      |      |
+    | :--: | :--: |
+    |      |      |
+
+    :{#tbl:${1:tagname}}
+
+snippet     crtblref
+abbr        [@tbl:tagname]
+options     word
+    [@tbl:${1:tagname}]${0}
+
+snippet     creqntag
+abbr        {#eq:tagname}
+options     word
+    $$ ${0} $$ {#eq:${1:tagname}}
+
+snippet     creqnref
+abbr        [@eq:tagname]
+options     word
+    [@eq:${1:tagname}]${0}
+
+snippet     crcodetag
+abbr        ```{#lst:tagname ...
+options     word
+    ```{#lst:${1:tagname} .${2:#:code} .numberLines}
+    ${0}
+    ```
+
+snippet     crcoderef
+abbr        [@lst:tagname]
+options     word
+    [@lst:${1:tagname}]${0}
+
+snippet     latexeqn
+abbr        \begin{align}...
+options     head
+    \begin{align}
+    f(x) &= a(b + c) \nonumber \\
+    &= ab + ac \nonumber
+    \end{align}
+
+snippet     latexfrac
+abbr        \frac{}{}
+options     word
+    \frac{${1}}{${2}} ${0}
+
+snippet     latexsigma
+abbr        \sum_{}^{}
+options     word
+    \sum_{${1}^{${2}}${0}
+
+snippet     latexinf
+abbr        \infty
+options     word
+    \infty${0}

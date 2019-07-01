@@ -34,7 +34,7 @@ noremap <Space>l g_
 noremap <Space><Space>l }+
 
 " 行移動をEnterで代用
-nnoremap <CR> G
+nnoremap <CR> Gzz
 
 " -------------------- cut/pasteに関するコマンド --------------------
 " cut/pasteしたら，自動で末尾に移動する
@@ -46,8 +46,9 @@ nnoremap <CR> G
 nnoremap Y y$
 
 " PとgPの入れ替え
-nnoremap P gP
-nnoremap gP P
+" yankround.vimを使うなら無効化
+" nnoremap P gP
+" nnoremap gP P
 
 " -------------------- バッファ全体をモーション範囲に ---------------
 omap <silent> ae :<C-u>normal ggVG<CR>
@@ -85,10 +86,17 @@ nnoremap <Space>qqa<CR> :qa!<CR>
 
 " -------------------空行の挿入コマンド------------------
 " スペースキー+oで空行を現在行の後に挿入
-nnoremap <Space>o  :<C-u>for i in range(v:count1) \| call append(line('.'), '') \| endfor<CR>
+nnoremap <silent><Space>o  :<C-u>for i in range(v:count1) \| call append(line('.'), '') \| endfor<CR>
 
 " スペースキー+Oで空行を現在行の前に挿入
-nnoremap <Space>O  :<C-u>for i in range(v:count1) \| call append(line('.')-1, '') \| endfor<CR>
+nnoremap <silent><Space>O  :<C-u>for i in range(v:count1) \| call append(line('.')-1, '') \| endfor<CR>
+
+" Space+Jで現在行の下に空行をいれつつ入力開始
+nnoremap <silent><Space>J o<CR><CR><Up>
+" Space+Kで現在行の上に空行をいれつつ入力開始
+nnoremap <silent><Space>K O<CR><CR><Up>
+" Space+Lで現在行の上下に空行をいれる
+nnoremap <silent><Space>L :<C-u>call append(line('.'), '') \| call append(line('.')-1, '')<CR>
 
 " ----------<Space>*によるその他のキーバインド----------
 " \nを含まない1行選択
@@ -100,8 +108,9 @@ noremap <Space>y 0v$hy
 " "0レジスタ(削除と関係のない，明示的ヤンクをしたレジスタ)をペースト
 noremap <Space>p "0p
 
-" -------------------挿入モードでの移動をemacs風に-------------------
+" -------------------挿入/Exモードでの移動をemacs風に-------------------
 inoremap <C-a> <C-o>^
+cnoremap <C-a> <Home>
 inoremap <C-e> <C-o>$
 " inoremap <C-f> <C-o>l
 " inoremap <C-b> <C-o>h

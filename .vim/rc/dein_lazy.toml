@@ -281,6 +281,14 @@ repo = 'mattn/excelview-vim' # {{{
 depends = 'webapi-vim'
 # }}}
 
+[[plugins]]
+repo = 'upamune/esa.vim' # {{{
+depends = 'webapi-vim'
+hook_add = '''
+    let g:esa_team = 'tishibashi-lab'
+'''
+# }}}
+
 [[plugins]] # カーソル下の語が自動ハイライトされる
 repo = 'itchyny/vim-cursorword' # {{{
 on_ft = ['python', 'html', 'toml', 'c']

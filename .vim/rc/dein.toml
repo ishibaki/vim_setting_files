@@ -166,12 +166,12 @@ hook_add = '''
 '''
 # }}}
 
-[[plugins]] # テンプレート作成
-repo = 'mattn/sonictemplate-vim' # {{{
-hook_add = '''
-  let g:sonictemplate_vim_template_dir = '$HOME/.vim/sonictemplate-vim'
-'''
-# }}}
+# [[plugins]] # テンプレート作成
+# repo = 'mattn/sonictemplate-vim' # {{{
+# hook_add = '''
+#   let g:sonictemplate_vim_template_dir = '$HOME/.vim/sonictemplate-vim'
+# '''
+# # }}}
 
 [[plugins]] # Text objectを新しく設定できる
 repo = 'kana/vim-textobj-user' # {{{
@@ -199,7 +199,7 @@ let g:startify_lists = [
       \ { 'type': 'commands',  'header': ['   === Commands ==='                                  ]},
       \ ]
 
-    let g:startify_bookmarks = [{"v": $MYVIMRC}, {"s": "~/Dropbox/GTD/GTD.txt"}, {"d": "~/Desktop"}, {"~": "~"}, {"x": "~/Dropbox"},]
+    let g:startify_bookmarks = [{"v": $MYVIMRC}, {"d": "~/Desktop"}, {"~": "~"}, {"x": "~/Dropbox"},]
 
     function! s:filter_header(lines) abort
         let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
@@ -306,10 +306,10 @@ hook_add = '''
 '''
 # }}}
 
-[[plugins]] # ディレクトリごとに.local.vimrcを設定できる
-repo = 'thinca/vim-localrc' # {{{
-# repo = 'embear/vim-localvimrc' でも良い．どっちがいいんだろう．
-# }}}
+# [[plugins]] # ディレクトリごとに.local.vimrcを設定できる
+# repo = 'thinca/vim-localrc' # {{{
+# # repo = 'embear/vim-localvimrc' でも良い．どっちがいいんだろう．
+# # }}}
 
 [[plugins]] # undoをツリー表示する
 repo = 'sjl/gundo.vim' # {{{
@@ -339,57 +339,57 @@ hook_add = '''
 '''
 # }}}
 
-[[plugins]] # 新規modeを作成
-repo = 'kana/vim-submode' # {{{
-hook_add = '''
-    " タイムアウト設定をOFFに
-    let g:submode_timeout = 0
-    " Submodeから離れるときのキー入力を有効にする
-    let g:submode_keep_leaving_key = 1
-
-    " Winsize Change Mode {{{
-    call submode#enter_with('winsize', 'n', '', '<C-w>>', '<C-w>>')
-    call submode#enter_with('winsize', 'n', '', '<C-w><', '<C-w><')
-    call submode#enter_with('winsize', 'n', '', '<C-w>+', '<C-w>+')
-    call submode#enter_with('winsize', 'n', '', '<C-w><kPlus>', '<C-w>+')
-    call submode#enter_with('winsize', 'n', '', '<C-w>-', '<C-w>-')
-    call submode#enter_with('winsize', 'n', '', '<C-w><kMinus>', '<C-w>-')
-    call submode#map('winsize', 'n', '', '>', '<C-w>>')
-    call submode#map('winsize', 'n', '', '<', '<C-w><')
-    call submode#map('winsize', 'n', '', '+', '<C-w>+')
-    call submode#map('winsize', 'n', '', '<kPlus>', '<C-w>+')
-    call submode#map('winsize', 'n', '', '-', '<C-w>-')
-    call submode#map('winsize', 'n', '', '<kMinus>', '<C-w>-')
-    call submode#map('winsize', 'n', '', '=', '<C-w>=')
-    " }}}
-
-    " Window Move Mode {{{
-    " call submode#enter_with('winmove', 'n', '', '<C-w>h', '<C-w>h')
-    " call submode#enter_with('winmove', 'n', '', '<C-w>j', '<C-w>j')
-    " call submode#enter_with('winmove', 'n', '', '<C-w>k', '<C-w>k')
-    " call submode#enter_with('winmove', 'n', '', '<C-w>l', '<C-w>l')
-    " call submode#enter_with('winmove', 'n', '', '<C-w>H', '<C-w>H')
-    " call submode#enter_with('winmove', 'n', '', '<C-w>J', '<C-w>J')
-    " call submode#enter_with('winmove', 'n', '', '<C-w>K', '<C-w>K')
-    " call submode#enter_with('winmove', 'n', '', '<C-w>L', '<C-w>L')
-    " call submode#map('winmove', 'n', '', 'h', '<C-w>h')
-    " call submode#map('winmove', 'n', '', 'j', '<C-w>j')
-    " call submode#map('winmove', 'n', '', 'k', '<C-w>k')
-    " call submode#map('winmove', 'n', '', 'l', '<C-w>l')
-    " call submode#map('winmove', 'n', '', 'H', '<C-w>H')
-    " call submode#map('winmove', 'n', '', 'J', '<C-w>J')
-    " call submode#map('winmove', 'n', '', 'K', '<C-w>K')
-    " call submode#map('winmove', 'n', '', 'L', '<C-w>L')
-    " }}}
-
-    " Tab Move Mode {{{
-    " call submode#enter_with('tabmove', 'n', '', 'gt', 'gt')
-    " call submode#enter_with('tabmove', 'n', '', 'gT', 'gT')
-    " call submode#map('tabmove', 'n', '', 't', 'gt')
-    " call submode#map('tabmove', 'n', '', 'T', 'gT')
-    " }}}
-'''
-# }}}
+# [[plugins]] # 新規modeを作成
+# repo = 'kana/vim-submode' # {{{
+# hook_add = '''
+#     " タイムアウト設定をOFFに
+#     let g:submode_timeout = 0
+#     " Submodeから離れるときのキー入力を有効にする
+#     let g:submode_keep_leaving_key = 1
+# 
+#     " Winsize Change Mode {{{
+#     call submode#enter_with('winsize', 'n', '', '<C-w>>', '<C-w>>')
+#     call submode#enter_with('winsize', 'n', '', '<C-w><', '<C-w><')
+#     call submode#enter_with('winsize', 'n', '', '<C-w>+', '<C-w>+')
+#     call submode#enter_with('winsize', 'n', '', '<C-w><kPlus>', '<C-w>+')
+#     call submode#enter_with('winsize', 'n', '', '<C-w>-', '<C-w>-')
+#     call submode#enter_with('winsize', 'n', '', '<C-w><kMinus>', '<C-w>-')
+#     call submode#map('winsize', 'n', '', '>', '<C-w>>')
+#     call submode#map('winsize', 'n', '', '<', '<C-w><')
+#     call submode#map('winsize', 'n', '', '+', '<C-w>+')
+#     call submode#map('winsize', 'n', '', '<kPlus>', '<C-w>+')
+#     call submode#map('winsize', 'n', '', '-', '<C-w>-')
+#     call submode#map('winsize', 'n', '', '<kMinus>', '<C-w>-')
+#     call submode#map('winsize', 'n', '', '=', '<C-w>=')
+#     " }}}
+# 
+#     " Window Move Mode {{{
+#     " call submode#enter_with('winmove', 'n', '', '<C-w>h', '<C-w>h')
+#     " call submode#enter_with('winmove', 'n', '', '<C-w>j', '<C-w>j')
+#     " call submode#enter_with('winmove', 'n', '', '<C-w>k', '<C-w>k')
+#     " call submode#enter_with('winmove', 'n', '', '<C-w>l', '<C-w>l')
+#     " call submode#enter_with('winmove', 'n', '', '<C-w>H', '<C-w>H')
+#     " call submode#enter_with('winmove', 'n', '', '<C-w>J', '<C-w>J')
+#     " call submode#enter_with('winmove', 'n', '', '<C-w>K', '<C-w>K')
+#     " call submode#enter_with('winmove', 'n', '', '<C-w>L', '<C-w>L')
+#     " call submode#map('winmove', 'n', '', 'h', '<C-w>h')
+#     " call submode#map('winmove', 'n', '', 'j', '<C-w>j')
+#     " call submode#map('winmove', 'n', '', 'k', '<C-w>k')
+#     " call submode#map('winmove', 'n', '', 'l', '<C-w>l')
+#     " call submode#map('winmove', 'n', '', 'H', '<C-w>H')
+#     " call submode#map('winmove', 'n', '', 'J', '<C-w>J')
+#     " call submode#map('winmove', 'n', '', 'K', '<C-w>K')
+#     " call submode#map('winmove', 'n', '', 'L', '<C-w>L')
+#     " }}}
+# 
+#     " Tab Move Mode {{{
+#     " call submode#enter_with('tabmove', 'n', '', 'gt', 'gt')
+#     " call submode#enter_with('tabmove', 'n', '', 'gT', 'gT')
+#     " call submode#map('tabmove', 'n', '', 't', 'gt')
+#     " call submode#map('tabmove', 'n', '', 'T', 'gT')
+#     " }}}
+# '''
+# # }}}
 
 [[plugins]]
 repo = 'pbrisbin/vim-mkdir' # {{{
@@ -443,17 +443,6 @@ let g:clever_f_timeout_ms = 500
 # repo = 'tpope/vim-abolish' # {{{
 # }}}
 
-# [[plugins]] # メモ用プラグイン
-# repo = 'glidenote/memolist.vim' # {{{
-# }}}
-
-# [[plugins]] # チートシート呼び出し
-# repo = 'reireias/vim-cheatsheet' # {{{
-# hook_add = '''
-#     let g:cheatsheet#cheat_file = '~/.cheatsheet.md'
-# '''
-# # }}}
-
 # [[plugins]] # :CalendarでGoogleカレンダーを開けます
 # repo = 'itchyny/calendar.vim' # {{{
 # hook_add = '''
@@ -495,14 +484,6 @@ let g:clever_f_timeout_ms = 500
 # '''
 # }}}
 
-# [[plugins]] # 検索ワードハイライトを複数設置
-# repo = 't9md/vim-quickhl' # {{{
-# hook_add = '''
-#     map <Space>m <Plug>(quickhl-manual-this)
-#     map <Space>M <Plug>(quickhl-manual-reset)
-# '''
-# }}}
-
 # [[plugins]] # ファイルツリー
 # repo = 'scrooloose/nerdtree' # {{{
 # hook_add = '''
@@ -511,60 +492,6 @@ let g:clever_f_timeout_ms = 500
 #     let NERDTreeShowHidden = 1
 #     nnoremap <silent><C-s> :NERDTreeToggle<CR>
 # '''
-# }}}
-
-# [[plugins]]
-# repo = 'mattn/vimplenote-vim' # {{{
-# # ~/.vimplenotercを用意すること
-# hook_add = '''
-#     source ~/.vimplenoterc
-# '''
-# # }}}
-
-[[plugins]] # ipynb editor
-repo = 'szymonmaszke/vimpyter' # {{{
-hook_add = '''
-    nmap <silent><Leader>b :VimpyterInsertPythonBlock<CR>
-    nmap <silent><Leader>s :VimpyterStartJupyter<CR>
-    nmap <silent><Leader>S :VimpyterStartNteract<CR>
-    let g:vimpyter_view_directory = '$HOME/.vimpyter_views'
-    xnoremap <silent> ic <Esc>?```{.python?+1<CR>V/```/-1<CR>
-    xnoremap <silent> ac <Esc>?```{.python<CR>V/```<CR>
-'''
-# }}}
-
-# 例集 {{{
-# git clone 後、実行すべきコマンドがある場合はこんな感じ {{{
-# [[plugins]]
-# repo = 'Shougo/vimproc.vim'
-# hook_post_update = '''
-#   if dein#util#_is_windows()
-#     let cmd = 'tools\\update-dll-mingw'
-#   elseif dein#util#_is_cygwin()
-#     let cmd = 'make -f make_cygwin.mak'
-#   elseif executable('gmake')
-#     let cmd = 'gmake'
-#   else
-#     let cmd = 'make'
-#   endif
-#   let g:dein#plugin.build = cmd
-# '''
-# }}}
-
-# ブランチやタグを指定したいとき {{{
-# [[plugins]]
-# repo = 'delphinus35/typescript-vim'
-# rev  = 'colorize-template-strings'
-# }}}
-
-# 特定の条件で読み込みたいとき {{{
-# [[plugins]]
-# repo = 'elzr/vim-json'
-# if   = '''! has('kaoriya')'''
-# }}}
-
-# }}}
-
 # }}}
 
 # vim: set foldmethod=marker :

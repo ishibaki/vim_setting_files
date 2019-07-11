@@ -19,7 +19,7 @@ set spell
 set viminfo='2000,f1,<500,:1000,@500,/500,n$HOME/.vim/info/viminfo
 
 " シソーラスファイルの設定
-set thesaurus+=$HOME/dotfiles/thesaurus_file/mthesaur.txt
+" set thesaurus+=$HOME/dotfiles/thesaurus_file/mthesaur.txt
 
 " バックアップファイルを作らない
 " set nobackup
@@ -110,7 +110,7 @@ set formatoptions+=mMj
 set scrolloff=0
 
 " python設定
-let g:python3_host_prog = expand('/usr/local/bin/python3')
+" let g:python3_host_prog = expand('/usr/local/bin/python3')
 
 " 波括弧マーカーでフォールディングする設定
 set foldmethod=marker
@@ -152,18 +152,6 @@ set wrapscan
 
 " 検索語をハイライト表示
 set hlsearch
-
-"-------------------ビジュアル選択範囲で検索を可能にする-------------------
-"ビジュアルモードには適応されるが選択モードではノーマルモードでは適応されないようにキーをリマップ
-" xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
-" xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
-" "選択領域で検索
-" function! s:VSetSearch()
-"     let temp = @s
-"     norm! gv"sy
-"     let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
-"     let @s = temp
-" endfunction
 
 " <Leader>をスペースキーダブルタップにする
 let mapleader = "\<Space>\<Space>"

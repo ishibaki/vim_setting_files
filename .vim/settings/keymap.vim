@@ -145,10 +145,6 @@ nnoremap <silent>]b :bnext<CR>
 xnoremap > >gv
 xnoremap < <gv
 
-" ------- 全角コンマと全角ピリオドを句読点に変更する ------
-nnoremap <silent> <Space>s,. :<C-u>%s/，/、/g<CR>:<C-u>%s/．/。/g<CR>
-nnoremap <silent> <Space>S,. :<C-u>%s/、/，/g<CR>:<C-u>%s/。/．/g<CR>
-
 " ------- タイムスタンプの挿入 ------
 nnoremap <silent>ZTD O<C-r>=strftime("%Y-%m-%d")<CR><Esc>
 nnoremap <silent>ZTd O<C-r>=strftime("%Y/%m/%d")<CR><Esc>

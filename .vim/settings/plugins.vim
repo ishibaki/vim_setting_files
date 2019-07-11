@@ -2,72 +2,6 @@
 "  /_///_//_/// /_\ 
 " /       _/
 
-" ---------- my own --------- {{{
-autocmd BufNewFile,BufRead *GTD.txt call GenerateTaskDone()
-
-:function! GenerateTaskDone()
-    :function! TaskDone() " {{{
-        :let done_task_str = getline(".")
-        :let done_task_str = done_task_str[match(done_task_str, "- ") : -1]
-        :let now_day = "; " . strftime("%Y/%m/%d", localtime())
-        :call append(line("$"), done_task_str . now_day)
-        :normal dd
-    :endfunction
-    " }}}
-    :function! GoToInbox() " {{{
-        :call search('^<a id="1_inbox"></a>')
-        :normal 2jzz
-    :endfunction
-    " }}}
-    :function! GoToJustDoIt() " {{{
-        :call search('^<a id="2_just_do_it"></a>')
-        :normal 2jzz
-    :endfunction
-    " }}}
-    :function! GoToNextActions() " {{{
-        :call search('^<a id="3_next_actions"></a>')
-        :normal 2jzz
-    :endfunction
-    " }}}
-    :function! GoToProjects() " {{{
-        :call search('^<a id="4_projects"></a>')
-        :normal 2jzz
-    :endfunction
-    " }}}
-    :function! GoToWaitingFor() " {{{
-        :call search('^<a id="5_waiting_for"></a>')
-        :normal 2jzz
-    :endfunction
-    " }}}
-    :function! GoToCalendar() " {{{
-        :call search('^<a id="6_calendar"></a>')
-        :normal 2jzz
-    :endfunction
-    " }}}
-    :function! GoToNotes() " {{{
-        :call search('^<a id="7_notes"></a>')
-        :normal 2jzz
-    :endfunction
-    " }}}
-    :function! GoToDone() " {{{
-        :call search('^<a id="8_done"></a>')
-        :normal 2jzz
-    :endfunction
-    " }}}
-    " key mapping " {{{
-    :nnoremap <leader>td :call TaskDone()<CR>
-    :nnoremap <leader>ti :call GoToInbox()<CR>
-    :nnoremap <leader>tj :call GoToJustDoIt()<CR>
-    :nnoremap <leader>ta :call GoToNextActions()<CR>
-    :nnoremap <leader>tp :call GoToProjects()<CR>
-    :nnoremap <leader>tw :call GoToWaitingFor()<CR>
-    :nnoremap <leader>tc :call GoToCalendar()<CR>
-    :nnoremap <leader>tn :call GoToNotes()<CR>
-    :nnoremap <leader>tD :call GoToDone()<CR>
-    " }}}
-:endfunction
-" }}}
-
 " ---------- folding setting ---------- {{{
 if expand('<sfile>:p')!=#expand('%:p') && exists('g:loaded_foldCC')| finish| endif| let g:loaded_foldCC = 1
 let s:save_cpo = &cpo| set cpo&vim
@@ -258,32 +192,5 @@ endfunction
 command! -nargs=1 Csvhl :call CSVH(<args>)
 " :Csvhl 1<CR>みたいにつかう
 " }}}
-
-" ---------- Unite ---------- {{{
-" nnoremap <silent> ,vr :UniteResume<CR>
-
-" " vinarise
-" let g:vinarise_enable_auto_detect = 1
-" " unite-build map
-" nnoremap <silent> ,vb :Unite build<CR>
-" nnoremap <silent> ,vcb :Unite build:!<CR>
-" nnoremap <silent> ,vch :UniteBuildClearHighlight<CR>
-"
-" let g:unite_source_grep_command = 'ag'
-" let g:unite_source_grep_default_opts = '--nocolor --nogroup'
-" let g:unite_source_grep_max_candidates = 200
-" let g:unite_source_grep_recursive_opt = ''
-" " unite-grepの便利キーマップ
-" vnoremap /g y:Unite grep::-iRn:<C-R>=escape(@", '\\.*$^[]')<CR><CR>
-"
-" set runtimepath+=c:/tools/vim/vim74/bundle/neocomplete.vim
-" set runtimepath+=c:/tools/vim/vim74/bundle/neco-look
-" }}}
-
-" " ---------- machit ---------- {{{
-" source $VIMRUNTIME/macros/matchit.vim
-" " }}}
-
-" inoremap <expr><C-x>s neocomplete#start_manual_complete('look')
 
 " vim: set foldmethod=marker :

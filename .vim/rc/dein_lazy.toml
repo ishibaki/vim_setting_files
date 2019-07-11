@@ -27,19 +27,6 @@ repo = 'bps/vim-textobj-python' # {{{
 on_ft = 'python'
 # }}}
 
-[[plugins]] # ipynb editor
-repo = 'szymonmaszke/vimpyter' # {{{
-on_ft = 'ipynb'
-hook_add = '''
-    nmap <silent><Leader>b :VimpyterInsertPythonBlock<CR>
-    nmap <silent><Leader>s :VimpyterStartJupyter<CR>
-    nmap <silent><Leader>S :VimpyterStartNteract<CR>
-    let g:vimpyter_view_directory = '$HOME/.vimpyter_views'
-    xnoremap <silent> ic <Esc>?```{.python?+1<CR>V/```/-1<CR>
-    xnoremap <silent> ac <Esc>?```{.python<CR>V/```<CR>
-'''
-# }}}
-
 [[plugins]] # Snippet
 repo = 'Shougo/neosnippet.vim' # {{{
 on_ft = ['python', 'markdown']
@@ -59,30 +46,6 @@ hook_add = '''
 repo = 'Shougo/neosnippet-snippets'
 on_ft = 'python'
 depends = 'neosnippet.vim'
-# }}}
-
-[[plugins]] # Python cell mode
-repo = 'julienr/vim-cellmode' # {{{
-on_ft = 'python'
-hook_add = '''
-    let g:cellmode_tmux_sessionname=''
-    let g:cellmode_tmux_windowname=''
-    let g:cellmode_tmux_panenumber='0'
-    let g:cellmode_screen_sessionname='ipython'
-    let g:cellmode_screen_window='0'
-    let g:cellmode_cell_delimiter='\(##\|#%%\|#\s%%\)'
-
-    function! InsertCellSeparatorLine(...)
-      let line_num = get(a:, 1, '.')
-      if empty(getline(line_num))
-        normal 79A#-
-      else
-        normal o79A#-
-      endif
-    endfunction
-
-    nnoremap <silent><Space># :<C-u>call InsertCellSeparatorLine()<CR>
-'''
 # }}}
 
 [[plugins]] # python editing mode
@@ -259,44 +222,27 @@ repo = 'cespare/vim-toml' # {{{
 on_ft = 'toml'
 # }}}
 
-[[plugins]] # diffsplitが便利になるよ
-repo = 'chrisbra/vim-diff-enhanced' # {{{
-# }}}
-
-[[plugins]] # cow, comment out plugin
-repo = 'tyru/caw.vim' # {{{
-on_ft = ['python', 'html', 'markdown', 'vim', 'toml', 'zsh']
-hook_add = '''
-    nmap gcc <Plug>(caw:wrap:toggle)
-    vmap gcc <Plug>(caw:wrap:toggle)
-'''
-# }}}
+# [[plugins]] # cow, comment out plugin
+# repo = 'tyru/caw.vim' # {{{
+# on_ft = ['python', 'html', 'markdown', 'vim', 'toml', 'zsh']
+# hook_add = '''
+#     nmap gcc <Plug>(caw:wrap:toggle)
+#     vmap gcc <Plug>(caw:wrap:toggle)
+# '''
+# # }}}
 
 [[plugins]] # For Excel viewer and vimplenote-vim
 repo = 'mattn/webapi-vim' # {{{
 # }}}
 
-[[plugins]] # Excel viewer (only .xlsx)
-repo = 'mattn/excelview-vim' # {{{
-depends = 'webapi-vim'
-# }}}
-
-[[plugins]]
-repo = 'upamune/esa.vim' # {{{
-depends = 'webapi-vim'
-hook_add = '''
-    let g:esa_team = 'tishibashi-lab'
-'''
-# }}}
+# [[plugins]] # Excel viewer (only .xlsx)
+# repo = 'mattn/excelview-vim' # {{{
+# depends = 'webapi-vim'
+# # }}}
 
 [[plugins]] # カーソル下の語が自動ハイライトされる
 repo = 'itchyny/vim-cursorword' # {{{
 on_ft = ['python', 'html', 'toml', 'c']
-# }}}
-
-[[plugins]] # カラムをモーション範囲に
-repo = 'idbrii/textobj-word-column.vim' # {{{
-depends = 'vim-textobj-user'
 # }}}
 
 # Not In Use {{{

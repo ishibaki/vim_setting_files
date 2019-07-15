@@ -60,6 +60,28 @@
   - `Ctrl-n`で補完候補の上から，`Ctrl-p`で補完候補の下から自動補完を選択できる
   - 論文書きのときにめちゃ便利
 
+## 勉強になるウェブサイト
+
+### 学習順序
+
+- [Vimをはじめるときのポインタ](http://wakame.hatenablog.jp/entry/2017/12/15/004041)
+
+### Vimの基本的な使い方
+
+- [実践Vim](https://www.amazon.co.jp/実践Vim-思考のスピードで編集しよう-Drew-Neil/dp/4048916599)
+- [Learn Vim Progressively](http://mattn.kaoriya.net/software/vim/20110902125512.htm)
+- [スパルタン Vim 3.0](http://files.kaoriya.net/docs/SpartanVim/SpartanVim-3.0-online.pdf)
+- [実践Vimを読んで学んだ、おすすめVimデフォルト機能36個](http://myenigma.hatenablog.com/entry/2015/12/19/081933)
+- [内部専用Vim教本](file:///Volumes/share/personal/Ishibashi/vim/practical_vim.html) `reiwa`へアクセス出来る人専用
+
+### コマンドの覚え方
+
+- [Vimのコマンドの覚え方大全](http://haya14busa.com/vim-mnemonic/)
+- [ニーモニックで覚えるVimコマンドチートシート](https://qiita.com/fiftystorm36/items/9da472686cb8e62e9e26)
+- [Vimモーション譜](https://qiita.com/kumazo/items/9d334256694c6253944a)
+- [Vim日本語チートシート作った](https://qiita.com/zipper/items/8fbed306e203b17be0c3)
+- [vimcheatsheet.com](https://external-preview.redd.it/iigrixvxp5aYN9ox7Gr1dfI_rhLRotWlLsCafjJqjEQ.png?auto=webp&s=1594ddc17408cb9186a73c2a6d1a1bf1e00769dd) (Webサイトは消失してしまったが，Redditに残った画像がある)
+
 ## 設定方法
 
 1. ホームディレクトリに，`dotfiles`ディレクトリを作る

@@ -72,7 +72,7 @@
 - [Learn Vim Progressively](http://mattn.kaoriya.net/software/vim/20110902125512.htm)
 - [スパルタン Vim 3.0](http://files.kaoriya.net/docs/SpartanVim/SpartanVim-3.0-online.pdf)
 - [実践Vimを読んで学んだ、おすすめVimデフォルト機能36個](http://myenigma.hatenablog.com/entry/2015/12/19/081933)
-- [内部専用Vim教本](file:///Volumes/share/personal/Ishibashi/vim/practical_vim.html) `reiwa`へアクセス出来る人専用
+- [内部専用Vim教本](/Volumes/share/personal/Ishibashi/vim/practical_vim.html) `reiwa`へアクセス出来る人専用
 
 ### コマンドの覚え方
 

@@ -110,7 +110,8 @@ set formatoptions+=mMj
 set scrolloff=0
 
 " python設定
-let g:python3_host_prog = expand('/usr/local/bin/python3')
+let g:python3_host_prog = expand('/usr/bin/python3')
+let g:python_host_prog = expand('/usr/bin/python')
 
 " 波括弧マーカーでフォールディングする設定
 set foldmethod=marker

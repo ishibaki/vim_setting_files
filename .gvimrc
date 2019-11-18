@@ -9,7 +9,7 @@ elseif has('win64') || has('win32') " Windows setting
     set guifont=Ricty\ Diminished\ Discord:h24
     set transparency=15
 elseif system('uname') == "Linux\n" " Linux setting
-    set guifont=Ricty\ Diminished\ Discord\ 18
+    set guifont=Cica 22
     " set lines=23 " window height
     " set columns=90 " window width
 endif

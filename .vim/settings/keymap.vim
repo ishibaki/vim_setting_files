@@ -34,13 +34,36 @@ noremap <Space>l g_
 noremap <Space><Space>l }+
 
 " 行移動をEnterで代用
-nnoremap <CR> Gzz
+" nnoremap <CR> G
+" nnoremap <S-CR> <CR>
+
+" 移動してもカーソルを常に中央に
+nmap j jzz
+nmap k kzz
+nmap <C-u> <C-u>zz
+nmap <C-d> <C-d>zz
+nmap <C-f> <C-f>zz
+nmap <C-b> <C-b>zz
+nmap <C-o> <C-o>zz
+nmap <C-i> <C-i>zz
+nmap G Gzz
+vmap j jzz
+vmap k kzz
+vmap <C-u> <C-u>zz
+vmap <C-d> <C-d>zz
+vmap <C-f> <C-f>zz
+vmap <C-b> <C-b>zz
+vmap o ozz
+vmap G Gzz
 
 " -------------------- cut/pasteに関するコマンド --------------------
 " cut/pasteしたら，自動で末尾に移動する
 " vnoremap <silent>y y']
 " vnoremap <silent>p p']
 " nnoremap <silent>p p']
+
+" 選択部分をクリップボードにコピー
+vnoremap <C-y> "*y
 
 " DやCコマンドとの一貫性を保つために，Yで行末までヤンクにする
 nnoremap Y y$
@@ -97,6 +120,10 @@ nnoremap <silent><Space>J o<CR><CR><Up>
 nnoremap <silent><Space>K O<CR><CR><Up>
 " Space+Lで現在行の上下に空行をいれる
 nnoremap <silent><Space>L :<C-u>call append(line('.'), '') \| call append(line('.')-1, '')<CR>
+
+" insertモードの時 Shift + Enterで空行を下に挿入
+inoremap <S-CR> <Esc>:call append(line('.'), '')<CR>gi
+inoremap <C-S-CR> <Esc>:call append(line('.')-1, '')<CR>gi
 
 " ----------<Space>*によるその他のキーバインド----------
 " \nを含まない1行選択

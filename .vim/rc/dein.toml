@@ -17,6 +17,7 @@ hook_add = '''
     nnoremap <silent> [unite]u :<C-u>Unite<Space>file -vertical<CR>
     nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
     nnoremap <silent> [unite]f :<C-u>Unite<Space>buffer -vertical<CR>
+    nnoremap <silent> [unite]j :<C-u>Unite<Space>jump -vertical<CR>
     nnoremap <silent> [unite]b :<C-u>Unite<Space>bookmark -vertical<CR>
     nnoremap <silent> [unite]a :<C-u>UniteBookmardAdd<CR>
     nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>

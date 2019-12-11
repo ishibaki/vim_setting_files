@@ -286,6 +286,9 @@ let g:clever_f_mark_cursor = 1
 let g:clever_f_timeout_ms = 500
 " }}}
 
+Plug 'tpope/vim-fugitive' " {{{
+" }}}
+
 " }}}
 
 " ==================== ON DEMAND LOADING ==================== {{{

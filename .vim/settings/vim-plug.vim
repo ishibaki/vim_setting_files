@@ -277,13 +277,15 @@ nnoremap gy   :GundoToggle<CR>
 Plug 'qpkorr/vim-renamer' " {{{
 " }}}
 
-Plug 'rhysd/clever-f.vim'
+Plug 'rhysd/clever-f.vim' " {{{
 map ; <Plug>(clever-f-repeat-forward)
 map , <Plug>(clever-f-repeat-back)
 let g:clever_f_use_migemo = 1
 let g:clever_f_chars_match_any_signs = 1
 let g:clever_f_mark_cursor = 1
 let g:clever_f_timeout_ms = 500
+" }}}
+
 " }}}
 
 " ==================== ON DEMAND LOADING ==================== {{{

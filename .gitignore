@@ -16,6 +16,7 @@ tags
 .vim/syntax
 .vim/ftplugin
 .vim/info
+.vim/qfixhowm-master
 init.vim
 
 .vim/info/viminfo

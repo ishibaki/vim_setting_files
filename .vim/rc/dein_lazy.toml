@@ -200,6 +200,17 @@ on_ft = ['markdown']
 depends = 'vim-textobj-user'
 # }}}
 
+[[plugins]]
+repo = 'ishibaki/deoplete-biblatex' # {{{
+on_ft = ['markdown']
+depends = 'deoplete.nvim'
+hook_add = '''
+    let g:deoplete#sources#biblatex#bibfile = '~/.pandoc/library.bib'
+    let g:deoplete#sources#biblatex#delimiter = ';'
+    " let g:deoplete#sources#biblatex#startpattern = '['
+'''
+# }}}
+
 # Not In Use {{{
 
 # [[plugins]] # markdownでoutlineを作る専用

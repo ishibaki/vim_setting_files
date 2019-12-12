@@ -69,4 +69,11 @@ syntax on
 let $PATH = "~/.pyenv/shims:".$PATH
 call has('python3')
 
+function! ImInActivate()
+    call system('fcitx-remote -o')
+endfunction
+inoremap <silent> jk <Esc>:<C-u>call ImInActivate()<CR>
+inoremap <silent> <C-[> <Esc>:<C-u>call ImInActivate()<CR>
+inoremap <silent> <Esc> <Esc>:<C-u>call ImInActivate()<CR>
+
 " vim: set foldmethod=marker :

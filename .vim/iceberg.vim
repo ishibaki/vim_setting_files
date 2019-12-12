@@ -1,0 +1,1 @@
+/home/tishibaki/.cache/dein/repos/github.com/cocopon/iceberg.vim/colors/iceberg.vim

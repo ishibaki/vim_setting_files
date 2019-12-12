@@ -150,7 +150,13 @@ hook_add = '''
 repo = 'kannokanno/previm' # {{{
 on_ft = ['markdown','txt']
 hook_add = '''
-    let g:previm_open_cmd = 'open -a Safari.app'
+    if system('uname') == "Darwin\n" " Mac setting
+        let g:previm_open_cmd = 'open -a Safari.app'
+    elseif has('win64') || has('win32') " Windows setting
+        let g:previm_open_cmd = ''
+    elseif system('uname') == "Linux\n" " Linux setting
+        let g:previm_open_cmd = 'google-chrome'
+    endif
     let g:previm_enable_realtime = 1
     let g:previm_disable_default_css = 1
     let g:previm_custom_css_path = '~/.pandoc/github.css'

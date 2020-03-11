@@ -39,7 +39,7 @@ let g:deoplete#enable_at_startup = 1
 Plug 'cocopon/iceberg.vim' " {{{
 " }}}
 
-if has('nvim') || v:version >= 800
+if has('nvim')
     Plug 'neoclide/coc.nvim', {'branch': 'release'} " {{{
     " Use K for show documentation in preview window
     nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -170,6 +170,7 @@ map  <Space>ff       <Plug>(easymotion-bd-f)
 map  <Space>fs       <Plug>(easymotion-bd-f2)
 map  <Space>fd       <Plug>(easymotion-bd-f2)
 map  <Space>ft       <Plug>(easymotion-bd-t)
+map  <Space>tt       <Plug>(easymotion-bd-t)
 map  <Space>f/       <Plug>(easymotion-sn)
 map  <Space>j        <Plug>(easymotion-bd-jk)
 map  <Space>k        <Plug>(easymotion-bd-jk)
@@ -193,17 +194,13 @@ Plug 'mattn/sonictemplate-vim' " {{{
 let g:sonictemplate_vim_template_dir = '$HOME/.vim/sonictemplate-vim'
 " }}}
 
-Plug 'thinca/vim-quickrun' " {{{
+Plug 'thinca/vim-quickrun', {'for': ['python', 'c']} " {{{
 let g:quickrun_config = {
 \ 'python': {
         \ 'command': 'python3'
     \ },
 \ 'ipynb': {
         \ 'command': 'python3'
-    \ },
-\ 'R': {
-        \ 'command': 'R',
-        \ 'cmdopt': '--quiet --no-save <'
     \ },
 \ }
 " }}}
@@ -289,6 +286,13 @@ let g:clever_f_timeout_ms = 500
 Plug 'tpope/vim-fugitive' " {{{
 " }}}
 
+Plug 'scrooloose/nerdtree' " {{{
+map <silent> <C-S> :NERDTreeToggle<CR>
+" }}}
+
+Plug 'pbrisbin/vim-mkdir' " {{{
+" }}}
+
 " }}}
 
 " ==================== ON DEMAND LOADING ==================== {{{
@@ -306,6 +310,29 @@ xmap <C-k>       <Plug>(neosnippet_expand_target)
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
     \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 " }}}
+
+Plug 'godlygeek/tabular', {'for': ['markdown']} " {{{
+"}}}
+
+Plug 'plasticboy/vim-markdown', {'for': ['markdown']} " {{{
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_math = 1
+let g:vim_markdown_strikethrough = 1
+" }}}
+
+Plug 'rhysd/vim-grammarous', {'for': ['markdown']} " {{{
+let g:grammarous#enable_spell_check=1
+" }}}
+
+" Plug 'majutsushi/tagbar', {'for': ['python', 'markdown']} " {{{
+" let g:tagbar_sort = 0
+" " let g:tagbar_left = 1
+" nnoremap <silent> go :<C-u>TagbarToggle<CR>
+" " }}}
+
+" Plug 'lvht/tagbar-markdown' " {{{
+" " }}}
 
 Plug 'alvan/vim-closetag', {'for': ['markdown', 'html']} " {{{
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.md,*.markdown,*.mkdown,*.mdown'
@@ -421,15 +448,27 @@ xnoremap <silent> ac <Esc>?```{.python<CR>V/```<CR>
 
 " ==================== OTHERS ==================== {{{
 
-Plug 'vim-scripts/Vim-R-plugin', {'for': ['R']} " {{{
-let maplocalleader = ","
-let vimrplugin_vsplit = 1
-let vimrplugin_assign = 0
-let vimrplugin_vimpager = "horizontal"
+if has('nvim')
+  Plug 'jalvesaq/Nvim-R', {'for': ['R']} " {{{
+  vmap <Leader>r <Plug>RDSendSelection
+  vmap <Leader>r <Plug>RDSendSelection
+  nmap <Leader>r <Plug>RDSendLine
+  " let maplocalleader = '<Space>'
+  nmap <Leader>sr <Plug>RStart
+  imap <Leader>sr <Plug>RStart
+  vmap <Leader>sr <Plug>RStart
+  " }}}
+else
+  Plug 'vim-scripts/Vim-R-plugin', {'for': ['r', 'R']} " {{{
+  let maplocalleader = ","
+  let vimrplugin_vsplit = 1
+  let vimrplugin_assign = 0
+  let vimrplugin_vimpager = "horizontal"
 
-let vimrplugin_objbr_place = "console, right"
-let vimrplugin_objbr_opendf = 0
-" }}}
+  let vimrplugin_objbr_place = "console, right"
+  let vimrplugin_objbr_opendf = 0
+  " }}}
+endif
 
 Plug 'ujihisa/neco-look', {'for': ['markdown', 'rst', 'tex', 'gitcommit', 'gitrebase']} " {{{
 if !exists('g:neocomplete#text_mode_filetypes')
@@ -456,7 +495,7 @@ Plug 'upamune/esa.vim', {'for': ['markdown']} " {{{
 let g:esa_team = 'tishibashi-lab'
 " }}}
 
-Plug 'itchyny/vim-cursorword', {'for': ['python', 'html', 'toml', 'c']} " {{{
+Plug 'itchyny/vim-cursorword', {'for': ['html', 'toml', 'c']} " {{{
 " }}}
 
 " }}}

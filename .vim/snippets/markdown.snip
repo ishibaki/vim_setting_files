@@ -263,3 +263,145 @@ snippet     check
 abbr        - [ ]
 options     word
     - [ ] ${0}
+
+snippet     with
+abbr        with {func}({file}) as :
+options     head
+    with ${1:open}(${2:#:filename, mode}) as ${3:f}:
+        ${0:pass}
+
+snippet     isci
+abbr        imoprt numpy as np..
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    from matplotlib import rcParams
+    # import seaborn as sns
+
+snippet     plt.figure
+abbr        fig = plt.figure()..
+options     head
+    # Set parameters
+    rcParams['font.size'] = fontsize
+    rcParams['figure.figsize'] = figsize
+
+    # Generate Figure & Axes instances
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 1, 1)
+
+    ${0}
+
+    # X-axis Settings
+    ax.set_xlim(0, 1)
+    ax.set_xlabel('X-axis')
+
+    # Y-axis Settings
+    ax.set_ylim(0, 1)
+    ax.set_ylabel('Y-axis')
+
+    # Legend Settings
+    ax.legend(loc='upper left', bbox_to_anchor=(1, 1))
+
+    plt.show()
+    # plt.savefig(filename, format='svg')
+
+snippet     barplot
+abbr        ax.bar(x=x, height=..
+    # Bar plot
+    ax.bar(x=x, height=height, width=0.8, color='white', edgecolor='black',
+           alpha=1, linewidth=1, yerr=yerr, capsize=5, label=label)
+    ${0}
+
+snippet     scatterplot
+abbr        ax.scatter(x=x, y=y, ..
+    # Scatter plot
+    ax.scatter(x=x, y=y, s=marker_size, c=marker_color, marker='.',
+               edgecolors='black', alpha=1, linewidth=1, label=label)
+    # Error bar settings
+    # ax.errorbar(x=x, y=y, xerr=xerr, yerr=yerr, ecolor='black' capsize=8,
+    #             elinewidth=1)
+    ${0}
+
+snippet     lineplot
+abbr        ax.plot(x=x, y=y, ..
+    # Line plot
+    ax.plot(x=x, y=y, linestyle='-', linewidth=2, color='black', alpha=1,
+            marker=None, markerfacecolor=None, label=label)
+    # Error bar settings
+    # ax.errorbar(x=x, y=y, yerr=yerr, ecolor='black' capsize=8, elinewidth=1)
+    ${0}
+
+snippet     histogram
+abbr        ax.hist(x=x, bins=..
+    # Histogram
+    ax.scatter(x=x, bins=np.linspace(0, 1, 2 + 1), density=None, color='white',
+               edgecolor='black', alpha=1, label=label)
+    ${0}
+
+snippet     jitterplot
+abbr        sns.stripplot(x="id-column", ..
+    # Jitter plot
+    sns.stripplot(x="id-column", y="data-column", data=df, color='black',
+                  jitter=True, size=5, edgecolor='grey')
+    ${0}
+
+snippet     boxplot
+abbr        sns.boxplot(x="id-column", ..
+    # Box plot
+    sns.boxplot(x="id-column", y="data-column", data=df, color=None)
+    # Jitter plot
+    # sns.stripplot(x="id-column", y="data-column", data=df, color='black',
+    #               jitter=True, size=5, edgecolor='grey')
+    ${0}
+
+snippet     import
+abbr        import scipy; import ...
+    # Scientific libraries
+    import scipy
+    import numpy as np
+    import pandas as pd
+
+    # Graphic libraries
+    import matplotlib as mpl
+    import matplotlib.pyplot as plt
+    from matplotlib import rcParams
+    # import japanize_matplotlib
+    # import seaborn as sns
+
+    # Statistical libraries
+    # import statsmodels.stats as stats
+    # import statsmodels.stats.multicomp as multi
+    # import statsmodels.formula.api as smf
+    # import scikit_posthocs as sp
+
+    # Other libraries
+    # import re
+    # from datetime import datetime
+    # import collections
+    ${0}
+
+snippet vim
+abbr modeline foldmethod
+options head
+    ${0}
+    # vim: set foldmethod=marker :
+
+snippet errs
+abbr errs = {'se': 68.2689...
+options head
+    errs = {'se': 68.26894921370859, 'sd': 'sd', '95%': 95,
+            '1s': 68.268949213708590, '2s': 95.449973610364159,
+            '3s': 99.730020393673981, '4s': 99.993665751633376,
+            '5s': 99.999942669685624, '6s': 99.999999802682471}
+    ${0}
+
+snippet     insertion
+abbr        {.insertion ...
+options     word
+    {.insertion author="${1}" date="`strftime("%Y-%m-%d")`T`strftime("%T")`Z"}${0}
+
+snippet     deletion
+abbr        {.insertion ...
+options     word
+    {.deletion author="${1}" date="`strftime("%Y-%m-%d")`T`strftime("%T")`Z"}${0}
+

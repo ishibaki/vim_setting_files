@@ -194,6 +194,21 @@ on_ft = ['markdown']
 depends = 'vim-textobj-user'
 # }}}
 
+[[plugins]] # Markdown outliner
+repo =  'majutsushi/tagbar' # {{{
+on_ft = ['python', 'markdown']
+hook_add = '''
+    let g:tagbar_sort = 0
+    " let g:tagbar_left = 1
+    nnoremap <silent> go :<C-u>TagbarToggle<CR>
+'''
+
+[[plugins]] # Markdown outliner
+repo = 'lvht/tagbar-markdown'
+on_ft = ['markdown']
+depends = 'tagbar'
+# }}}
+
 # Not In Use {{{
 
 # [[plugins]] # markdownでoutlineを作る専用

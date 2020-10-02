@@ -68,6 +68,38 @@ autocmd BufNewFile,BufRead *GTD.txt call GenerateTaskDone()
 :endfunction
 " }}}
 
+" ---------- Qfixhowm ---------- {{{
+set runtimepath+=~/.vim/qfixhowm-master
+let QFixHowm_key = 'g'
+
+let howm_dir = '~/MEGAsync/qfixhowm'
+let howm_filename = '%y%m%d_%H%M%S.md'
+let QFixHowm_DiaryFile = 'diary/%y%m%d_qfdiary.md'
+let QFixHowm_QuickMemoFile = '000000_qfmemo.md'
+let howm_fileencoding = 'utf-8'
+let howm_fileformat = 'unix'
+let QFixHowm_FileType = 'markdown'
+let QFixHowm_Title = '#'
+let QFixHowm_HolidayFile='~/.vim/qfixhowm-master/misc/holiday/Sche-Hd-0000-00-00-000000.utf8'
+let QFixHowm_ST= -9
+let QFixHowm_Template = [
+  \"# %TITLE% %TAG%",
+  \"",
+  \"<!-- vim: set foldmethod=marker : -->",
+\]
+let QFixHowm_PairLinkDir = 'pairlink'
+let QFixMRU_IgnoreFile   = '/pairlink/'
+let calendar_jp = 1
+let QFixHowm_CalendarCount = 3
+let qfixmemo_outline_wrap = 1
+let SubWindow_Title =  "__submenu__.howm"
+let SubWindow_Width = 30
+let QFixHowm_MenuPreview = 1
+let QFixHowm_MenuRecent = 10
+let qfixmemo_outline_foldenable = 0
+let qfixmemo_outline_foldmethod = 'marker'
+" }}}
+
 " ---------- folding setting ---------- {{{
 if expand('<sfile>:p')!=#expand('%:p') && exists('g:loaded_foldCC')| finish| endif| let g:loaded_foldCC = 1
 let s:save_cpo = &cpo| set cpo&vim
@@ -246,7 +278,7 @@ function! ToggleLExplorer() " {{{
     endif
 endfunction
 " }}}
-map <silent><C-S> :call ToggleLExplorer()<CR>
+" map <silent><C-S> :call ToggleLExplorer()<CR>
 " }}}
 
 " ---------- Highlight CSV column (:Csvhl 1<CR>) ---------- {{{

@@ -47,6 +47,10 @@ nmap <C-b> <C-b>zz
 nmap <C-o> <C-o>zz
 nmap <C-i> <C-i>zz
 nmap G Gzz
+nmap n nzz
+nmap N Nzz
+nmap ; ;zz
+nmap , ,zz
 vmap j jzz
 vmap k kzz
 vmap <C-u> <C-u>zz
@@ -55,6 +59,10 @@ vmap <C-f> <C-f>zz
 vmap <C-b> <C-b>zz
 vmap o ozz
 vmap G Gzz
+vmap n nzz
+vmap N Nzz
+vmap ; ;zz
+vmap , ,zz
 
 " -------------------- cut/pasteに関するコマンド --------------------
 " cut/pasteしたら，自動で末尾に移動する

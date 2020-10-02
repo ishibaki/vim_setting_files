@@ -24,7 +24,7 @@ let g:extra_whitespace_ignored_filetypes = ['unite']
 " }}}
 
 if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " {{{
+  Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'} " {{{
   " }}}
 elseif v:version >= 800
   Plug 'Shougo/deoplete.nvim' " {{{
@@ -36,27 +36,27 @@ else
 endif
 let g:deoplete#enable_at_startup = 1
 
+" if has('nvim')
+"     Plug 'neoclide/coc.nvim', {'branch': 'release'} " {{{
+"     " Use K for show documentation in preview window
+"     nnoremap <silent> K :call <SID>show_documentation()<CR>
+"     function! s:show_documentation()
+"         if &filetype == 'vim'
+"             execute 'h '.expand('<cword>')
+"         else
+"             call CocAction('doHover')
+"         endif
+"     endfunction
+"     set updatetime=300
+" 
+"     " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+"     xmap <Leader>a  <Plug>(coc-codeaction-selected)
+"     nmap <Leader>a  <Plug>(coc-codeaction-selected)
+" " }}}
+" endif
+
 Plug 'cocopon/iceberg.vim' " {{{
 " }}}
-
-if has('nvim')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'} " {{{
-    " Use K for show documentation in preview window
-    nnoremap <silent> K :call <SID>show_documentation()<CR>
-    function! s:show_documentation()
-        if &filetype == 'vim'
-            execute 'h '.expand('<cword>')
-        else
-            call CocAction('doHover')
-        endif
-    endfunction
-    set updatetime=300
-
-    " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-    xmap <Leader>a  <Plug>(coc-codeaction-selected)
-    nmap <Leader>a  <Plug>(coc-codeaction-selected)
-" }}}
-endif
 
 Plug 'itchyny/lightline.vim' " {{{
 function! g:Date()
@@ -87,6 +87,7 @@ let g:lightline = {
 \ }
 " }}}
 
+if expand("%")[12:25] == "/vim-anywhere/"
 Plug 'mhinz/vim-startify' " {{{
 let g:startify_files_number = 5
 let g:startify_lists = [
@@ -122,6 +123,7 @@ let g:startify_custom_header = [
     \ '              ``',
     \ ]
 
+endif
 " }}}
 
 Plug 'kana/vim-textobj-user' " {{{
@@ -293,6 +295,26 @@ map <silent> <C-S> :NERDTreeToggle<CR>
 Plug 'pbrisbin/vim-mkdir' " {{{
 " }}}
 
+" Plug 'mrtazz/simplenote.vim' " {{{
+" source ~/.simplenoterc
+" let g:SimplenoteFiletype = 'markdown'
+" 
+" :function! SimplenoteMemoFunc()
+"     :SimplenoteOpen 0ea6ef57f1b5aeba17939b88039f1cd4
+"         if getline("$") != ""
+"             :call append(line("$"), "")
+"         endif
+"     :call append(line("$"), "---")
+"     :call append(line("$"), "")
+"     :let now_time = strftime("%Y/%m/%d %H:%M:%S", localtime())
+"     :call append(line("$"), "## " . now_time)
+"     :call append(line("$"), "")
+"     :normal G
+" :endfunction
+" command Memo :call SimplenoteMemoFunc()
+" command Note :call SimplenoteMemoFunc()
+" " }}}
+
 " }}}
 
 " ==================== ON DEMAND LOADING ==================== {{{
@@ -323,6 +345,9 @@ let g:vim_markdown_strikethrough = 1
 
 Plug 'rhysd/vim-grammarous', {'for': ['markdown']} " {{{
 let g:grammarous#enable_spell_check=1
+" }}}
+
+Plug 'vim-voom/VOoM', {'for': ['markdown']} " {{{
 " }}}
 
 " Plug 'majutsushi/tagbar', {'for': ['python', 'markdown']} " {{{
@@ -450,13 +475,16 @@ xnoremap <silent> ac <Esc>?```{.python<CR>V/```<CR>
 
 if has('nvim')
   Plug 'jalvesaq/Nvim-R', {'for': ['R']} " {{{
+  let maplocalleader = ','
   vmap <Leader>r <Plug>RDSendSelection
   vmap <Leader>r <Plug>RDSendSelection
   nmap <Leader>r <Plug>RDSendLine
-  " let maplocalleader = '<Space>'
   nmap <Leader>sr <Plug>RStart
-  imap <Leader>sr <Plug>RStart
-  vmap <Leader>sr <Plug>RStart
+  let g:R_assign = 0
+  let g:R_vsplit = 1
+  let g:R_nvimpager = "horizontal"
+  let g:R_objbr_place = "console,right"
+  let g:R_objbr_opendf = 0
   " }}}
 else
   Plug 'vim-scripts/Vim-R-plugin', {'for': ['r', 'R']} " {{{

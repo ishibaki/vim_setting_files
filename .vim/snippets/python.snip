@@ -285,3 +285,30 @@ options head
             '3s': 99.730020393673981, '4s': 99.993665751633376,
             '5s': 99.999942669685624, '6s': 99.999999802682471}
     ${0}
+
+snippet mainarg
+abbr import argparse ...
+    def main():
+        pass
+
+    if __name__ == '__main__':
+        # import argparse
+        # 
+        # description = """
+        # """
+        # parser = argparse.ArgumentParser(description=description)
+        # 
+        # help1 = """
+        # """
+        # parser.add_argument("arg1", help=help1) # required
+        # parser.add_argument("--flag", action="store_true")
+        # parser.add_argument("-c", "--choice",
+        #                     choices=["a", "b", "c"],
+        #                     required=True)
+        # parser.add_argument("--parameter", type=float, default=0.0)
+        # parser.add_argument("--colors", nargs="*")
+        # 
+        # args = parser.parse_args()
+        
+        main()
+

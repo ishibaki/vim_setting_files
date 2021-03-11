@@ -23,18 +23,27 @@ Plug 'bronson/vim-trailing-whitespace' " {{{
 let g:extra_whitespace_ignored_filetypes = ['unite']
 " }}}
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'} " {{{
-  " }}}
-elseif v:version >= 800
-  Plug 'Shougo/deoplete.nvim' " {{{
+if has('nvim') " {{{
+  Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+    let g:deoplete#enable_at_startup = 1
+  Plug 'lambdalisue/fern.vim'
+    map <silent> <C-S> :Fern . -drawer -toggle<CR>
+" }}}
+elseif v:version >= 810 " {{{
+  Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
-else
+    let g:deoplete#enable_at_startup = 1
+  Plug 'scrooloose/nerdtree'
+    map <silent> <C-S> :NERDTreeToggle<CR>
+" }}}
+else " {{{
   Plug 'Shougo/neocomplete.vim'
-  " }}}
+    let g:neocomplete#enable_at_startup = 1
+  Plug 'scrooloose/nerdtree'
+    map <silent> <C-S> :NERDTreeToggle<CR>
+" }}}
 endif
-let g:deoplete#enable_at_startup = 1
 
 " if has('nvim')
 "     Plug 'neoclide/coc.nvim', {'branch': 'release'} " {{{
@@ -87,7 +96,7 @@ let g:lightline = {
 \ }
 " }}}
 
-if expand("%")[12:25] == "/vim-anywhere/"
+" if expand("%")[12:25] == '/vim-anywhere/'
 Plug 'mhinz/vim-startify' " {{{
 let g:startify_files_number = 5
 let g:startify_lists = [
@@ -123,7 +132,7 @@ let g:startify_custom_header = [
     \ '              ``',
     \ ]
 
-endif
+" endif
 " }}}
 
 Plug 'kana/vim-textobj-user' " {{{
@@ -288,10 +297,6 @@ let g:clever_f_timeout_ms = 500
 Plug 'tpope/vim-fugitive' " {{{
 " }}}
 
-Plug 'scrooloose/nerdtree' " {{{
-map <silent> <C-S> :NERDTreeToggle<CR>
-" }}}
-
 Plug 'pbrisbin/vim-mkdir' " {{{
 " }}}
 
@@ -320,6 +325,15 @@ Plug 'pbrisbin/vim-mkdir' " {{{
 " ==================== ON DEMAND LOADING ==================== {{{
 
 " ==================== MARKDOWN ==================== {{{
+
+" Plug 'SirVer/ultisnips', {'for': ['python', 'markdown']} " {{{
+" Plug 'honza/vim-snippets', {'for': ['python', 'markdown']}
+" 
+" let g:UltiSnipsExpandTrigger="<C-k>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+" let g:UltiSnipsEditSplit="vertical"
+" " }}}
 
 Plug 'Shougo/neosnippet.vim', {'for': ['python', 'markdown']} " {{{
 let g:neosnippet#disable_runtime_snippets = {
@@ -350,14 +364,14 @@ let g:grammarous#enable_spell_check=1
 Plug 'vim-voom/VOoM', {'for': ['markdown']} " {{{
 " }}}
 
-" Plug 'majutsushi/tagbar', {'for': ['python', 'markdown']} " {{{
-" let g:tagbar_sort = 0
-" " let g:tagbar_left = 1
-" nnoremap <silent> go :<C-u>TagbarToggle<CR>
-" " }}}
+Plug 'majutsushi/tagbar', {'for': ['python', 'markdown', 'R']} " {{{
+let g:tagbar_sort = 0
+" let g:tagbar_left = 1
+nnoremap <silent> go :<C-u>TagbarToggle<CR>
+" }}}
 
-" Plug 'lvht/tagbar-markdown' " {{{
-" " }}}
+Plug 'lvht/tagbar-markdown' " {{{
+" }}}
 
 Plug 'alvan/vim-closetag', {'for': ['markdown', 'html']} " {{{
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.md,*.markdown,*.mkdown,*.mdown'
